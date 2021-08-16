@@ -19,16 +19,16 @@ export default function Footer() {
           <div className={styles.social}>
             <h2>Follow Us</h2>
             <div className={styles.icons}>
-              <a href="https://www.instagram.com/ecell_bphc/">
+              <a href="https://www.instagram.com/ecell_bphc/" target="_blank">
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
-              <a href="https://www.facebook.com/eCELL.BPHC">
+              <a href="https://www.facebook.com/eCELL.BPHC" target="_blank">
                 <FontAwesomeIcon icon={faFacebook} />
               </a>
-              <a href="https://twitter.com/ecell_bphc">
+              <a href="https://twitter.com/ecell_bphc" target="_blank">
                 <FontAwesomeIcon icon={faTwitter} />
               </a>
-              <a href="https://www.linkedin.com/company/e-cell-bphc">
+              <a href="https://www.linkedin.com/company/e-cell-bphc" target="_blank">
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
             </div>
