@@ -22,7 +22,6 @@ import se5 from "../assets/images/Carousel/Startup Expo/se5.png";
 import se6 from "../assets/images/Carousel/Startup Expo/se6.png";
 import se7 from "../assets/images/Carousel/Startup Expo/se7.png";
 
-
 import sanchit from "../assets/images/tech/sanchit.jpeg";
 const eventdata = [
   {

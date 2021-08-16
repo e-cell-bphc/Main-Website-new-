@@ -112,11 +112,11 @@
     align-items: center;
   }
 }
-@media screen and (max-width: 480px){
-  .Eventsname{
+@media screen and (max-width: 480px) {
+  .Eventsname {
     font-size: 45px;
   }
-  .more{
+  .more {
     font-size: 25px;
   }
 }

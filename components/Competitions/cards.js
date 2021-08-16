@@ -11,7 +11,7 @@ export default function Cards() {
       id: 2,
       head: "Sell it",
       Desc: `Sell it is a fantastic opportunity for all the marketing enthusiasts to showcase their communication skills and pitch in their ideas in this epic showdown. Given six unique and unconventional products like a single sock or a used pen refill, you must pitch the item in a video or poster. WIth prices worth RS. 3000, this battle of wits where Facebook reacts makes all the difference is an interesting one.`,
-    },   
+    },
     {
       id: 4,
       head: "Suit Up",
@@ -21,23 +21,21 @@ export default function Cards() {
       id: 5,
       head: "Ace the Case",
       Desc: ` 'Ace The Case' is a case study competition that is held every year and is sure to test your observations. With two rounds, each to determine a solution for the defined problem statement with respect to the product given, ACE THE CASE puts you in real-world situations where your expertise in understanding a subject and determining the fault will be examined. It’s a chance not worth missing to get an action-based learning and brainstorming experience from meticulously referenced and inspiring case studies.`,
-    },   
+    },
   ];
   return (
     <>
       <div className={cards.Eventsname}>Competitions</div>
       <div className={cards.flexbox}>
-        
-          {data.map((box) => (
-            <div className={cards.card} key={box.id}>
-              <div className={cards.headcard}>
-                <div className={cards.headimage}></div>
-                <div className={cards.headname}>{box.head}</div>
-              </div>
-              <div className={cards.info}>{box.Desc}</div>
+        {data.map((box) => (
+          <div className={cards.card} key={box.id}>
+            <div className={cards.headcard}>
+              <div className={cards.headimage}></div>
+              <div className={cards.headname}>{box.head}</div>
             </div>
-          ))}
-        
+            <div className={cards.info}>{box.Desc}</div>
+          </div>
+        ))}
       </div>
     </>
   );

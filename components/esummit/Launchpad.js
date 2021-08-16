@@ -13,12 +13,12 @@ export default function Launchpad() {
         </div>
         <div className={styles.boxes}>
           <div className={styles.box}>
-            <Carousel slides={carouselData}/>
+            <Carousel slides={carouselData} />
           </div>
         </div>
       </div>
       <Link href="/commingsoon">
-      <button className={styles.buy_button}>BUY TICKETS</button>
+        <button className={styles.buy_button}>BUY TICKETS</button>
       </Link>
     </div>
   );

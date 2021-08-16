@@ -11,7 +11,7 @@ export default function Cards() {
       id: 2,
       head: "Fampay",
       Desc: "by Saransh Agarwal",
-    },   
+    },
     {
       id: 4,
       head: "Revenue Models",
@@ -52,17 +52,15 @@ export default function Cards() {
     <>
       <div className={cards.Eventsname}>Past Sessions</div>
       <div className={cards.flexbox}>
-        
-          {data.map((box) => (
-            <div className={cards.card} key={box.id}>
-              <div className={cards.headcard}>
-                <div className={cards.headimage}></div>
-                <div className={cards.headname}>{box.head}</div>
-              </div>
-              <div className={cards.info}>{box.Desc}</div>
+        {data.map((box) => (
+          <div className={cards.card} key={box.id}>
+            <div className={cards.headcard}>
+              <div className={cards.headimage}></div>
+              <div className={cards.headname}>{box.head}</div>
             </div>
-          ))}
-        
+            <div className={cards.info}>{box.Desc}</div>
+          </div>
+        ))}
       </div>
     </>
   );

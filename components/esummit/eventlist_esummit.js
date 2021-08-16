@@ -39,6 +39,7 @@ const events = [
     heading: "Workshop",
     link: "/commingsoon",
     description:
-    "E-cell hosts several workshops which provide everyone with a chance to experience the entrepreneurial essence and culture of our college."  },
+      "E-cell hosts several workshops which provide everyone with a chance to experience the entrepreneurial essence and culture of our college.",
+  },
 ];
 export default events;

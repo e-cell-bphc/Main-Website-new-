@@ -185,16 +185,14 @@
   }
 }
 @media screen and (max-width: 480px) {
-    .outer{
-      padding-top: 5vh;
-    }
-    .carousel{
-      height: fit-content;
-      
-      flex-basis: auto;
-     margin-top: 25px;
-     margin-bottom: 25px;
-    }
+  .outer {
+    padding-top: 5vh;
+  }
+  .carousel {
+    height: fit-content;
 
-    
+    flex-basis: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
 }

@@ -30,7 +30,6 @@
   cursor: pointer;
 }
 
-
 .topic_inactive {
   padding: 15px;
   font-size: 20px;
@@ -41,13 +40,13 @@
   cursor: pointer;
 }
 
-@media screen and (max-width:890px) {
-    .topics{
-      transform: scale(0.8);
-    }    
+@media screen and (max-width: 890px) {
+  .topics {
+    transform: scale(0.8);
+  }
 }
-@media screen and (max-width:760px) {
-  .sidebar{
+@media screen and (max-width: 760px) {
+  .sidebar {
     display: none;
-  } 
+  }
 }

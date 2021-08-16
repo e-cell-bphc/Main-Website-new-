@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../../styles/GR/QA.module.css";
 import Image from "next/image";
 import info from "../../assets/images/info.png";
-export default function QA({ question, answer,classy,questionid }) {
+export default function QA({ question, answer, classy, questionid }) {
   return (
     <>
       <div className={styles.qa}>

@@ -33,16 +33,15 @@ a {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #000; 
-
+  background: #000;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(0, 153, 255); 
+  background: rgb(0, 153, 255);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(0, 153, 255); 
+  background: rgb(0, 153, 255);
 }

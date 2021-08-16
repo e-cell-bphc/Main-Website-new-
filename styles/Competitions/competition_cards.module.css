@@ -75,8 +75,8 @@
   }
 
   .card {
-   width: 90vw;
-   height: auto;
+    width: 90vw;
+    height: auto;
     /*margin-left: 57vh;
             padding-left: 30px;
             padding-right: 30px;*/
@@ -91,7 +91,7 @@
   .more {
     font-size: 4vh;
   }
-  .headcard{
+  .headcard {
     font-size: 5vh;
     margin-bottom: 30px;
   }
@@ -101,31 +101,28 @@
     text-align: center;
     font-size: 7vh;
   }
-  .flexbox{
+  .flexbox {
     width: 100vw;
     align-items: center;
     justify-content: center;
   }
-
 }
-@media screen and (min-width:1800px ){
-  .card{
+@media screen and (min-width: 1800px) {
+  .card {
     width: 15vw;
-    
   }
-
 }
-@media screen and (max-width: 480px){
-  .Eventsname{
+@media screen and (max-width: 480px) {
+  .Eventsname {
     font-size: 45px;
   }
-  .more{
+  .more {
     font-size: 25px;
   }
 }
 
 @media screen and (max-width: 1500px) {
-  .card{
+  .card {
     height: auto;
-  }  
+  }
 }
