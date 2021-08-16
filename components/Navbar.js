@@ -53,7 +53,7 @@ export default function Navbar() {
         <div className={Navbarcss.mb_logo}>
           <Link href="/">
             <a>
-              <Image src={pic2} height={18} alt="ECell logo" />
+              <Image src={pic2} height={18} alt="ECellclogo" className={Navbarcss.ios}/>
             </a>
           </Link>
         </div>

@@ -166,3 +166,14 @@
 .mobilenav_logo {
   margin-right: 1%;
 }
+.topbarlogo {
+  height: 8vh;
+  margin: 0 auto;
+  width: 50px;
+}
+
+.ios-strech-fix
+{
+      height: intrinsic;
+      width: intrinsic;
+}
