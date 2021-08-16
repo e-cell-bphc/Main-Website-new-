@@ -13,6 +13,7 @@ import Rushil from "../../assets/images/tech/Rushil.jpg";
 import Ashwin from "../../assets/images/tech/ashwin-pic.jpeg";
 import Sambhav from "../../assets/images/Executives/Sambhav.jpeg";
 import AkshatO from "../../assets/images/tech/AkshatO.jpg";
+import Susho from "../../assets/images/Executives/Susho.jpeg"
 
 export default function Aboutus() {
   const list = [
@@ -71,6 +72,14 @@ export default function Aboutus() {
       classy: "position",
       position: "Design Head",
       email: "f20190192@hyderabad.bits-pilani.ac.in",
+    },
+    {
+      id: 8,
+      src: Susho,
+      name: "Sushobhit Srivastava",
+      classy: "position",
+      position: "Secretray",
+      email: "f20191262@hyderabad.bits-pilani.ac.in",
     },
   ];
 
