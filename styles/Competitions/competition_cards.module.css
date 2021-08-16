@@ -123,3 +123,9 @@
     font-size: 25px;
   }
 }
+
+@media screen and (max-width: 1500px) {
+  .card{
+    height: auto;
+  }  
+}

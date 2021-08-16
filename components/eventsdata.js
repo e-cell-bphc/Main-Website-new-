@@ -28,7 +28,7 @@ const eventdata = [
   {
     event: "groundreality",
     heading: "Ground Reality",
-    caption: "Idea wont become reality unitil it is tested",
+    caption: "Idea won't become reality until it is tested",
     carouselImages: [
       {
         image: gr1,

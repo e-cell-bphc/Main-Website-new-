@@ -54,11 +54,15 @@
     opacity: 1;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
   .header {
-    transform: scale(0.65);
+    transform: scale(0.4);
   }
+}
+
+@media screen and (max-width: 600px) {
   .subheader {
     transform: scale(0.7);
   }
 }
+
