@@ -22,7 +22,14 @@
 }
 @media screen and (max-width: 700px) {
   .wrapper {
-    padding: 0 60px;
+    padding: 0 40px;
+  }
+  .heading {
+    transform: scale(0.9);
+  }
+  .info {
+    align-items: center;
+    justify-content: center;
   }
 }
 .info {

@@ -25,11 +25,12 @@ export default function Navbar() {
             <a className={Navbarcss.button}>Esummit</a>
           </Link>
           <a
+            className={Navbarcss.button}
             target="_blank"
             rel="noopener noreferrer"
             href="https://join.slack.com/t/entrepreneurial-mind1/shared_invite/zt-tzumg4dy-ENN8qV~UDcVDU34CV~FEJA"
           >
-            <a className={Navbarcss.button}>Community</a>
+            <a>Community</a>
           </a>
           <Link href="/blog">
             <a className={Navbarcss.button}>Blog</a>
@@ -82,13 +83,13 @@ export default function Navbar() {
           </a>
         </Link>
         <a
+          onClick={() => handleClick()}
+          className={Navbarcss.mobilebtn}
           target="_blank"
           rel="noopener noreferrer"
           href="https://join.slack.com/t/entrepreneurial-mind1/shared_invite/zt-tzumg4dy-ENN8qV~UDcVDU34CV~FEJA"
         >
-          <a onClick={() => handleClick()} className={Navbarcss.mobilebtn}>
-            Community
-          </a>
+          Community
         </a>
         <Link href="/blog">
           <a onClick={() => handleClick()} className={Navbarcss.mobilebtn}>

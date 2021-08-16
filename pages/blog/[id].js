@@ -19,10 +19,10 @@ export default function Blog({ postData }) {
         <div>
           <h1 className={styles.heading}>{postData.title}</h1>
         </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         <div className={styles.info}>
           <Date dateString={postData.date} />
         </div>
+        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </div>
     </>
   );
