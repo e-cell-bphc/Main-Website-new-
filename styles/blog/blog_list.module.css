@@ -1,0 +1,40 @@
+.blog_area {
+  height: 100%;
+  width: inherit;
+  border-radius: 0px 10px 10px 0;
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 8px 32px 0 rgba(8, 157, 216, 0.37);
+  padding: 8px 22px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.blog_area::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: black;
+}
+
+.blog_area::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: #F5F5F5;
+}
+
+.blog_area::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+	background-color:rgb(0, 119, 255);
+	background-image: -webkit-linear-gradient(45deg,
+	                                          rgba(255, 255, 255, .2) 25%,
+											  transparent 25%,
+											  transparent 50%,
+											  rgba(255, 255, 255, .2) 50%,
+											  rgba(255, 255, 255, .2) 75%,
+											  transparent 75%,
+											  transparent)
+}

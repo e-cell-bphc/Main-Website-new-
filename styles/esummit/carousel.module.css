@@ -1,0 +1,38 @@
+.slider{
+    position: relative;
+    background-color: transparent;
+    /* height: 80vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image{
+    height: 100px;
+    width: 500px;
+    border-radius: 10px;
+}
+.lefticon,.righticon{
+    position: absolute;
+    top: 50%;
+    font-size: 3rem;
+    /* color: #000; */
+    color: blue;
+    z-index: 1;
+    cursor: pointer;
+    user-select: none;
+}
+.lefticon{
+    left: 12px;
+}
+.righticon{
+    right: 12px;
+}
+.slide,.slideactive{
+    opacity: 0;
+    transition-duration: 1s ease;
+}
+.slideactive{
+    opacity: 1;
+    transition-duration: 1s;
+    transform: scale(1.08);
+} 

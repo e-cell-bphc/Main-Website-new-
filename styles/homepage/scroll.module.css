@@ -1,0 +1,33 @@
+.name {
+  color: white;
+  float: right;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  margin-top: -14%;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 5px;
+  margin-right: 2.5%;
+  animation: updown 1.5s infinite;
+  font-size: 14px;
+  font-weight: 700;
+}
+@keyframes updown {
+  0% {
+    transform: translateY(0px);
+  }
+  10% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@media screen and (max-width: 480px) {
+  .name {
+    margin-top: -1000px;
+    visibility: hidden;
+  }
+}

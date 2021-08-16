@@ -1,0 +1,144 @@
+.nav {
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  color: black;
+  height: 20%;
+  font-size: 50px;
+  text-align: center;
+  background-color: white;
+  width: 100vh;
+}
+.section {
+  width: 100vh;
+  height: 90vh;
+  background-color: black;
+  border: 0px solid white;
+}
+
+.headingsite {
+  font-size: 100px;
+  color: white;
+  display: block;
+  position: relative;
+  left: 100px;
+  top: 300px;
+}
+.desc {
+  font-size: 30px;
+  color: white;
+  display: block;
+  position: relative;
+  left: 100px;
+  top: 330px;
+}
+.lite {
+  color: white;
+}
+.sweepstakes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+  color: white;
+}
+.sweepvideo {
+  grid-column: 1/2;
+  margin: auto;
+  margin-left: 50px;
+  vertical-align: center;
+  border: 0px solid green;
+  height: 50%;
+  width: 85%;
+  font-size: 200px;
+  text-align: center;
+}
+.sweepvideo video {
+  height: 100%;
+  width: 100%;
+}
+.sweepdesc {
+  grid-column: 2/3;
+  margin-left: 40px;
+  margin-top: 30%;
+  border: 0px solid red;
+  line-height: 1.5;
+  font-size: 30px;
+}
+
+/*Button*/
+
+.registerButton {
+  background: none;
+  color: white;
+  width: 200px;
+  height: 80px;
+  border: 1px solid rgb(27, 219, 245);
+  font-size: 30px;
+  border-radius: 4px;
+  transition: 0.6s;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.registerButton:hover {
+  background: rgb(27, 219, 245);
+  color: black;
+  cursor: pointer;
+}
+
+.registerButton:hover:before {
+  opacity: 0.6;
+  transition: 0.7s;
+}
+
+.registerButton:hover:after {
+  opacity: 1;
+  transition: 0.7s;
+}
+/*Button End*/
+
+/*Media Queries*/
+
+@media only screen and (max-width: 768px) {
+  .section {
+    margin: auto;
+    width: 100vh;
+  }
+  .headingsite {
+    font-size: 150%;
+    color: white;
+    display: block;
+    position: relative;
+    top: 60%;
+    text-align: center;
+    margin-left: 0px;
+  }
+  .desc {
+    font-size: 120%;
+    color: white;
+    display: block;
+    position: relative;
+    left: 10%;
+    top: 65%;
+    text-align: center;
+  }
+  .sweepstakes {
+    display: block;
+    width: 100%;
+  }
+  .sweepvideo {
+    width: 100%;
+    border: 1px solid green;
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+    height: 25%;
+  }
+  .registerButton {
+    height: auto;
+    width: auto;
+    padding: 5%;
+    margin: auto;
+    position: absolute;
+    margin: auto;
+  }
+}

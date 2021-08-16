@@ -1,0 +1,125 @@
+.headcard {
+  color: white;
+  font-size: 33px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+}
+
+.flexbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.card {
+  width: 35vw;
+  height: 380px;
+  border: 1px solid grey;
+  border-radius: 15px;
+  margin: 30px;
+  padding: 20px;
+  transition: 0.15s;
+}
+.info {
+  color: grey;
+  font-size: 18px;
+  word-spacing: 3px;
+  margin-top: 15px;
+  cursor: default;
+  text-align: center;
+}
+.card:hover {
+  border-color: rgb(8, 126, 223);
+}
+
+.more {
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+.more:hover {
+  background: #121fcf;
+  background: -webkit-linear-gradient(to right, #121fcf 0%, #26e2ff 100%);
+  background: -moz-linear-gradient(to right, #121fcf 0%, #26e2ff 100%);
+  background: linear-gradient(to right, #121fcf 0%, #26e2ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.headimage {
+  margin-right: 15px;
+}
+.Eventsname {
+  font-size: 45px;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  align-items: center;
+  text-decoration: underline;
+  text-decoration-color: rgb(8, 126, 223);
+  text-underline-offset: 0.3em;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 900px) {
+  .section {
+    width: 100vh;
+  }
+
+  .card {
+   width: 90vw;
+   height: auto;
+    /*margin-left: 57vh;
+            padding-left: 30px;
+            padding-right: 30px;*/
+  }
+  .info {
+    font-size: 2vh;
+    word-spacing: 0.1em;
+    font-weight: 550;
+    line-height: 4vh;
+    text-align: center;
+  }
+  .more {
+    font-size: 4vh;
+  }
+  .headcard{
+    font-size: 5vh;
+    margin-bottom: 30px;
+  }
+  .Eventsname {
+    padding: 1 10%;
+    width: 100%;
+    text-align: center;
+    font-size: 7vh;
+  }
+  .flexbox{
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+  }
+
+}
+@media screen and (min-width:1800px ){
+  .card{
+    width: 15vw;
+    
+  }
+
+}
+@media screen and (max-width: 480px){
+  .Eventsname{
+    font-size: 45px;
+  }
+  .more{
+    font-size: 25px;
+  }
+}

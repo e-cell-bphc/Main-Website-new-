@@ -1,0 +1,8 @@
+.row{
+    display: flex;
+    flex-direction:row;
+    width: 500%;
+    justify-content: space-around;
+    
+   
+}

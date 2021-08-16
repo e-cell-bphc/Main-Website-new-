@@ -1,0 +1,130 @@
+.card {
+  width: 350px;
+  height: 500px;
+  border: 1px solid grey;
+  border-radius: 15px;
+  margin: 10px;
+  padding: 20px;
+  transition: 0.15s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.85);
+  box-shadow: 5px rgb(11, 64, 107);
+}
+.card:hover {
+  border-color: rgb(8, 126, 223);
+}
+.name {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.email {
+  color: grey;
+  font-size: 15px;
+}
+.teamcards {
+  min-width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.teamheader {
+  font-size: 45px;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  align-items: center;
+  text-decoration: underline;
+  text-decoration-color: rgb(8, 126, 223);
+  text-underline-offset: 0.3em;
+  text-align: center;
+
+  margin-bottom: 30px;
+}
+.email {
+  margin-bottom: 1vh;
+}
+.position {
+  margin-bottom: 3vh;
+  margin-top: 2vh;
+  color: grey;
+  font-size: 23px;
+  text-align: center;
+}
+.positionlong {
+  margin-bottom: 2vh;
+  color: grey;
+  font-size: 23px;
+  text-align: center;
+}
+.cardTech {
+  width: 300px;
+  height: auto;
+  border: 1px solid grey;
+  border-radius: 15px;
+  margin: 10px;
+  padding: 20px;
+  transition: 0.15s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.85);
+}
+.cardTech:hover {
+  border-color: rgb(8, 126, 223);
+}
+.nameTech {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.emailTech {
+  color: grey;
+  font-size: 17px;
+}
+@media screen and (max-width: 480px) {
+  .card {
+    width: 90vw;
+    height: auto;
+    margin-bottom: -60px;
+  }
+  .cardTech {
+    width: 90vw;
+    height: auto;
+    margin-bottom: -30px;
+  }
+
+  .teamcards {
+    margin-bottom: 20vh;
+  }
+}
+@media screen and (max-width: 800px) {
+  .card {
+    transform: scale(0.7);
+  }
+}
+
+.mail {
+  position: relative;
+}
+.mail::before {
+  content: "";
+  height: 1px;
+  background: rgb(8, 126, 223);
+  position: absolute;
+  bottom: -3px;
+  width: 0;
+  right: 0;
+  transition: 0.5s ease-in-out;
+}
+.mail:hover::before {
+  left: 0;
+  width: 100%;
+}

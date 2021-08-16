@@ -1,0 +1,49 @@
+.tiles {
+    border: 1px solid white;
+    width: 95%;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.heading{
+text-align: center;
+font-size: 80%;
+line-height: 100%;
+color: rgb(0, 119, 255);
+text-transform: uppercase;
+flex-basis: 0.8;
+}
+
+.tiles:hover {
+    border: 1px solid rgb(0, 119, 255) ;
+}
+.date {
+    flex-basis: 0.2;
+    color: white;
+    text-transform:capitalize;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+@media screen and (max-width:900px) {
+    .tiles{
+        flex-direction: column;
+    }        
+}
+@media screen and (max-width:560px) {
+.heading{
+    font-size: 50%;
+}      
+}
+@media screen and (max-width:400px) {
+    .heading{
+        font-size: 30%;
+    }  
+    .date{
+        font-size: 50%;
+    }    
+}

@@ -1,0 +1,64 @@
+.container {
+  min-height: 250vh;
+}
+.headpageblur {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  opacity: 0.8;
+  /* background: linear-gradient(135deg, #0091fd55 25%, transparent 25%) -40px 0/
+			80px 80px,
+		linear-gradient(225deg, #0091fd 25%, transparent 25%) -40px 0/ 80px 80px,
+		linear-gradient(315deg, #0091fd55 25%, transparent 25%) 0px 0/ 80px 80px,
+		linear-gradient(45deg, #0091fd 25%, #000000 25%) 0px 0/ 80px 80px; */
+  background: url(../../assets/images/waves.svg);
+  background-size: cover;
+}
+.header {
+  color: white;
+  font-size: 85px;
+  margin-bottom: 50px;
+  width: auto;
+  height: auto;
+  /* background: rgb(0, 0, 0, 0.85); */
+  padding: 10px;
+  border-radius: 15px;
+  /* border: 1px solid black; */
+  animation: fade 0.35s linear;
+  text-transform: uppercase;
+}
+.subheader {
+  color: white;
+  font-size: 30px;
+  width: auto;
+  height: auto;
+  background: rgb(0, 0, 0, 0.2);
+  backdrop-filter: blur(30px);
+  padding: 10px;
+  border-radius: 15px;
+  /* border: 1px solid black; */
+  animation: fade 0.35s linear;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header {
+    transform: scale(0.65);
+  }
+  .subheader {
+    transform: scale(0.7);
+  }
+}

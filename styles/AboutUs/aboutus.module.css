@@ -1,0 +1,9 @@
+.container {
+  padding-top: 10vh;
+  background: -webkit-radial-gradient(
+    top,
+    65% 12%,
+    rgb(11, 64, 107),
+    rgba(0, 0, 0, 1)
+  );
+}

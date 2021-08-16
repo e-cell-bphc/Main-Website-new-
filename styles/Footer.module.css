@@ -1,0 +1,108 @@
+.footerWrapper {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  padding: 50px;
+  padding-bottom: 12px;
+  color: var(--white-color);
+  z-index: 100;
+  background: var(--primary-color);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(5, 18, 31, 1) 26%,
+    rgba(18, 64, 107, 1) 59%,
+    rgba(28, 99, 167, 1) 81%
+  );
+}
+.footer {
+  z-index: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  margin-bottom: 30px;
+}
+.footerLeft {
+  display: flex;
+  flex-flow: row wrap;
+  flex: 3 1 auto;
+  justify-content: space-between;
+}
+.footerLeft > * {
+  flex: 1 40%;
+  margin-right: 12px;
+}
+.footerRight {
+  flex-flow: row wrap;
+  flex-grow: 1;
+}
+
+.links ul {
+  padding: 0;
+}
+.links li {
+  list-style-type: none;
+}
+.icons > * {
+  font-size: 27px;
+  padding: 5px;
+}
+.icons svg {
+  max-width: 25px;
+  transition: 0.3s;
+  opacity: 0.7;
+}
+.icons > * > *:hover {
+  color: var(--secondary-color);
+  opacity: 1;
+}
+.icons > * > *:hover {
+  transform: translateY(-2px) scale(1.1);
+}
+.icons > *:not(:last-child) {
+  margin-right: 14px;
+}
+.copyright {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.footerWrapper a.mail {
+  position: relative;
+}
+.footerWrapper a.mail::before {
+  content: "";
+  height: 1px;
+  background: white;
+  position: absolute;
+  bottom: -3px;
+  width: 0;
+  right: 0;
+  transition: 0.5s ease-in-out;
+}
+.footerWrapper a.mail:hover::before {
+  left: 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 930px) {
+  .footer {
+    margin-bottom: 10px;
+  }
+  .footerLeft {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-grow: 1.5;
+  }
+}
+@media screen and (max-width: 600px) {
+  .footerLeft > div {
+    margin-bottom: 5px;
+  }
+  .footerWrapper {
+    padding: 0px 25px;
+    padding-bottom: 10px;
+  }
+}

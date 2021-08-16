@@ -1,0 +1,181 @@
+.head {
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 10px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: row;
+  text-align: left;
+  align-items: center;
+  text-shadow: 0px 1px, 1px 0px, 1px 1px;
+}
+
+.flexbox {
+  min-width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 400px;
+  height: 400px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  -webkit-backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding-top: 15px;
+  padding-left: 23px;
+  padding-right: 23px;
+  padding-bottom: 15px;
+  transition: 0.15s;
+  margin: 2%;
+}
+
+.info {
+  color: gray;
+  font-size: 18px;
+  word-spacing: 3px;
+  margin-top: 15px;
+  cursor: default;
+}
+
+.more {
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 10px;
+  transition: 0.1s;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  bottom: 0;
+  margin-left: 30%;
+  margin-right: 30%;
+  transition: 0.4s;
+  border-bottom: 1px solid transparent;
+}
+
+.more:hover {
+  background: #121fcf;
+  background: -webkit-linear-gradient(to right, #121fcf 0%, #26e2ff 100%);
+  background: -moz-linear-gradient(to right, #121fcf 0%, #26e2ff 100%);
+  background: linear-gradient(to right, #121fcf 0%, #26e2ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 1px solid rgb(8, 126, 223);
+}
+
+.headimage {
+  margin-right: 15px;
+}
+
+.Eventsname {
+  font-size: 48px;
+  color: white;
+  align-items: center;
+  margin: 0 auto;
+  width: max-content;
+  font-weight: 700;
+  border-bottom: 2px solid rgb(8, 126, 223);
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+.container {
+  background: radial-gradient(
+    circle,
+    rgb(11, 64, 107) 0.2%,
+    rgba(0, 0, 0, 1) 44%
+  );
+  padding-top: 1px;
+  margin-top: 0px;
+}
+@media screen and (max-width: 340px) {
+  .card {
+    transform: scale(0.9);
+  }
+  .Eventsname {
+    transform: scale(0.7);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    width: 90%;
+    height: auto;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 16px 64px 0 rgba(31, 38, 135, 0.37);
+    margin-bottom: 15%;
+  }
+  .head {
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+  }
+
+  .info {
+    font-size: 18px;
+    word-spacing: 3px;
+    margin-top: 15px;
+  }
+  .Eventsname {
+    font-size: 60px;
+  }
+  .container {
+    background: black;
+    padding-top: 1px;
+    margin-top: 0px;
+  }
+
+  .more {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+}
+
+/* @media screen and (max-width: 1200px) and (min-width: 1024px) {
+  .Eventsname {
+    margin-left: 40%;
+    margin-right: 40%;
+  }
+} */
+
+@media screen and (min-width: 1800px) {
+  .Eventsname {
+    font-size: 70px;
+  }
+  .card {
+    width: 45vh;
+    margin: 2.5%;
+  }
+  .info {
+    font-size: 28px;
+    word-spacing: 4px;
+    margin-top: 15px;
+  }
+  .head {
+    font-size: 45px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .more {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+}
