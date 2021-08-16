@@ -10,7 +10,7 @@ export default function QA({ question, answer,classy,questionid }) {
           <div>
             <Image className={styles.icon} src={info} width={30} height={25} />
           </div>
-          <span className={styles.h}> {question} </span>
+          <div className={styles.h}> {question} </div>
         </div>
         <div className={styles.panel}>
           <p className={styles[`${classy}`]}>{answer}</p>

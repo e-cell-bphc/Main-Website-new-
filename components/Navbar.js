@@ -30,7 +30,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             href="https://join.slack.com/t/entrepreneurial-mind1/shared_invite/zt-tzumg4dy-ENN8qV~UDcVDU34CV~FEJA"
           >
-            <a>Community</a>
+            Community
           </a>
           <Link href="/blog">
             <a className={Navbarcss.button}>Blog</a>

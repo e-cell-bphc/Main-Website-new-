@@ -36,6 +36,7 @@
 .accordian {
   padding: 0px 5px;
   display: flex;
+  
   justify-content: start;
   margin-bottom: 5px;
   align-items: center;
@@ -67,4 +68,48 @@
   .accordian{
     margin-top: 50px;
   }
+}
+@media screen and (max-width:1550px) {
+  .h{
+    transform:scale(0.9)
+  }
+  
+}
+@media screen and (max-width:1450px) {
+  .h{
+    font-size: 17px;
+  }
+  .one{
+    height: 230px;
+  }
+  
+}
+@media screen and (max-width:1250px) {
+  .h{
+    font-size: 17px;
+  }
+  .one{
+    height: auto;
+    
+  }
+  .two{
+    height: auto;
+    
+  }
+  .three{
+    height: auto;
+    
+  }
+
+}
+@media screen and (max-width: 1000px){
+  .qa{
+    flex-basis: 40%;
+    
+  }
+  .accordian{
+    padding: 0px;
+    width: 60vw;
+  }
+  
 }

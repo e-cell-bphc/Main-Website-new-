@@ -51,7 +51,7 @@
 }
 
 .carousel {
-  height: 55%;
+  height: auto;
   margin-right: 5%;
   margin-top: 20px;
   padding: 1rem;
