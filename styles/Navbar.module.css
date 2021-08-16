@@ -61,12 +61,10 @@
   margin-top: 10px;
 }
 .mb_logo {
-  aspect-ratio: 96/92;
-  height: 100%;
+  position: relative;
+  height: 8vh;
   margin-left: 15px;
-}
-.mb_logo * {
-  height: 100%;
+  width: 55px;
 }
 /*.button:hover {
   color: white;
@@ -172,8 +170,3 @@
   width: 50px;
 }
 
-.ios-strech-fix
-{
-      height: intrinsic;
-      width: intrinsic;
-}

@@ -51,11 +51,7 @@ export default function Navbar() {
 
       <div className={Navbarcss.topbar}>
         <div className={Navbarcss.mb_logo}>
-          <Link href="/">
-            <a>
-              <Image src={pic2} height={18} alt="ECellclogo" className={Navbarcss.ios}/>
-            </a>
-          </Link>
+          <Link href="/"><Image src={pic2} alt="ECell logo"  layout="fill" objectFit="cover" /></Link>
         </div>
         <div className={Navbarcss.ham} onClick={() => handleClick()}>
           <div className={isHamOn ? Navbarcss.ham1 : null}></div>
