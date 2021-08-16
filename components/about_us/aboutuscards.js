@@ -13,18 +13,10 @@ import Rushil from "../../assets/images/tech/Rushil.jpg";
 import Ashwin from "../../assets/images/tech/ashwin-pic.jpeg";
 import Sambhav from "../../assets/images/Executives/Sambhav.jpeg";
 import AkshatO from "../../assets/images/tech/AkshatO.jpg";
-import Susho from "../../assets/images/Executives/Susho.jpeg"
+import Susho from "../../assets/images/Executives/Susho.jpeg";
 
 export default function Aboutus() {
   const list = [
-    {
-      id: 8,
-      src: Susho,
-      name: "Sushobhit Srivastava",
-      classy: "position",
-      position: "Secretary",
-      email: "f20191262@hyderabad.bits-pilani.ac.in",
-    },
     {
       id: 1,
       src: Anushka,
@@ -32,6 +24,14 @@ export default function Aboutus() {
       classy: "position",
       position: "President",
       email: "f20190393@hyderabad.bits-pilani.ac.in",
+    },
+    {
+      id: 8,
+      src: Susho,
+      name: "Sushobhit Srivastava",
+      classy: "position",
+      position: "Secretary",
+      email: "f20191262@hyderabad.bits-pilani.ac.in",
     },
     {
       id: 2,
@@ -79,7 +79,7 @@ export default function Aboutus() {
       name: "Sambhav Jain",
       classy: "position",
       position: "Design Head",
-      email: "f20190192@hyderabad.bits-pilani.ac.in",
+      email: "f20191100@hyderabad.bits-pilani.ac.in",
     },
   ];
 
