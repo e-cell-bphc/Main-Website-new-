@@ -24,9 +24,13 @@ export default function Navbar() {
           <Link href="/esummit">
             <a className={Navbarcss.button}>Esummit</a>
           </Link>
-          <Link href="#">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://join.slack.com/t/entrepreneurial-mind1/shared_invite/zt-tzumg4dy-ENN8qV~UDcVDU34CV~FEJA"
+          >
             <a className={Navbarcss.button}>Community</a>
-          </Link>
+          </a>
           <Link href="/blog">
             <a className={Navbarcss.button}>Blog</a>
           </Link>
@@ -77,11 +81,15 @@ export default function Navbar() {
             Esummit
           </a>
         </Link>
-        <Link href="#">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://join.slack.com/t/entrepreneurial-mind1/shared_invite/zt-tzumg4dy-ENN8qV~UDcVDU34CV~FEJA"
+        >
           <a onClick={() => handleClick()} className={Navbarcss.mobilebtn}>
             Community
           </a>
-        </Link>
+        </a>
         <Link href="/blog">
           <a onClick={() => handleClick()} className={Navbarcss.mobilebtn}>
             Blog
