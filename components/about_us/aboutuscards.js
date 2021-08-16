@@ -18,6 +18,14 @@ import Susho from "../../assets/images/Executives/Susho.jpeg"
 export default function Aboutus() {
   const list = [
     {
+      id: 8,
+      src: Susho,
+      name: "Sushobhit Srivastava",
+      classy: "position",
+      position: "Secretary",
+      email: "f20191262@hyderabad.bits-pilani.ac.in",
+    },
+    {
       id: 1,
       src: Anushka,
       name: "Anushka Chaudhary",
@@ -72,14 +80,6 @@ export default function Aboutus() {
       classy: "position",
       position: "Design Head",
       email: "f20190192@hyderabad.bits-pilani.ac.in",
-    },
-    {
-      id: 8,
-      src: Susho,
-      name: "Sushobhit Srivastava",
-      classy: "position",
-      position: "Secretray",
-      email: "f20191262@hyderabad.bits-pilani.ac.in",
     },
   ];
 
