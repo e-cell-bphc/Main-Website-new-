@@ -28,7 +28,7 @@ export default function Navbar() {
             className={Navbarcss.button}
             target="_blank"
             rel="noopener noreferrer"
-            href="https://join.slack.com/t/entrepreneurial-mind1/shared_invite/zt-tzumg4dy-ENN8qV~UDcVDU34CV~FEJA"
+            href="https://join.slack.com/t/entrepreneurial-mind1/shared_invite/zt-ulz68kty-SF6tFkMYsxWaLiZkkksUgw"
           >
             Community
           </a>

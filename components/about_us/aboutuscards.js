@@ -42,20 +42,20 @@ export default function Aboutus() {
       email: "f20190866@hyderabad.bits-pilani.ac.in",
     },
     {
-      id: 3,
-      src: nikhil,
-      name: "Nikhil Gupta",
-      classy: "position",
-      position: "Launchpad Chairman",
-      email: "f20191562@hyderabad.bits-pilani.ac.in",
-    },
-    {
       id: 4,
       src: Yashsav,
       name: "Yashsav Gupta",
       classy: "positionlong",
       position: "Vice-President Projects and Initiatives",
       email: "f20191459@hyderabad.bits-pilani.ac.in",
+    },
+    {
+      id: 3,
+      src: nikhil,
+      name: "Nikhil Gupta",
+      classy: "position",
+      position: "Launchpad Chairman",
+      email: "f20191562@hyderabad.bits-pilani.ac.in",
     },
     {
       id: 5,
