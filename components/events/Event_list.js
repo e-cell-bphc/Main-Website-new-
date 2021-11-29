@@ -12,14 +12,14 @@ function Event_list({ selectedOption, allPostsData }) {
             <div className={style.heading}>
               Ground Reality Form
             </div>
-            <Event_Tiles allPostsData={allPostsData} />
+            <Event_Tiles />
           </>
         ) : selectedOption == 2 ? (
           <>
             <div className={style.heading}>
               Beyond Profits Form
             </div>
-            <Event_Tiles allPostsData={allPostsData} />
+            <Event_Tiles />
           </>
         ) : null}
       </div>

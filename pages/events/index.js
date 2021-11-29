@@ -2,20 +2,9 @@ import React, { useEffect, useState } from "react";
 import SideMenu from "../../components/blog/SideMenu";
 import styles from "../../styles/blog/index_blog.module.css";
 import Event_list from "../../components/events/Event_list";
-import { getSortedPostsData } from "../../lib/posts";
 import Head from "next/head";
 
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
-  console.log(allPostsData);
-  return {
-    props: {
-      allPostsData,
-    },
-  };
-}
-
-function Events({ allPostsData }) {
+function Events() {
   const [selectedOption, setSelectedOption] = useState({
     activeOption: { id: 1, name: "Homepage" },
     options: [
@@ -36,7 +25,6 @@ function Events({ allPostsData }) {
           />
           <Event_list
             selectedOption={selectedOption.activeOption.id}
-            allPostsData={allPostsData}
           />
         </div>
       </div>
