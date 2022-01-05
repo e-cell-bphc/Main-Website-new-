@@ -3,7 +3,8 @@ import styles from "../styles/GR/Gr.module.css";
 import QA from "../components/gr/QA";
 import Carousel from "../components/esummit/carousel";
 import Head from "next/head";
-
+import FormGR from '../components/forms/FormGR'
+import FormBP from '../components/forms/FormBP'
 export const getStaticPaths = () => {
   const paths = eventdata.map((eventname) => {
     return {
@@ -137,6 +138,11 @@ function Event({ event }) {
           </div>
         </div>
         <div className={styles.details}>{event[0].caption}</div>
+        <div className={styles.formarea}>
+          <div>
+				  {event[0].heading === "Ground Reality" ? <FormGR/> : <FormBP />}
+          </div>
+				</div>
         <div className={styles.container_fluid}>
           <div className={styles.faq}>
             {faq_list.map((data) => (
