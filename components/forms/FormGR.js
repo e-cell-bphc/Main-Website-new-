@@ -30,6 +30,8 @@ function FormGR() {
 		})
 			.then((res) => {
 				alert("Form Data Submitted :)");
+			}).then(() => {
+				window.location = "https://www.ecellbphc.in/groundreality";
 			})
 			.catch((err) => {
 				alert("Form Data Not Submitted :( . Please Try Again");

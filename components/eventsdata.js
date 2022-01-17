@@ -26,6 +26,7 @@ import sanchit from "../assets/images/tech/sanchit.jpeg";
 const eventdata = [
   {
     event: "groundreality",
+    link: "./grRegisteration",
     heading: "Ground Reality",
     caption: "Idea won't become reality until it is tested",
     carouselImages: [
@@ -48,6 +49,7 @@ const eventdata = [
   },
   {
     event: "beyondprofits",
+    link:"./bpRegisteration",
     heading: "Beyond Profits",
     caption: "A head for business, a heart for the world",
     carouselImages: [

@@ -5,6 +5,7 @@ import Carousel from "../components/esummit/carousel";
 import Head from "next/head";
 import FormGR from '../components/forms/FormGR'
 import FormBP from '../components/forms/FormBP'
+import Link from "next/dist/client/link";
 export const getStaticPaths = () => {
   const paths = eventdata.map((eventname) => {
     return {
@@ -132,17 +133,20 @@ function Event({ event }) {
         <div className={styles.header}>
           <div className={styles.event}>
             <div className={styles.name}>{event[0].heading}</div>
+            <Link href={event[0].link}>
+              <div className={styles.register}>Register</div>
+            </Link>
           </div>
           <div className={styles.carousel}>
             <Carousel slides={event[0].carouselImages} />
           </div>
         </div>
         <div className={styles.details}>{event[0].caption}</div>
-        <div className={styles.formarea}>
+        {/* <div className={styles.formarea}>
           <div>
 				  {event[0].heading === "Ground Reality" ? <FormGR/> : <FormBP />}
           </div>
-				</div>
+				</div> */}
         <div className={styles.container_fluid}>
           <div className={styles.faq}>
             {faq_list.map((data) => (
