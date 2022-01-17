@@ -75,6 +75,7 @@ const eventdata = [
   },
   {
     event: "startupexpo",
+    link:"#",
     heading: "Startup Expo",
     caption: "Ideas require feedback to improve",
     carouselImages: [
