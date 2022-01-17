@@ -32,7 +32,7 @@ function Event_Tiles() {
         </div>
         <div className={styles.distri}>
           <div className={styles.input}>
-            <div className={styles.div}>Team Members' name</div>
+            <div className={styles.div}>Team Members&apos; name</div>
             <input type="text" name="members" value={team} onChange={()=>{setTeam()}} className={styles.inputbox} required />
           </div>
           <div className={styles.input}>
