@@ -62,8 +62,7 @@
   color: transparent;
   animation: moveBg 90s linear infinite;
   -webkit-animation: moveBg 10s linear infinite;
-  animation: moveBg 10s timing-function delay iteration-count direction
-    fill-mode;
+  animation: moveBg 10s ;
 }
 .insidebox {
   display: flex;
