@@ -15,7 +15,7 @@ const events = [
   },
   {
     id: 3,
-    heading: "StartUp Expo",
+    heading: "Pitchers Pilot",
     link: "/startupexpo",
     description:
       "Start-up Expo is an initiative that provides young entrepreneurs with the spotlight they deserve by showcasing their enterprises to the attendees present at the summit",
