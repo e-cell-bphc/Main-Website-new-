@@ -103,7 +103,7 @@ function Event({ event }) {
       questionid: "qthree",
       question: "When is the last date?",
       answer:
-        "The last date for registration of both the competitions is 20th February 2021.",
+        "The last date for registration of both the competitions is 10th February 2022.",
     },
     {
       id: 7,
