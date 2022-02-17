@@ -89,7 +89,12 @@
   font-weight: 800;
   text-shadow: 0px 1px, 1px 0px, 1px 1px;
 }
-
+@media screen and (max-width: 1400px) {
+  .head{
+    margin-top: -35vh;
+  }
+  
+}
 @media screen and (max-width: 480px) {
   .upperhome {
     padding-top: 7%;

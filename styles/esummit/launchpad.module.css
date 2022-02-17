@@ -102,18 +102,29 @@
   border: 1px solid #1280d4;
   /* box-shadow: inset -2px -2px 40px rgba(0,0,255,0.1),
                     2px 2px 6px rgba(0,0,255,0.8) */
+}@media screen and (max-width: 1400px){
+  .headings{
+    transform: scale(0.8);
+  }
+  .box{
+    transform: scale(0.8);
+  }
+  .buy_button{
+    transform: scale(0.8);
+  }
 }
 @media only screen and (max-width: 1220px) {
   .headings {
     text-align: center;
-    margin-top: 5%;
+    margin-top: 5vh;
     padding: none;
   }
   .container1 {
     flex-direction: column;
   }
   .box {
-    width: 95%;
+    width: 100%;
+    margin-top: 10vh;
   }
 }
 @media only screen and (max-width: 700px) {
@@ -153,12 +164,15 @@
 }
 @media only screen and (max-width: 500px) {
   .box {
-    transform: scale(0.6);
+    transform: scale(0.7);
     box-shadow: -2px -2px 6px rgba(0, 0, 255, 0.1),
       2px 2px 15px rgba(0, 0, 255, 0.3);
+      margin-top: 4em;
+      margin-bottom: 4em;
   }
   .heading1 {
-    font-size: 40px;
+    font-size: 50px;
+    
   }
 }
 @media only screen and (max-width: 400px) {

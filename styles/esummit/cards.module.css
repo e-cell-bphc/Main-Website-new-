@@ -2,7 +2,7 @@
   background: rgb(0, 0, 0);
   background: -webkit-radial-gradient(
     center,
-    50% 50%,
+    70% 50%,
     rgb(9, 53, 95),
     rgba(0, 0, 0, 1)
   );
@@ -95,6 +95,12 @@
   font-size: 2em;
   color: #fff;
   /* transition: .5s; */
+}
+@media screen and (max-width: 1400px) {
+    .card{
+      transform: scale(0.9);
+      margin: 35px;
+    }
 }
 @media only screen and (min-width: 1000px) {
   .card:hover {

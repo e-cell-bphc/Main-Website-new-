@@ -94,7 +94,15 @@
 .mobilebtn:hover {
   color: rgb(0, 183, 255);
 }
-
+@media screen and (max-width: 1400px){
+  .button{
+    transform: scale(0.8);
+    margin-right: 10px;
+  }
+  .buttons{
+    margin-right: 2%;
+  }
+}
 @media screen and (max-width: 880px) {
   .navbar {
     display: none;
