@@ -19,7 +19,7 @@ export default function Cards({ src, info, headname, link }) {
         </div>
         <div className={cards.info}>{info} </div>
         <div className={cards.more}>
-          <Link href={link}>Know more</Link>
+          <a href={link}>Know more</a>
         </div>
       </div>
     </>
