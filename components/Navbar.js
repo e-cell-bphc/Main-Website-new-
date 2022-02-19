@@ -38,9 +38,9 @@ export default function Navbar() {
           <Link href="/about">
             <a className={Navbarcss.button}>About us</a>
           </Link>
-          <Link href="/commingsoon">
+          <a href="/id/portal">
             <a className={Navbarcss.button}>Internship Drive</a>
-          </Link>
+          </a>
           {/*<Link href="/welcome/signup">
             <a className={(Navbarcss.button, Navbarcss.rightmostbutton)}>
               Sign Up
@@ -97,11 +97,11 @@ export default function Navbar() {
             About Us
           </a>
         </Link>
-        <Link href="/commingsoon">
+        <a href="/id/portal">
           <a onClick={() => handleClick()} className={Navbarcss.mobilebtn}>
             Internship Drive
           </a>
-        </Link>
+        </a>
         {/* <Link href="/welcome/signup">
           <a onClick={() => handleClick()} className={Navbarcss.mobilebtn}>
             Sign Up

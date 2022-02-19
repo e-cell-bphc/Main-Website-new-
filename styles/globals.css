@@ -11,8 +11,15 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: black;
   color: white;
+  overflow-x: hidden;
 }
-
+.oldnav{
+  padding-bottom: 9vh;
+}
+.Navbar{
+  position: fixed;
+  z-index: 20;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -29,6 +36,10 @@ a {
 ::-webkit-scrollbar {
   width: 7px;
   border-left: 1px solid #666;
+}
+.nav0{
+  padding-top: "9vh"; 
+  position: "relative" 
 }
 
 /* Track */

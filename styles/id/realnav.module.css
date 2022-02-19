@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 9vh;
+    justify-content: space-between;
+    background: #000;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 35px;
+    letter-spacing: 5px;
+}

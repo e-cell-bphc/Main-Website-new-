@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300&display=swap');
+
+.cardWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  margin-bottom: 20vh;
+}
+
+.cardContainer {
+  /* box-shadow: 0 4px 8px 0 rgb(95, 83, 207), 0 6px 20px 0 rgb(36, 68, 128); */
+  background-color: rgb(17, 17, 17);
+  margin-top: 15vh;
+  padding-top: 5vh;
+  width: 38vw;
+  min-height: 70vh;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.signInBtn {
+
+  font-size: 1.2rem;
+  color: white;
+  width: 10vw;
+  height: 45px;
+    transform: scale(0.7);
+
+  padding-bottom: 4px;
+  padding-top: 4px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid grey;
+  transition: 0.2s;
+
+}
+.signInBtn:hover{
+  background: white;
+  color: black;
+  cursor: pointer;
+}
+.signinoff {
+  font-size: 1.2rem;
+  border-radius: 5px;
+    width: 10vw;
+  transform: scale(0.7);
+
+  height: 45px;
+  background: white;
+  color: black;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+  transition: 0.2s;
+}
+
+.signUpBtn {
+  font-size: 1.2rem;
+  color: black;
+  width: 10vw;
+  height: 45px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  border-radius: 5px;
+    transform: scale(0.7);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  justify-content: center;
+  border: 1px solid white;
+  transition: 0.2s;
+}
+
+.signupbtnoff{
+    font-size: 1.2rem;
+  color: white;
+  width: 10vw;
+  transform: scale(0.7);
+  height: 45px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: inherit;
+  justify-content: center;
+  border: 1px solid grey;
+  transition: 0.2s;
+}
+
+.signupbtnoff:hover{
+  color: black;
+  background: white;
+  cursor: pointer;
+}
+
+/* .signIn:hover, .signUp:hover {
+  text-decoration: underline;
+  text-decoration-color: white;
+  cursor: pointer;
+} */
+
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 6vh;
+  margin-right: 5vw;
+  margin-left: 5vw;
+
+}
+
+.signIn {
+  flex: 3;
+  padding-right: 2vw;
+}
+
+.signUp {
+  flex: 3;
+  padding-left: 2vw;
+}
+
+.inputs {
+  color: rgba(255, 255, 255, 0.61);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 25vh;
+  margin:15px 0 15px 0 ;
+}
+
+.inp {
+  color: white;
+}
+
+.inputField {
+  outline: 0;
+  border: 0;
+  border: 1px solid #9b9b9b;
+  background: transparent;
+  width: 28vw;
+  padding: 10px 5px 10px 5px;
+  margin-top: 0;
+  border-radius: 5px;
+  color: white;
+  font-size: large;
+    margin:10px 0 10px 0 ;
+}
+
+/* .inputField:focus {
+  border-bottom: 2px solid white;
+} */
+
+.butn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  margin-top: 4vh;
+  height: 8vh;
+  width: 10vw;
+  background-color: rgb(5, 124, 221);
+  border: none;
+  font-weight: bold;
+  color: white;
+  font-size: medium;
+  cursor: pointer;
+  border-radius: 5px;
+} 
+
+.Sbtn {
+  margin-bottom: 5vh;
+  margin-top: 4vh;
+  height: 8vh;
+  border-radius: 5px;
+  width: 10vw;
+  background-color: rgb(5, 124, 221);
+  border: none;
+  font-weight: bold;
+  color: white;
+  font-size: medium;
+  cursor: pointer;
+} 
+
+.btn:hover, .Sbtn:hover {
+  background-color: rgb(3, 75, 134);
+}
+
+.forgot {
+  margin-top: 3vh;
+  margin-bottom: 4vh;
+}
+
+.forgotPwd {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.61);
+}
+
+.forgotPwd:hover {
+  text-decoration: underline;
+}
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputFieldSignup {
+  all: unset;
+  margin-top: 10vh;
+  margin-bottom: -5vh;
+  color: white;
+  border-bottom: 2px solid #9b9b9b;
+  background: transparent;
+  text-align: left;
+  width: 15vw;
+}
+
+.inputFieldSignup:focus {
+  border-bottom: 2px solid white;
+}
+
+
+
+@media only screen and(max-width: 620px) {
+  .cardContainer{
+    width: 90vw;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .cardContainer {
+     width: 60vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+  .inputField {
+    width: 35vw;
+  }
+  .btn {
+    width: 25vw;
+  }
+  .inputFieldSignup {
+    width: 60vw;
+  }
+  .Sbtn{
+    width: 20vw;
+  }
+  .inputs {
+    margin-top: 5vh;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  /* .cardContainer {
+     width: 60vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+  .inputField {
+    width: 35vw;
+  }
+  .btn {
+    width: 25vw;
+  }
+  .inputFieldSignup {
+    width: 60vw;
+  }
+  .Sbtn{
+    width: 20vw;
+  }
+  .inputs {
+    margin-top: 5vh;
+  } */
+  .signInBtn{
+    font-size: 1.7em;
+    height: 10vh;
+    width: 17vw;
+  }
+  .signinoff {
+    font-size: 1.7em;
+    height: 10vh;
+    width: 17vw;  }
+  .signUpBtn{
+    font-size: 1.7em;
+    height: 10vh;
+    width: 17vw;  }
+  .signupbtnoff{
+    font-size: 1.7em;
+    height: 10vh;
+    width: 17vw;  }
+  .inputField{
+    width: 35vw;
+  }
+  .links{
+    margin-right: 3vw;
+    margin-left: 3vw;
+  }
+}
+@media only screen and(max-width: 620px) {
+  .cardContainer{
+    width: 90vw;
+  }
+}
+
+/* @media only screen and (max-width: 1500px) and (min-width: 1129px) {
+  .cardContainer {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+  .inputField {
+    width: 25vw;
+  }
+  .btn {
+    width: 12vw;
+  }
+  .inputFieldSignup {
+    width: 15vw;
+  }
+  .Subtn {
+    width: 12vw;
+  }
+  .inputs {
+    margin-top: 7vh;
+  }
+} */
+
+.Header{
+  color: white;
+  font-size: 3em;
+margin-left: auto;
+margin-right: auto;
+  font-family: 'Bebas Neue', cursive;
+  border-bottom: 1px solid rgb(0, 133, 241);
+  width: fit-content;
+}

@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+/* .cardContainer{
+    height: 35em;
+    width: 30em;
+    background: rgb(10, 10, 10);
+    margin: 5vh;
+    border-radius: 10px;
+    color: grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} */
+
+.cardContainer{
+    height: 27em;
+    width: 22em;
+    background: rgb(7, 7, 7);
+    margin: 5vh;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+       transition-duration: 0.25s;
+}
+
+.cardContainer:hover{
+    transform: scale(1.03);
+    transition-duration: 0.25s;
+}
+
+
+.propitem{
+    text-align: center;
+    margin-top: 1.2vh;
+    margin-bottom: 1.2vh;}
+.companyName{
+    font-size: 2em;
+    font-family: 'Bebas Neue', cursive;
+}
+
+
+.button {
+    margin-top: 1em;
+  background-color: rgb(37, 37, 37);
+  border: 1px solid transparent;
+  border-radius: .75rem;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex: 0 0 auto;
+  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  padding: .75rem 1.2rem;
+  text-align: center;
+  text-decoration: none #6B7280 solid;
+  text-decoration-thickness: auto;
+  transition-duration: .2s;
+  transition-property: background-color,border-color,color,fill,stroke;
+  transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+}
+
+.button:hover {
+    background-color: #363838;
+    transition-duration: 0.25s;
+}
+
+.button:focus {
+  box-shadow: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .button {
+    padding: .75rem 1.5rem;
+  }
+}
+@media screen and (max-width: 512px) {
+    .cardContainer{
+        margin: 5vh, 0 , 5vh, 0;
+        height: 27em;
+    }
+}
+@media screen and (max-width:1000px) {
+    .cardContainer{
+        margin: 2vh;
+    }
+}

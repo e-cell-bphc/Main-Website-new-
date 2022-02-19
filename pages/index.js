@@ -41,7 +41,7 @@ export default function Home() {
       src: id,
       headname: "Internship Drive",
       info: `Internship Drive is an amazing opportunity for students to find an ideal internship, based on their skills or interests, from 30+ startups providing stipends from 3k to 30k INR. With a wide variety of opportunities, including work from home options, it is a great chance to gain experience and learn about the versatility of a job environment.  `,
-      link: "/commingsoon",
+      link: "/id/portal",
     },
     {
       id: 5,

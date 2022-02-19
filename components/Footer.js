@@ -8,8 +8,9 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
+
   return (
-    <footer className={styles.footerWrapper}>
+    <footer className={ styles.footerWrapper}>
       <div className={styles.footer}>
         <div className={styles.footerLeft}>
           <div className={styles.info}>

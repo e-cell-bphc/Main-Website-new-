@@ -1,0 +1,24 @@
+.xyz {
+  height: 100px;
+  font-size: 30px;
+  color: white;
+
+ 
+font-size: 1em;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-evenly;
+  width: 17vw;
+  height: 17vh;
+    border: 1px solid rgb(0, 104, 189);
+  border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+
+
+}
+.count{
+  font-size: 1.3em;
+
+}
+
