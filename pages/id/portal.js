@@ -33,7 +33,7 @@ export default function Home() {
               <div className={styles.welcome}>Welcome</div>
               <div className={styles.internship}>Internship Drive</div>
               <div className={styles.quote}>
-                lorem ipsum internship drive is an amazing event for you all
+                Internship drive is an amazing event for you all
                 guys{" "}
               </div>
             </div>
