@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from '../../styles/id/login.module.css'
 import Link from 'next/link'
-import { signIn } from 'next-auth/react'
-import { useSession } from 'next-auth/react'
+import { signIn, signOut } from 'next-auth/react'
 
 import { useRouter } from 'next/router'
+import { useSession } from 'next-auth/react'
 
 function SignIn() {
   const router = useRouter()
@@ -12,6 +12,25 @@ function SignIn() {
   const [email, setEmail] = useState('aa@g.co')
   const [password, setPassword] = useState('admin')
   const [loginError, setLoginError] = useState('')
+
+  // const { data: session, status } = useSession()
+
+  const { data: session, status } = useSession()
+  useEffect(() => {
+    console.log(session)
+    console.log(status)
+    if (session) {
+      console.log('something', session)
+      // return (
+      //   <>
+      //     Signed in as {session} <br />
+      //     <button onClick={() => signOut()}>Sign out</button>
+      //   </>
+      // )
+    } else {
+      console.log('empty')
+    }
+  }, [session, status])
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -50,6 +69,14 @@ function SignIn() {
     //   .catch((error) => {
     //     console.log(error)
     //   })
+  }
+
+  if (status == 'authenticated') {
+    return (
+      <div>
+        <h1>authenticated</h1>
+      </div>
+    )
   }
 
   return (
