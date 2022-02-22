@@ -55,6 +55,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
     <>
       <Head>
         <Script src="https://checkout.razorpay.com/v1/checkout.js"></Script>
+        <title>ECell</title>
       </Head>
       <SessionProvider session={session}>
         <div className={nav ? 'oldnav' : 'Navbar'}>

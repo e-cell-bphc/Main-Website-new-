@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from '../../styles/id/home.module.css'
 import Social from '../../components/id/social'
 import Scroll from '../../components/id/scroll'
