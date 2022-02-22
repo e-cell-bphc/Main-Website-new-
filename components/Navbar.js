@@ -5,11 +5,12 @@ import Link from "next/link";
 import pic1 from "../assets/images/mainlogo.png";
 import pic2 from "../assets/images/e_logo.png";
 
-export default function Navbar() {
+export default function Navbar(props) {
   const [isHamOn, setIsHamOn] = useState(false);
   const handleClick = () => {
     setIsHamOn(!isHamOn);
   };
+ 
   return (
     <>
       <div className={Navbarcss.navbar}>
@@ -38,9 +39,16 @@ export default function Navbar() {
           <Link href="/about">
             <a className={Navbarcss.button}>About us</a>
           </Link>
-          <a href="/id/portal">
-            <a className={Navbarcss.button}>Internship Drive</a>
-          </a>
+          <Link href="/id/portal">
+            <a
+              onClick={() => {
+                setrender('ID')
+              }}
+              className={Navbarcss.button}
+            >
+              Internship Drive
+            </a>
+          </Link>
           {/*<Link href="/welcome/signup">
             <a className={(Navbarcss.button, Navbarcss.rightmostbutton)}>
               Sign Up
@@ -51,7 +59,14 @@ export default function Navbar() {
 
       <div className={Navbarcss.topbar}>
         <div className={Navbarcss.mb_logo}>
-          <Link href="/"><Image src={pic2} alt="ECell logo"  layout="fill" objectFit="cover" /></Link>
+          <Link href="/">
+            <Image
+              src={pic2}
+              alt="ECell logo"
+              layout="fill"
+              objectFit="cover"
+            />
+          </Link>
         </div>
         <div className={Navbarcss.ham} onClick={() => handleClick()}>
           <div className={isHamOn ? Navbarcss.ham1 : null}></div>
@@ -97,11 +112,16 @@ export default function Navbar() {
             About Us
           </a>
         </Link>
-        <a href="/id/portal">
+        <Link
+          href="/id/portal"
+          onClick={() => {
+            setrender(true)
+          }}
+        >
           <a onClick={() => handleClick()} className={Navbarcss.mobilebtn}>
             Internship Drive
           </a>
-        </a>
+        </Link>
         {/* <Link href="/welcome/signup">
           <a onClick={() => handleClick()} className={Navbarcss.mobilebtn}>
             Sign Up
@@ -109,5 +129,5 @@ export default function Navbar() {
 </Link>*/}
       </div>
     </>
-  );
+  )
 }

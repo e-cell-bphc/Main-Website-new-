@@ -334,21 +334,21 @@ margin-bottom: 5vh;
 
 @keyframes up {
   0%{
-    transform: translate(44vw,-10vh);
+    transform: translate(44vw,-17vh);
     font-size: 0.8em;
 
   }
   33.33%{
     font-size: 0.8em;
-    transform: translate(0vw,-10vh);
+    transform: translate(0vw,-17vh);
   }
   86.66%{
     font-size: 0.8em;
-    transform: translate(0vw,-10vh);
+    transform: translate(0vw,-17vh);
   }
   100%{
     font-size: 0.9em;
-    transform: translate(-26vw, -20vh);
+    transform: translate(-26vw, -29vh);
   }
 }
 .video{
@@ -359,7 +359,7 @@ margin-bottom: 5vh;
 .quote{
   font-size: 0.15em;
   left: -25vw;
-  margin-top: 6vh;
+  margin-top: 1vh;
 
 }
 @keyframes left {
