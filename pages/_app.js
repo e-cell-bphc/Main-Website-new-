@@ -5,6 +5,7 @@ import Navbar1 from '../components/id/navbarID'
 import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import { SessionProvider } from 'next-auth/react'
+import Script from 'next/script'
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   const [nav, setNav] = useState(true)
@@ -53,7 +54,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (
     <>
       <Head>
-        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+        <Script src="https://checkout.razorpay.com/v1/checkout.js"></Script>
       </Head>
       <SessionProvider session={session}>
         <div className={nav ? 'oldnav' : 'Navbar'}>
