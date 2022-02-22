@@ -58,9 +58,7 @@ function Profile() {
         {/* <div className={styles.inner_left}>
                 </div> */}
         <div className={styles.inner_right}>
-          <div className={styles.inner_right_top}>
-            {status == 'authenticated' ? 'Your auth Profile' : 'Go away'}
-          </div>
+          <div className={styles.inner_right_top}>Profile</div>
           <div className={styles.inner_right_bottom}>
             <div className={styles.user_form}>
               <div>
