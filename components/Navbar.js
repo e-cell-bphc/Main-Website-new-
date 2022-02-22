@@ -105,7 +105,7 @@ export default function Navbar() {
           </a>
         </Link>
         <a
-          href="/id/portal"
+          href="https://www.ecellbphc.in/id/portal"
           onClick={() => handleClick()}
           className={Navbarcss.mobilebtn}
         >
