@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '../../styles/id/profile.module.css'
 import { useState, useEffect } from 'react'
-import launchpad from '../../assets/launchpad.png'
+import launchpad from '../../assets/Launchpad.png'
 import Image from 'next/image'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
