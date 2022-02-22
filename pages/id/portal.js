@@ -8,6 +8,8 @@ import CompCards from '../../components/id/comCards'
 import ReactPlayer from 'react-player'
 import { useEffect, useState } from 'react'
 import { useSession } from 'next-auth/react'
+import { signIn, signOut } from 'next-auth/react'
+
 export default function Home() {
   const [playing, setPlaying] = useState(false)
 
@@ -46,7 +48,25 @@ export default function Home() {
             <div className={styles.heading}>
               <div className={styles.welcome}>Welcome</div>
               <div className={styles.internship}>Internship Drive</div>
-              {status==="authenticated"?<button className={styles.portalbtn}>Redirect to Portal</button>:<button className={styles.dashbtn}>Log in to Dashboard</button>}
+              {status === 'authenticated' ? (
+                <Link href="/profile">
+                  <button className={styles.portalbtn}>
+                    Redirect to Portal
+                  </button>
+                </Link>
+              ) : (
+                <button
+                  className={styles.dashbtn}
+                  onClick={(e) => {
+                    e.preventDefault()
+                    signIn(null, {
+                      callbackUrl: 'https://ecellbphc.in/id/profile'
+                    })
+                  }}
+                >
+                  Log in to Dashboard
+                </button>
+              )}
               {/* <button className={styles.portalbtn}>Redirect to Portal</button> */}
             </div>
             <div className={styles.line2}></div>
