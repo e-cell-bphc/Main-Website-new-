@@ -1,11 +1,11 @@
 import NextAuth from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials'
-import axios from 'axios'
+const jwt_decode = require('jwt-decode')
 
 const providers = [
   CredentialsProvider({
     // The name to display on the sign in form (e.g. 'Sign in with...')
-    name: '',
+    name: 'credentials',
     // The credentials is used to generate a suitable form on the sign in page.
     // You can specify whatever fields you are expecting to be submitted.
     // e.g. domain, username, password, 2FA token, etc.
@@ -25,12 +25,17 @@ const providers = [
       // e.g. return { id: 1, name: 'J Smith', email: 'jsmith@example.com' }
       // You can also use the `req` object to obtain additional parameters
       // (i.e., the request IP address)
-      const res = await fetch('http://localhost:4000/api/auth/login', {
-        method: 'POST',
-        body: JSON.stringify(credentials),
-        headers: { 'Content-Type': 'application/json' }
-      })
+      const res = await fetch(
+        'https://backend-api-2022.onrender.com/api/auth/authorize',
+        {
+          method: 'POST',
+          body: JSON.stringify(credentials),
+          headers: { 'Content-Type': 'application/json' }
+        }
+      )
       const user = await res.json()
+      console.log(user)
+      console.log(res.ok)
 
       // If no error and we have user data, return it
       if (res.ok && user) {
@@ -75,24 +80,43 @@ const providers = [
 
 const callbacks = {
   // Getting the JWT token from API response
-  async jwt(token, user) {
-    if (user) {
-      token.accessToken = user.data.token
-      console.log(token.accessToken)
-      console.log(user.data.token)
-    }
+  // async jwt(token, user) {
+  //   console.log('rx', token, user)
+  //   if (user) {
+  //     token.accessToken = user.data.token
+  //     console.log(token.accessToken)
+  //     console.log(user.data.token)
+  //   } else {
+  //     console.log('else')
+  //   }
 
-    return token
+  //   return token
+  // },
+  async jwt(x) {
+    console.log('rx', x)
+    // Persist the OAuth access_token to the token right after signin
+    console.log('298386721', x.user)
+    if (x.user) {
+      x.token.accessToken = x.user.data.token
+    }
+    console.log('djsffhb', x.token)
+    return x.token
   },
 
-  async session(session, token) {
+  async session({ session, token }) {
+    console.log('sess', session, token)
     session.accessToken = token.accessToken
+    var decoded = jwt_decode(token.accessToken)
+    session.user.email = decoded.email
+    session.user._id = decoded._id
+    console.log('sess1', session)
     return session
   }
 }
 
 const options = {
   providers,
+  secret: process.env.SECRET,
   callbacks
 }
 
