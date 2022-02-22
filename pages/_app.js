@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Navbar1 from '../components/id/navbarID'
 import { useState, useEffect } from 'react'
-import { set } from 'date-fns'
+import Head from 'next/head'
 import { SessionProvider } from 'next-auth/react'
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
@@ -52,6 +52,9 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   // console.log(nav + "hello");
   return (
     <>
+      <Head>
+        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+      </Head>
       <SessionProvider session={session}>
         <div className={nav ? 'oldnav' : 'Navbar'}>
           {nav ? <Navbar /> : <Navbar1 />}

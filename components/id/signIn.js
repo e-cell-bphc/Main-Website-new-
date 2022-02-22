@@ -37,7 +37,7 @@ function SignIn() {
     // event.stopPropagation()
 
     console.log('fn called')
-    signIn()
+    signIn(null, { callbackUrl: 'https://ecellbphc.in/id/profile' })
 
     // signIn('credentials', {
     //   name: '',

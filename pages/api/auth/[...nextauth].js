@@ -1,5 +1,6 @@
 import NextAuth from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials'
+const jwt_decode = require('jwt-decode')
 
 const providers = [
   CredentialsProvider({
@@ -24,11 +25,14 @@ const providers = [
       // e.g. return { id: 1, name: 'J Smith', email: 'jsmith@example.com' }
       // You can also use the `req` object to obtain additional parameters
       // (i.e., the request IP address)
-      const res = await fetch('http://localhost:4000/api/auth/login', {
-        method: 'POST',
-        body: JSON.stringify(credentials),
-        headers: { 'Content-Type': 'application/json' }
-      })
+      const res = await fetch(
+        'https://backend-api-2022.onrender.com/api/auth/authorize',
+        {
+          method: 'POST',
+          body: JSON.stringify(credentials),
+          headers: { 'Content-Type': 'application/json' }
+        }
+      )
       const user = await res.json()
       console.log(user)
       console.log(res.ok)
@@ -102,6 +106,9 @@ const callbacks = {
   async session({ session, token }) {
     console.log('sess', session, token)
     session.accessToken = token.accessToken
+    var decoded = jwt_decode(token.accessToken)
+    session.user.email = decoded.email
+    session.user._id = decoded._id
     console.log('sess1', session)
     return session
   }

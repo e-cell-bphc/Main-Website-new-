@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import launchpad from '../../assets/launchpad.png'
 import Image from 'next/image'
 import { useSession } from 'next-auth/react'
+import { useRouter } from 'next/router'
 
 function Profile() {
   const [userData, setUserData] = useState({
@@ -16,9 +17,9 @@ function Profile() {
     resume: ''
   })
 
-  //   const [something, setSomething] = useState('')
-
   const { data: session, status } = useSession()
+  const router = useRouter()
+
   useEffect(() => {
     console.log(session)
     console.log(status)
@@ -33,7 +34,16 @@ function Profile() {
     } else {
       console.log('empty')
     }
+
+    if (status === 'unauthenticated') {
+      router.push('/id/portal')
+    }
   }, [session, status])
+
+  useEffect(() => {
+    if (status === 'authenticated') {
+    }
+  }, [status])
 
   //   if (status === 'authenticated') {
   //     setSomething('sdjfbk')
