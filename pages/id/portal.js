@@ -49,7 +49,7 @@ export default function Home() {
               <div className={styles.welcome}>Welcome</div>
               <div className={styles.internship}>Internship Drive</div>
               {status === 'authenticated' ? (
-                <Link href="/profile">
+                <Link href="/id/profile">
                   <button className={styles.portalbtn}>
                     Redirect to Portal
                   </button>
