@@ -104,11 +104,13 @@ export default function Navbar() {
             About Us
           </a>
         </Link>
-        <Link href="/id/portal">
-          <a onClick={() => handleClick()} className={Navbarcss.mobilebtn}>
-            Internship Drive
-          </a>
-        </Link>
+        <a
+          href="/id/portal"
+          onClick={() => handleClick()}
+          className={Navbarcss.mobilebtn}
+        >
+          Internship Drive
+        </a>
         {/* <Link href="/welcome/signup">
           <a onClick={() => handleClick()} className={Navbarcss.mobilebtn}>
             Sign Up
