@@ -17,6 +17,22 @@ function Navbar() {
     setHamOn(() => !hamOn)
   }
 
+  const initializeRazorpay = () => {
+    return new Promise((resolve) => {
+      const script = document.createElement('script')
+      script.src = 'https://checkout.razorpay.com/v1/checkout.js'
+
+      script.onload = () => {
+        resolve(true)
+      }
+      script.onerror = () => {
+        resolve(false)
+      }
+
+      document.body.appendChild(script)
+    })
+  }
+
   const { data: session, status } = useSession()
   useEffect(() => {
     console.log(session)
@@ -80,9 +96,11 @@ function Navbar() {
     // }
   ]
 
-  function openRazorpay(e) {
+  async function openRazorpay(e) {
     e.preventDefault()
-    if (session.user.email && session.user._id) {
+    const res = await initializeRazorpay()
+
+    if (session.user.email && session.user._id && res) {
       axios
         .post(
           'https://backend-api-2022.onrender.com/api/payments/createOrder',
