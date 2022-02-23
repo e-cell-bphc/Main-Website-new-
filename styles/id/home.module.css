@@ -418,7 +418,6 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
 
 @media screen and (max-width:1400px) {
 
-<<<<<<< HEAD
 @keyframes up {
   0%{
     transform: translate(44vw,-17vh);
@@ -447,31 +446,7 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
   font-size: 0.15em;
   left: -25vw;
   margin-top: 1vh;
-=======
-  @keyframes up {
-    0% {
-      transform: translate(44vw, -10vh);
-      font-size: 0.8em;
-
-    }
->>>>>>> refs/remotes/origin/main
-
-    33.33% {
-      font-size: 0.8em;
-      transform: translate(0vw, -10vh);
-    }
-
-    86.66% {
-      font-size: 0.8em;
-      transform: translate(0vw, -10vh);
-    }
-
-    100% {
-      font-size: 0.9em;
-      transform: translate(-26vw, -20vh);
-    }
   }
-
   .video {
     width: 42vw;
     height: 23vw;
