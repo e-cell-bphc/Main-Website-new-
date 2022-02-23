@@ -35,14 +35,7 @@ function Profile() {
       console.log('empty')
     }
 
-    if (status === 'unauthenticated') {
-      router.push('/id/portal')
-    }
-  }, [session, status])
-
-  useEffect(() => {
     if (status === 'authenticated') {
-      setUserData({ ...userData, email: session.user.email || '' })
       axios
         .get(
           `https://backend-api-2022.onrender.com/api/users/${session.user._id}`,
@@ -53,10 +46,24 @@ function Profile() {
           }
         )
         .then((res) => {
-          setUserData(res.data)
+          setUserData({
+            ...userData,
+            name: res.data.data.name,
+            email: res.data.data.email,
+            phoneNumber: res.data.data.phoneNumber,
+            college: res.data.data.college,
+            yos: res.data.data.yos,
+            resumeURL: res.data.data.resumeURL
+          })
         })
     }
-  }, [status])
+
+    if (status === 'unauthenticated') {
+      router.push('/id/portal')
+    }
+  }, [session, status])
+
+  // useEffect(() => {}, [status])
 
   //   if (status === 'authenticated') {
   //     setSomething('sdjfbk')
