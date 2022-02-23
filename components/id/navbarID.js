@@ -17,6 +17,22 @@ function Navbar() {
     setHamOn(() => !hamOn)
   }
 
+  const initializeRazorpay = () => {
+    return new Promise((resolve) => {
+      const script = document.createElement('script')
+      script.src = 'https://checkout.razorpay.com/v1/checkout.js'
+
+      script.onload = () => {
+        resolve(true)
+      }
+      script.onerror = () => {
+        resolve(false)
+      }
+
+      document.body.appendChild(script)
+    })
+  }
+
   const { data: session, status } = useSession()
   useEffect(() => {
     console.log(session)
@@ -80,10 +96,11 @@ function Navbar() {
     // }
   ]
 
-  function openRazorpay(e) {
+  async function openRazorpay(e) {
     e.preventDefault()
+    const res = await initializeRazorpay()
 
-    if (session.user.email && session.user._id) {
+    if (session.user.email && session.user._id && res) {
       axios
         .post(
           'https://backend-api-2022.onrender.com/api/payments/createOrder',
@@ -101,7 +118,8 @@ function Navbar() {
               currency: 'INR',
               name: 'ECell, BITS Pilani',
               description: 'Test Transaction',
-              image: 'https://example.com/your_logo',
+              image:
+                'https://www.ecellbphc.in/_next/image?url=%2F_next%2Fstatic%2Fimage%2Fassets%2Fimages%2Fmainlogo.9c338b5ed23edcdf418f531e5ac4ab38.png&w=256&q=75',
               order_id: res.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
               callback_url: 'https://ecellbphc.in/id/profile',
               // prefill: {
