@@ -10,7 +10,7 @@ import Script from 'next/script'
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   const [nav, setNav] = useState(true)
   const [foot, setFoot] = useState(false)
-  const [render, setrender] = useState('');
+  const [render, setrender] = useState('')
 
   // if (process.browser) {
   //   let param = window.location.pathname
@@ -20,7 +20,6 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   //   }
   // }
 
- 
   useEffect(() => {
     if (process.browser) {
       let params = window.location.pathname
@@ -59,18 +58,18 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
       }
     }
   }, [render])
-  
+
   console.log(render)
   // console.log(nav + "hello");
   return (
     <>
       <Head>
         <Script src="https://checkout.razorpay.com/v1/checkout.js"></Script>
-        <title>ECell</title>
+        <title>ECell | Launchpad </title>
       </Head>
       <SessionProvider session={session}>
         <div className={nav ? 'oldnav' : 'Navbar'}>
-          {nav ? <Navbar hook={setrender}/> : <Navbar1 />}
+          {nav ? <Navbar hook={setrender} /> : <Navbar1 />}
         </div>
         <div className={nav ? 'nav0' : 'null'}>
           <Component {...pageProps} />

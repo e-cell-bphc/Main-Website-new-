@@ -117,7 +117,10 @@ const callbacks = {
 const options = {
   providers,
   secret: process.env.SECRET,
-  callbacks
+  callbacks,
+  // pages: {
+  //   signIn: "/login",
+  //   },    
 }
 
 export default (req, res) => NextAuth(req, res, options)

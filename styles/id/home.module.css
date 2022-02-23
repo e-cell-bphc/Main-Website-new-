@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Montserrat:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300&display=swap');
 
-
 .container {
   padding: 0 2rem;
   /* background-color: #161616;
@@ -12,10 +11,10 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
   flex-direction: row;
   align-items: center;
   justify-content: center;
-
 }
 
-.portalbtn, .dashbtn {
+.portalbtn,
+.dashbtn {
   background-color: transparent;
   border: 2px solid rgb(0, 104, 189);
   color: white;
@@ -23,6 +22,14 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
   padding: 10px;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.portalbtn:hover {
+  cursor: pointer;
+}
+
+.dashbtn:hover {
+  cursor: pointer;
 }
 
 .portal {
@@ -48,7 +55,6 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
   margin-bottom: 20vh;
 
   text-align: center;
-
 }
 
 .heading {
@@ -61,7 +67,6 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
   animation: shiftbox 1s 3.8s forwards;
-
 }
 
 @keyframes shiftbox {
@@ -70,7 +75,6 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
     height: 30vh;
     transform: translateX(-22vw);
     width: 42vw;
-
   }
 
   99% {
@@ -112,7 +116,6 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
   70% {
     opacity: 1;
     transform: translateY(0vh);
-
   }
 
   99% {
@@ -124,7 +127,6 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
     opacity: 0;
     transform: translateY(35vh);
   }
-
 }
 
 .About {
@@ -158,7 +160,6 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
   margin-bottom: 25px;
   color: white;
   font-family: 'Bebas Neue', cursive;
-
 }
 
 .Companies {
@@ -205,8 +206,6 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
   background: white;
   animation: left 7s forwards;
   transform: translateX(22vw);
-
-
 }
 
 .line2 {
@@ -255,7 +254,6 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
   90% {
     height: 35vh;
     transform: translateX(40vw);
-
   }
 
   100% {
@@ -304,15 +302,12 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
   90% {
     height: 35vh;
     transform: translateX(-2vw);
-
   }
 
   100% {
     height: 0;
     transform: translateX(-2vw);
-
   }
-
 }
 
 .internship {
@@ -321,7 +316,8 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
   font-size: 1em;
 }
 
-.portalbtn,.dashbtn{
+.portalbtn,
+.dashbtn {
   transform: translate(44vw, -15vh);
   animation: up2 3s 3.8s forwards;
 }
@@ -329,7 +325,6 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
   0% {
     transform: translate(44vw, -16vh);
     font-size: 1em;
-
   }
 
   33.33% {
@@ -403,7 +398,6 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
   position: relative;
   top: -23vh;
   left: -26vw;
-
 }
 
 @keyframes quote {
@@ -416,36 +410,34 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
   }
 }
 
-@media screen and (max-width:1400px) {
-
-@keyframes up {
-  0%{
-    transform: translate(44vw,-17vh);
-    font-size: 0.8em;
-
+@media screen and (max-width: 1400px) {
+  @keyframes up {
+    0% {
+      transform: translate(44vw, -17vh);
+      font-size: 0.8em;
+    }
+    33.33% {
+      font-size: 0.8em;
+      transform: translate(0vw, -17vh);
+    }
+    86.66% {
+      font-size: 0.8em;
+      transform: translate(0vw, -17vh);
+    }
+    100% {
+      font-size: 0.9em;
+      transform: translate(-26vw, -29vh);
+    }
   }
-  33.33%{
-    font-size: 0.8em;
-    transform: translate(0vw,-17vh);
+  .video {
+    width: 42vw;
+    height: 23vw;
+    top: 9em;
   }
-  86.66%{
-    font-size: 0.8em;
-    transform: translate(0vw,-17vh);
-  }
-  100%{
-    font-size: 0.9em;
-    transform: translate(-26vw, -29vh);
-  }
-}
-.video{
-  width: 42vw;
-  height: 23vw;
-  top: 9em;
-}
-.quote{
-  font-size: 0.15em;
-  left: -25vw;
-  margin-top: 1vh;
+  .quote {
+    font-size: 0.15em;
+    left: -25vw;
+    margin-top: 1vh;
   }
   .video {
     width: 42vw;
@@ -457,7 +449,6 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
     font-size: 0.15em;
     left: -25vw;
     margin-top: 6vh;
-
   }
 
   @keyframes left {
@@ -499,7 +490,6 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
     90% {
       height: 30vh;
       transform: translateX(40vw);
-
     }
 
     100% {
@@ -548,15 +538,12 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
     90% {
       height: 30vh;
       transform: translateX(-2vw);
-
     }
 
     100% {
       height: 0;
       transform: translateX(-2vw);
-
     }
-
   }
 
   .welcome {
@@ -572,14 +559,13 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
   }
 }
 
-@media screen and (max-width:550px) {
+@media screen and (max-width: 550px) {
   .Companies {
     display: none;
   }
 
   .heading {
     width: 80vw;
-
   }
 
   .internship {
@@ -590,7 +576,6 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
     0% {
       transform: translate(80vw, -2.5vh);
       font-size: 0.6em;
-
     }
 
     33.33% {
@@ -615,7 +600,6 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
       height: 25vh;
       transform: translateX(-35vw);
       width: 80vw;
-
     }
 
     99% {
@@ -672,7 +656,6 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
     90% {
       height: 20vh;
       transform: translateX(76vw);
-
     }
 
     100% {
@@ -721,13 +704,11 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
     90% {
       height: 20vh;
       transform: translateX(-4vw);
-
     }
 
     100% {
       height: 0;
       transform: translateX(-4vw);
-
     }
   }
 
@@ -742,7 +723,6 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
   }
 
   .container {
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -775,7 +755,6 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
       font-size: 0.7em;
       opacity: 1;
       transform: translateY(4vh);
-
     }
 
     99% {
