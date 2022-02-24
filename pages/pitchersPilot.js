@@ -47,7 +47,7 @@ function PitchersPilot() {
        classy: 'three',
        questionid: 'qthree',
        question: 'How can I register for the competitions?',
-       answer: 'You can register on our website. (The registerations for Launchpad 22` are closed. Hope to see you next year!)'
+       answer: 'You can register on our website.'
      },
      {
        id: 6,
@@ -55,7 +55,7 @@ function PitchersPilot() {
        questionid: 'qthree',
        question: 'When is the last date?',
        answer:
-         'The last date for registration of the competition was 10th February 2022.'
+         'The last date for registration will be update soon.'
      },
    ]
 
