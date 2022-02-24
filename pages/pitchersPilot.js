@@ -78,7 +78,7 @@ function PitchersPilot() {
             seeking funds and mentorship to pitch their ideas directly to our
             esteemed panel, who can choose to invest in the company based on
             their reasoning. Touted as the central attraction of Launchpad
-            `&apos;`21, startups from all across the country, including various
+            &apos;21, startups from all across the country, including various
             prestigious universities, will be hosted to contest the event.
           </div>
           <div className={styles.container_fluid}>
