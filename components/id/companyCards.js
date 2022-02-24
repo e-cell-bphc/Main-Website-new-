@@ -8,39 +8,13 @@ function CompanyCards() {
     {
       id: 1,
       image: './',
-      prop1: 'Yantro-Mitra',
+      prop1: 'Company X',
       prop2: 'Unpaid',
-      prop3: 'kuch bhi',
+      prop3: 'XYZ developer',
       path: '',
       status: 'Apply'
     },
-    {
-      id: 2,
-      image: '',
-      prop1: 'Apple',
-      prop2: '$1,000',
-      prop3: 'Hardware CS',
-      path: '',
-      status: 'Apply'
-    },
-    {
-      id: 3,
-      image: '#',
-      prop1: 'HDFC',
-      prop2: '$600',
-      prop3: 'Cyber-security',
-      path: '',
-      status: 'Apply'
-    },
-    {
-      id: 4,
-      image: '#',
-      prop1: 'Giordano',
-      prop2: '$200',
-      prop3: 'Product Design',
-      path: '',
-      status: 'Apply'
-    }
+    
   ]
   return (
     <>
