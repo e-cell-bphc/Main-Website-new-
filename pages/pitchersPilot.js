@@ -67,14 +67,14 @@ function PitchersPilot() {
         <div className={styles.container}>
           <div className={styles.header}>
             <div className={styles.event}>
-              <div className={styles.name}>Pitcher`&apos;`s Pilot</div>
+              <div className={styles.name}>Pitcher&apos;s Pilot</div>
             </div>
           </div>
           <div className={styles.aboutHead}>
-            What is Pitcher`&apos;`s Pilot?
+            What is Pitcher&apos;s Pilot?
           </div>
           <div className={styles.about}>
-            Pitcher`&apos;`s Pilot provides a platform for seed-stage startups
+            Pitcher&apos;s Pilot provides a platform for seed-stage startups
             seeking funds and mentorship to pitch their ideas directly to our
             esteemed panel, who can choose to invest in the company based on
             their reasoning. Touted as the central attraction of Launchpad
