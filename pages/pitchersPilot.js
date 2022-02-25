@@ -152,19 +152,7 @@ function PitchersPilot() {
       name2: 'deck',
       value2: formdata.deck
     },
-    {
-      id: 6,
-
-      label1: 'Link of Video',
-      type1:"text",
-      name11: 'link',
-      value1: formdata.link,
-
-      label2: 'Social media / Website Link (if any)',
-      type2:"text",
-      name2: 'website',
-      value2: formdata.website
-    },
+   
   ]
   const handlechange = (e) => {
     e.preventDefault();
