@@ -104,12 +104,12 @@ function PitchersPilot() {
       id: 2,
 
       label1: 'Contact Number',
-      type:"number",
+      type1:"number",
       name11: 'contact',
       value1: formdata.contact,
 
       label2: 'Email ID',
-      type:"email",
+      type22:"email",
       name2: 'email',
       value2: formdata.email
     },
@@ -117,12 +117,12 @@ function PitchersPilot() {
       id: 3,
 
       label1: 'Sector Of StartUp',
-      type:"text",
+      type1:"text",
       name11: 'sector',
       value1: formdata.sector,
 
       label2: 'Stage OF StartUp',
-      type:"text",
+      type2:"text",
       name2: 'stage',
       value2: formdata.stage
     },
@@ -130,25 +130,25 @@ function PitchersPilot() {
       id: 4,
 
       label1: 'Number Of Cofounders',
-      type:"number",
+      type1:"number",
       name11: 'cofounders',
       value1: formdata.cofounders,
 
       label2: 'Revenue (if any)',
-      type:"number",
+      type2:"number",
       name2: 'revenue',
       value2: formdata.revenue
     },
     {
       id: 5,
 
-      label1: 'Date of Startup (DD/MM/YYYY)',
-      type:"date",
+      label1: 'Date of Startup',
+      type1:"date",
       name11: 'date',
       value1: formdata.date,
 
-      label2: 'Pitch Deck',
-      type:"text",
+      label2: 'Pitch Deck(Drive link)',
+      type2:"text",
       name2: 'deck',
       value2: formdata.deck
     },
@@ -207,7 +207,7 @@ function PitchersPilot() {
        image:
          'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2FeCELL.BPHC%2F&psig=AOvVaw35nBI8g6Br43zsJCHpUSXo&ust=1645856957114000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCOD68oydmvYCFQAAAAAdAAAAABAD',
        order_id: data.id,
-       callback_url: 'https://eneqd3r9zrjok.x.pipedream.net/',
+       callback_url: 'https://www.ecellbphc.in/razorCallback',
        prefill: {
          name: '',
          email: '',
