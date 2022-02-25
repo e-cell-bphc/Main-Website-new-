@@ -243,7 +243,6 @@ function PitchersPilot() {
                 className={styles.Register}
                 onClick={(e) => {
                   switchForm(e)
-                  
                 }}
               >
                 Register
@@ -272,7 +271,7 @@ function PitchersPilot() {
           <div className={styles.formContainer}>
             <div className={styles.form}>
               <div className={styles.formheader}>Pitcher&apos;s Pilot</div>
-                {data.map((data) => {
+              {data.map((data) => {
                 return (
                   <div className={styles.row} key={data.id}>
                     <div className={styles.inputs}>
@@ -283,8 +282,7 @@ function PitchersPilot() {
                         name={data.name11}
                         value={data.value1}
                         required
-                        onChange={
-                          handlechange}
+                        onChange={handlechange}
                       />
                     </div>
                     <div className={styles.inputs}>
@@ -294,19 +292,29 @@ function PitchersPilot() {
                         type={data.type2}
                         name={data.name2}
                         value={data.value2}
-                        onChange={
-                          handlechange
-                        }
+                        onChange={handlechange}
                       />
                     </div>
                   </div>
-                  )
-                })}
-                <div className={styles.submit} onClick={
-                  handleSubmit
-                }>
-                  Submit
+                )
+              })}
+              <div className={styles.row}>
+                <div className={styles.inputs}>
+                  <label className={styles.label}>
+                    Social media / Website Link (if any)
+                  </label>
+                  <input
+                    className={styles.input}
+                    type="text"
+                    name="website"
+                    value={formdata.website}
+                    onChange={handlechange}
+                  />
                 </div>
+              </div>
+              <div className={styles.submit} onClick={handleSubmit}>
+                Submit
+              </div>
             </div>
           </div>
         )}

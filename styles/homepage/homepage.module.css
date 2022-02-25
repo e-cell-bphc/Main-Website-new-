@@ -658,7 +658,7 @@
     transform: translateY(-2000px);
   }
 }
-@media screen and (max-width: 1310px) and (min-width: 1024px) {
+@media screen and (max-width: 1410px) and (min-width: 1024px) {
   .head {
     font-size: 138px;
   }
