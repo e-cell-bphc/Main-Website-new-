@@ -156,12 +156,12 @@ function PitchersPilot() {
       id: 6,
 
       label1: 'Link of Video',
-      type:"text",
+      type1:"text",
       name11: 'link',
       value1: formdata.link,
 
       label2: 'Social media / Website Link (if any)',
-      type:"text",
+      type2:"text",
       name2: 'website',
       value2: formdata.website
     },
