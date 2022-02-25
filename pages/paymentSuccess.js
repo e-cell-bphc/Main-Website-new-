@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'next/link'
+import  Link  from 'next/link'
 import styles from '../styles/razorCallback.module.css'
 import { faCheckDouble } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -14,7 +14,7 @@ function PaymentSuccess() {
         <div className={styles.success}>Payment Successful</div>
         <div className={styles.back}>
           Click here to go back to
-          <a href="/pitchersPilot" className={styles.link}>Pitcher&apos;s Pilot</a>
+          <Link href="/pitchersPilot" className={styles.link}>Pitcher&apos;s Pilot</Link>
         </div>
       </div>
     </div>
