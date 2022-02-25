@@ -199,7 +199,7 @@ function PitchersPilot() {
     const data = await fetch('/api/razor',{method: 'POST'})
 
      var options = {
-       key: 'rzp_test_GonJayri4wLraB',
+       key: 'rzp_live_FWRQdHoaQSe74v',
        amount: "50000",
        currency: data.currency,
        name: 'Pitcher`s Pilot',
