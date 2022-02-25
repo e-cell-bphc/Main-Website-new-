@@ -191,7 +191,7 @@ function PitchersPilot() {
        amount: '35000',
        currency: data.currency,
        name: 'Pitcher`s Pilot',
-       description: 'Test Transaction',
+       description: 'Transaction',
        image:
          'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2FeCELL.BPHC%2F&psig=AOvVaw35nBI8g6Br43zsJCHpUSXo&ust=1645856957114000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCOD68oydmvYCFQAAAAAdAAAAABAD',
        order_id: data.id,
