@@ -18,15 +18,5 @@ app.post('/razorpay', async (req, res) => {
     receipt: shortid.generate(),
   }
 
-  try {
-    const response = await razorpay.orders.create(options)
-    console.log(response)
-    res.json({
-      id: response.id,
-      currency: response.currency,
-      amount: response.amount
-    })
-  } catch (error) {
-    console.log(error)
-  }
+ 
 })
