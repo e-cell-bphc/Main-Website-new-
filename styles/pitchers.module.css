@@ -5,6 +5,77 @@
     align-items: center;
 
 }
+.formContainer{
+    min-height: 90vh;
+
+}
+.form{
+    background: rgb(14, 14, 14);
+    height: max-content;
+    width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 5em;
+    font-family: "Montserrat", sans-serif;
+}
+.formheader{
+    font-size: 3em;
+    font-weight: 700;
+    border-bottom:1px solid rgb(8, 126, 223) ;
+    margin-bottom: 1em;
+}
+.row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.inputs{
+    width: 35%;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.input{
+    outline: none;
+    background-color: black;
+    border: none;
+    height: 3em;
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.1em;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.input:focus{
+    border: 1px solid white;
+}
+.label{
+    font-size: 1.2em;
+}
+.submit{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-weight: 800;
+    font-size: 1.6em;
+    width: auto;
+    height: auto;
+    background: rgb(11, 87, 150);
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+}
+.submit:hover{
+    cursor: pointer;
+    background-color: rgb(8, 126, 223);
+}
 .header {
   width: 80%;
   display: flex;
@@ -15,6 +86,14 @@
     margin-right: auto;
   height: max-content;
   
+}
+.Register{
+    font-size: 25px;
+    border: 1px solid blue;
+    border-radius: 5px;
+    margin-top: 2em;
+    margin-bottom: 15px;
+    padding: 10px 15px 10px 15px;
 }
 .event {
   display: flex;
@@ -116,23 +195,18 @@
   margin-top: 50px;
 }
 
+
 .faq {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-@media screen and (max-width: 580px) {
-    .container_fluid{
-        padding: 0;
-    }
-    .faq{
-   width: 100vw;
-  }
-    .accordian {
-    margin-top: 50px;
-  }
-}
 @media screen and (max-width: 1440px){
+    .form{
+        transform: scale(0.9);
+        margin-top: 1em;
+        width: 70vw;
+    }
     .container_fluid{
         transform: scale(0.9);
     }
@@ -145,4 +219,27 @@
     .about{
         font-size: 18px;
     }
+}
+@media screen and (max-width: 580px) {
+    .container_fluid{
+        padding: 0;
+    }
+    .faq{
+   width: 100vw;
+  }
+    .accordian {
+    margin-top: 50px;
+  }
+  .form{
+      width: 100vw;
+      margin: 0;
+  }
+  .row{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+  .inputs{
+      width: 80%;
+  }
 }
