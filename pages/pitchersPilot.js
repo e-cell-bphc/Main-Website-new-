@@ -200,11 +200,12 @@ function PitchersPilot() {
 
      var options = {
        key: 'rzp_live_FWRQdHoaQSe74v',
-       amount: "100",
+       amount: '35000',
        currency: data.currency,
        name: 'Pitcher`s Pilot',
        description: 'Test Transaction',
-       image: 'https://example.com/your_logo',
+       image:
+         'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2FeCELL.BPHC%2F&psig=AOvVaw35nBI8g6Br43zsJCHpUSXo&ust=1645856957114000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCOD68oydmvYCFQAAAAAdAAAAABAD',
        order_id: data.id,
        callback_url: 'https://eneqd3r9zrjok.x.pipedream.net/',
        prefill: {
@@ -281,6 +282,7 @@ function PitchersPilot() {
                         type={data.type1}
                         name={data.name11}
                         value={data.value1}
+                        required
                         onChange={
                           handlechange}
                       />
