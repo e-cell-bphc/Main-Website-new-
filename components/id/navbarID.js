@@ -113,15 +113,15 @@ function Navbar() {
           console.log('res', res.data)
           if (res.data.id) {
             var options = {
-              key: 'rzp_test_filNVUgZb3Ygl7', // Enter the Key ID generated from the Dashboard
+              key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID, // Enter the Key ID generated from the Dashboard
               amount: '50000', // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
               currency: 'INR',
               name: 'ECell, BITS Pilani',
               description: 'Test Transaction',
               image:
                 'https://www.ecellbphc.in/_next/image?url=%2F_next%2Fstatic%2Fimage%2Fassets%2Fimages%2Fmainlogo.9c338b5ed23edcdf418f531e5ac4ab38.png&w=256&q=75',
-              order_id: res.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-              callback_url: 'http://localhost:3000/id/portal',
+              order_id: res.data.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+              // callback_url: 'https://ecellbphc.in/id/portal',
               // prefill: {
               //   name: 'Gaurav Kumar',
               //   email: 'gaurav.kumar@example.com',
