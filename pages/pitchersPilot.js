@@ -135,7 +135,7 @@ function PitchersPilot() {
       value1: formdata.cofounders,
 
       label2: 'Revenue (if any)',
-      type2:"number",
+      type2:"text",
       name2: 'revenue',
       value2: formdata.revenue
     },
@@ -162,7 +162,7 @@ function PitchersPilot() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await axios.post(
-      'https://sheet.best/api/sheets/c37f7ab7-1546-46ec-9e65-33239b0845f1',
+      'https://sheet.best/api/sheets/32e90bd5-af25-42e6-b3a5-ee58f57f6cc6',
       formdata).then(
         (formdata) => {
           console.log(formdata);
@@ -191,7 +191,7 @@ function PitchersPilot() {
        amount: '35000',
        currency: data.currency,
        name: 'Pitcher`s Pilot',
-       description: 'Test Transaction',
+       description: 'Transaction',
        image:
          'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2FeCELL.BPHC%2F&psig=AOvVaw35nBI8g6Br43zsJCHpUSXo&ust=1645856957114000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCOD68oydmvYCFQAAAAAdAAAAABAD',
        order_id: data.id,
