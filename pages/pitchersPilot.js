@@ -94,7 +94,7 @@ function PitchersPilot() {
       name11: 'nameOfStartup',
       value1: formdata.nameOfStartup,
 
-      label2: 'Description Of Startups',
+      label2: 'Description Of Startup',
       name2: 'desc',
       type2: 'text',
       value2: formdata.desc
@@ -103,25 +103,25 @@ function PitchersPilot() {
     {
       id: 2,
 
-      label1: 'Contact Number',
-      type1:"number",
+      label1: 'Contact Number of all Co Founders',
+      type1:"text",
       name11: 'contact',
       value1: formdata.contact,
 
-      label2: 'Email ID',
-      type22:"email",
+      label2: 'Email ID of all cofounders',
+      type22:"text",
       name2: 'email',
       value2: formdata.email
     },
     {
       id: 3,
 
-      label1: 'Sector Of StartUp',
+      label1: 'Sector Of Startup',
       type1:"text",
       name11: 'sector',
       value1: formdata.sector,
 
-      label2: 'Stage OF StartUp',
+      label2: 'Stage Of Startup',
       type2:"text",
       name2: 'stage',
       value2: formdata.stage
@@ -142,12 +142,12 @@ function PitchersPilot() {
     {
       id: 5,
 
-      label1: 'Date of Startup',
+      label1: 'Startup Founding Date',
       type1:"date",
       name11: 'date',
       value1: formdata.date,
 
-      label2: 'Pitch Deck(Drive link)',
+      label2: 'Drive Link of Pitch Deck(Do mention a bit about your idea, revenue model, total sales, expansion strategy, etc. This presentation will be used in further rounds.)',
       type2:"text",
       name2: 'deck',
       value2: formdata.deck
