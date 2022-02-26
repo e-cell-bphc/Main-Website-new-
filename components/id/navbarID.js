@@ -80,11 +80,6 @@ function Navbar() {
       link: '/id/portal'
     },
     {
-      id: 2,
-      name: 'Profile',
-      link: '/id/profile'
-    },
-    {
       id: 3,
       name: 'Companies',
       link: '/id/viewCompany'
@@ -100,7 +95,7 @@ function Navbar() {
     e.preventDefault()
     const res = await initializeRazorpay()
 
-    if (session.user.email && session.user._id && res) {
+    if (session?.user.email && session?.user._id && res) {
       axios
         .post(
           'https://backend-api-2022.onrender.com/api/payments/createOrder',
@@ -146,6 +141,23 @@ function Navbar() {
     }
   }
 
+  function profile(){
+    if (status == 'authenticated') {
+      return (
+        <Link href="/id/profile">
+          <div
+            onClick={handleClick}
+            className={hamOn ? styles.fadeout : styles.fadein}
+            
+          >
+            Profile
+          </div>
+        </Link>)
+    }
+    else
+      return null;
+  }
+
   return (
     <>
       <div className={styles.ham} onClick={handleClick}>
@@ -179,6 +191,7 @@ function Navbar() {
               </>
             )
           })}
+          { profile}
           {!paid ? (
             <div
               onClick={openRazorpay}
@@ -186,7 +199,13 @@ function Navbar() {
             >
               Pay Now
             </div>
-          ) : null}
+          ) : <Link href='/id/success'>
+          <div
+              onClick={openRazorpay}
+              className={hamOn ? styles.fadeout : styles.fadein}
+            >
+              Pay Now
+              </div></Link>}
         </div>
         <div
           className={hamOn ? styles.logout_off : styles.logout_on}

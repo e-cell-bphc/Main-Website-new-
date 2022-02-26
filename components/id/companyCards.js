@@ -2,6 +2,7 @@ import React from 'react'
 import styles from '../../styles/id/companyCards.module.css'
 import Image from 'next/image'
 import launchpad from '../../assets/Launchpad.png'
+import { useSession } from 'next-auth/react'
 
 function CompanyCards() {
   const data = [
@@ -16,6 +17,18 @@ function CompanyCards() {
     },
     
   ]
+  const { data: session, status } = useSession()
+  
+  function auth() {
+    if (status == 'authenticated') {
+      return (
+        <>
+          <div className={styles.button}>{data.status}</div>
+        </>
+      )
+    }
+    else return null;
+  }
   return (
     <>
       {data.map((data) => {
@@ -41,7 +54,7 @@ function CompanyCards() {
                   </a>
                 </div>
               </div>
-              <div className={styles.button}>{data.status}</div>
+              {auth}
             </div>
           </>
         )
