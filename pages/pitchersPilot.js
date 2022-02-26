@@ -134,7 +134,7 @@ function PitchersPilot() {
       name11: 'cofounders',
       value1: formdata.cofounders,
 
-      label2: 'Revenue (if any)',
+      label2: 'Revenue till date (if any)',
       type2:"text",
       name2: 'revenue',
       value2: formdata.revenue
