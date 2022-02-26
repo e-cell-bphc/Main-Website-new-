@@ -596,18 +596,18 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
 
   @keyframes up {
     0% {
-      transform: translate(80vw, -8vh);
+      transform: translate(80vw, -8.6vh);
       font-size: 0.6em;
     }
 
     33.33% {
       font-size: 0.6em;
-      transform: translate(-0vw, -8vh);
+      transform: translate(-0vw, -8.6vh);
     }
 
     86.66% {
       font-size: 0.6em;
-      transform: translate(-0vw, -8vh);
+      transform: translate(-0vw, -8.6vh);
     }
 
     100% {
@@ -646,37 +646,37 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
     }
 
     6% {
-      height: 20vh;
+      height: 22vh;
       transform: translateX(40vw);
     }
 
     13.7% {
-      height: 20vh;
+      height: 22vh;
       transform: translateX(0vw);
     }
 
     43% {
-      height: 20vh;
+      height: 22vh;
       transform: translateX(0vw);
     }
 
     49.71% {
-      height: 20vh;
+      height: 22vh;
       transform: translateX(40vw);
     }
 
     54.28571% {
-      height: 20vh;
+      height: 22vh;
       transform: translateX(40vw);
     }
 
     67.14% {
-      height: 20vh;
+      height: 22vh;
       transform: translateX(76vw);
     }
 
     90% {
-      height: 20vh;
+      height: 22vh;
       transform: translateX(76vw);
     }
 
@@ -694,37 +694,37 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
     }
 
     6% {
-      height: 20vh;
+      height: 22vh;
       transform: translateX(-40vw);
     }
 
     13.7% {
-      height: 20vh;
+      height: 22vh;
       transform: translateX(0vw);
     }
 
     43% {
-      height: 20vh;
+      height: 22vh;
       transform: translateX(0vw);
     }
 
     49.71% {
-      height: 20vh;
+      height: 22vh;
       transform: translateX(-40vw);
     }
 
     54.28571% {
-      height: 20vh;
+      height: 22vh;
       transform: translateX(-40vw);
     }
 
     67.14% {
-      height: 20vh;
+      height: 22vh;
       transform: translateX(-4vw);
     }
 
     90% {
-      height: 20vh;
+      height: 22vh;
       transform: translateX(-4vw);
     }
 
