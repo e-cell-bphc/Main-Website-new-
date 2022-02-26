@@ -188,7 +188,7 @@ function PitchersPilot() {
 
      var options = {
        key: 'rzp_live_FWRQdHoaQSe74v',
-       amount: '35000',
+       amount: '30000',
        currency: data.currency,
        name: 'Pitcher`s Pilot',
        description: 'Transaction',
