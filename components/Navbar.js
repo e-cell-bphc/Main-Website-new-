@@ -10,6 +10,10 @@ export default function Navbar(props) {
   const handleClick = () => {
     setIsHamOn(!isHamOn);
   };
+  const handleClickID = () => {
+    setIsHamOn(!isHamOn);
+     setrender('ID')
+  };
 
   return (
     <>
@@ -115,11 +119,8 @@ export default function Navbar(props) {
         </Link>
         <Link
           href="/id/portal"
-          onClick={() => {
-            setrender(true)
-          }}
         >
-          <a onClick={() => handleClick()} className={Navbarcss.mobilebtn}>
+          <a onClick={() => handleClickID()} className={Navbarcss.mobilebtn}>
             Internship Drive
           </a>
         </Link>

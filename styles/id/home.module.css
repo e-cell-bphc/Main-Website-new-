@@ -409,12 +409,11 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
     opacity: 1;
   }
 }
-
-@media screen and (max-width: 1400px) {
+@media screen and (min-width: 1300px) and (max-width: 1400px) {
   @keyframes up {
     0% {
       transform: translate(44vw, -17vh);
-      font-size: 0.8em;
+      font-size:0.8em;
     }
     33.33% {
       font-size: 0.8em;
@@ -426,6 +425,29 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
     }
     100% {
       font-size: 0.9em;
+      transform: translate(-26vw, -29vh);
+    }
+  }
+}
+@media screen and (max-width: 1450px) {
+  .internship{
+    font-size: 2em;
+  }
+  @keyframes up {
+    0% {
+      transform: translate(44vw, -17vh);
+      font-size:0.9em;
+    }
+    33.33% {
+      font-size: 0.9em;
+      transform: translate(0vw, -17vh);
+    }
+    86.66% {
+      font-size: 0.9em;
+      transform: translate(0vw, -17vh);
+    }
+    100% {
+      font-size: 1.1em;
       transform: translate(-26vw, -29vh);
     }
   }
@@ -559,7 +581,7 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 1100px) {
   .Companies {
     display: none;
   }
@@ -574,18 +596,18 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
 
   @keyframes up {
     0% {
-      transform: translate(80vw, -2.5vh);
+      transform: translate(80vw, -8vh);
       font-size: 0.6em;
     }
 
     33.33% {
       font-size: 0.6em;
-      transform: translate(-0vw, -2.5vh);
+      transform: translate(-0vw, -8vh);
     }
 
     86.66% {
       font-size: 0.6em;
-      transform: translate(-0vw, -2.5vh);
+      transform: translate(-0vw, -8vh);
     }
 
     100% {
@@ -772,5 +794,28 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
 
   .stats {
     display: none;
+  }
+}
+@media screen and (min-width: 380px) and (max-width: 420px) {
+  @keyframes up {
+    0% {
+      transform: translate(80vw, -4vh);
+      font-size: 0.6em;
+    }
+
+    33.33% {
+      font-size: 0.6em;
+      transform: translate(-0vw, -4vh);
+    }
+
+    86.66% {
+      font-size: 0.6em;
+      transform: translate(-0vw, -4vh);
+    }
+
+    100% {
+      font-size: 0.75em;
+      transform: translate(-0vw, -15vh);
+    }
   }
 }
