@@ -56,7 +56,7 @@ function PitchersPilot() {
        questionid: 'qthree',
        question: 'When is the last date?',
        answer:
-         'The last date for registration will be update soon.'
+         'The last date for registration will be updated soon.'
      },
   ]
   
