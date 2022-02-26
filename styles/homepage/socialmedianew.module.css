@@ -37,7 +37,7 @@
 }
 @media screen and (max-width: 700px) {
   .social1 {
-    bottom: 58px;
+    bottom: 80px;
     left: 50%;
     /* height: 0px; */
     display: flex;
