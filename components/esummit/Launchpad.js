@@ -17,7 +17,7 @@ export default function Launchpad() {
           </div>
         </div>
       </div>
-      <Link href="/commingsoon">
+      <Link href="/id/portal">
         <button className={styles.buy_button}>BUY TICKETS</button>
       </Link>
     </div>
