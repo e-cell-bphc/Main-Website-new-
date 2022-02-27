@@ -14,7 +14,7 @@ function PaymentSuccess() {
         <div className={styles.success}>Payment Successful</div>
         <div className={styles.back}>
           Click here to go back to
-          <Link href="/id/" className={styles.link}>
+          <Link href="/id/portal" className={styles.link}>
             Internship Drive
           </Link>
         </div>

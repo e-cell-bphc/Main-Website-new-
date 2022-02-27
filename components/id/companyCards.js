@@ -18,17 +18,20 @@ function CompanyCards() {
     
   ]
   const { data: session, status } = useSession()
-  
-  function auth() {
-    if (status == 'authenticated') {
-      return (
-        <>
-          <div className={styles.button}>{data.status}</div>
-        </>
-      )
-    }
-    else return null;
-  }
+
+  {
+    data.map((data) => {
+      return(
+      function auth() {
+        if (status == 'authenticated') {
+          return (
+            <>
+              <div className={styles.button}>{data.status}</div>
+            </>
+          )
+        } else return null
+      }
+    )})}
   return (
     <>
       {data.map((data) => {
@@ -54,7 +57,7 @@ function CompanyCards() {
                   </a>
                 </div>
               </div>
-              {auth}
+              <div className={styles.button}>{data.status}</div>
             </div>
           </>
         )

@@ -11,7 +11,7 @@ import { useSession } from 'next-auth/react'
 
 function Navbar() {
   const [hamOn, setHamOn] = useState(true)
-  const [paid, setPaid] = useState(false)
+  const [paids, setPaid] = useState(false)
 
   const handleClick = () => {
     setHamOn(() => !hamOn)
@@ -131,13 +131,16 @@ function Navbar() {
             }
             var rzp1 = new Razorpay(options)
             rzp1.open()
-          } else {
-            alert('order creation failed')
+          } else if( paid) {
+            alert('already paid')
           }
         })
         .catch((error) => {
-          console.log(error)
+          console.log
         })
+    }
+    else {
+      alert('Login/Signup first')
     }
   }
 
@@ -192,7 +195,7 @@ function Navbar() {
             )
           })}
           { profile}
-          {!paid ? (
+          {!paids ? (
             <div
               onClick={openRazorpay}
               className={hamOn ? styles.fadeout : styles.fadein}
@@ -200,8 +203,8 @@ function Navbar() {
               Pay Now
             </div>
           ) : <Link href='/id/success'>
-          <div
-    
+              <div
+                onClick={handleClick}
               className={hamOn ? styles.fadeout : styles.fadein}
             >
               Pay Now
