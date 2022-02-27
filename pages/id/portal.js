@@ -79,7 +79,7 @@ export default function Home() {
           <div className={styles.video}>
             <ReactPlayer
               // playing={playing}
-              url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
+              url="https://drive.google.com/file/d/1-pPVpmJfOrv-vTn2OsTBUzHiWNw7Be9b/view?usp=sharing"
               width="100%"
               height="100%"
               controls={false}
