@@ -23,7 +23,7 @@ const events = [
   {
     id: 4,
     heading: 'Internship Drive',
-    link: '/commingsoon',
+    link: '/id/portal',
     description:
       'Internship Drive is an amazing opportunity to find an ideal internship, based on their skills or interests, from 30+ startups providing stipends from 3k to 30k INR.'
   },
