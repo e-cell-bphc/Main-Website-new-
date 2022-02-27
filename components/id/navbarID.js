@@ -112,7 +112,7 @@ function Navbar() {
               amount: '50000', // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
               currency: 'INR',
               name: 'ECell, BITS Pilani',
-              description: 'Test Transaction',
+              description: 'Payment for Launchpad 2022',
               image:
                 'https://www.ecellbphc.in/_next/image?url=%2F_next%2Fstatic%2Fimage%2Fassets%2Fimages%2Fmainlogo.9c338b5ed23edcdf418f531e5ac4ab38.png&w=256&q=75',
               order_id: res.data.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
@@ -131,8 +131,10 @@ function Navbar() {
             }
             var rzp1 = new Razorpay(options)
             rzp1.open()
+          } else if (res.data.status == 'paid') {
+            alert("You've already paid")
           } else {
-            alert('order creation failed')
+            alert('Something blew up')
           }
         })
         .catch((error) => {
@@ -141,21 +143,19 @@ function Navbar() {
     }
   }
 
-  function profile(){
+  function profile() {
     if (status == 'authenticated') {
       return (
         <Link href="/id/profile">
           <div
             onClick={handleClick}
             className={hamOn ? styles.fadeout : styles.fadein}
-            
           >
             Profile
           </div>
-        </Link>)
-    }
-    else
-      return null;
+        </Link>
+      )
+    } else return null
   }
 
   return (
@@ -191,7 +191,7 @@ function Navbar() {
               </>
             )
           })}
-          { profile}
+          {profile}
           {!paid ? (
             <div
               onClick={openRazorpay}
@@ -199,13 +199,13 @@ function Navbar() {
             >
               Pay Now
             </div>
-          ) : <Link href='/id/success'>
-          <div
-    
-              className={hamOn ? styles.fadeout : styles.fadein}
-            >
-              Pay Now
-              </div></Link>}
+          ) : (
+            <Link href="/id/success">
+              <div className={hamOn ? styles.fadeout : styles.fadein}>
+                Pay Now
+              </div>
+            </Link>
+          )}
         </div>
         <div
           className={hamOn ? styles.logout_off : styles.logout_on}
