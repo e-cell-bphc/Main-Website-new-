@@ -315,21 +315,20 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
 
 }
 
-.internship {
+.middiv {
+  min-height: fit-content;
   transform: translate(44vw, -15vh);
   animation: up 3s 3.8s forwards;
+}
+
+.internship {
   font-size: 1em;
 }
 
-.portalbtn,.dashbtn{
-  transform: translate(44vw, -15vh);
-  animation: up2 3s 3.8s forwards;
-}
 @keyframes up {
   0% {
     transform: translate(44vw, -16vh);
     font-size: 1em;
-
   }
 
   33.33% {
@@ -347,30 +346,27 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
     transform: translate(-27vw, -29vh);
   }
 }
-@keyframes up2 {
+
+/* @keyframes up2 {
   0% {
     transform: translate(44vw, -16vh);
     display: none;
-    /* font-size: 1em; */
   }
 
   33.33% {
-    /* font-size: 1em; */
     transform: translate(0vw, -16vh);
     display: none;
   }
 
   86.66% {
-    /* font-size: 1em; */
     transform: translate(0vw, -16vh);
     display: none;
   }
 
   100% {
-    /* font-size: 1.3em; */
     transform: translate(-27vw, -29vh);
   }
-}
+} */
 
 .video {
   width: 44em;
@@ -577,7 +573,7 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
   }
 
   .internship {
-    transform: translate(80vw, -0vh);
+    /* transform: translate(80vw, -0vh); */
   }
 
   @keyframes up {

@@ -4,21 +4,22 @@ import { useState, useEffect } from 'react'
 import launchpad from '../../assets/launchpad.png'
 import Image from 'next/image'
 import { useSession } from 'next-auth/react'
-
 function Profile() {
+  const { data: session, status } = useSession()//
   const [userData, setUserData] = useState({
-    name: 'Akshat Khaitan',
-    email: 'f20202055@hyderabad.bits-pilani.ac.in',
-    phone: '1234567890',
-    college: 'BITS-HYDERABAD',
-    year_of_study: '2nd Year',
-    city: 'Hyderabad',
+    name: '',
+    email: 'f20202055@hyderabad.bits-pilani.ac.in',//comment this out
+    // email: session.user.email, //uncomment after api active
+    phone: '',
+    college: '',
+    year_of_study: '',
+    city: '',
     resume: ''
   })
 
   //   const [something, setSomething] = useState('')
 
-  const { data: session, status } = useSession()
+  
   useEffect(() => {
     console.log(session)
     console.log(status)
@@ -49,7 +50,7 @@ function Profile() {
                 </div> */}
         <div className={styles.inner_right}>
           <div className={styles.inner_right_top}>
-            {status == 'authenticated' ? 'Your auth Profile' : 'Go away'}
+            {status == 'authenticated' ? 'Your auth Profile' : 'Go away'}{/*change these messages later*/}
           </div>
           <div className={styles.inner_right_bottom}>
             <div className={styles.user_form}>
@@ -59,6 +60,9 @@ function Profile() {
                   type="text"
                   className={styles.inputbox}
                   placeholder="Enter your name"
+                  onChange={(e)=>{
+                    setUserData({...userData,name:e.target.value})
+                  }}
                   value={userData.name}
                 />
               </div>
@@ -67,7 +71,7 @@ function Profile() {
                 <input
                   className={styles.inputbox}
                   type="text"
-                  placeholder="Enter your Email"
+                  placeholder="Enter your email"
                   value={userData.email}
                 />
               </div>
@@ -76,7 +80,10 @@ function Profile() {
                 <input
                   type="text"
                   className={styles.inputbox}
-                  placeholder="Enter your Phone"
+                  placeholder="Enter your phone"
+                  onChange={(e)=>{
+                    setUserData({...userData,phone:e.target.value})
+                  }}
                   value={userData.phone}
                 />
               </div>
@@ -85,7 +92,10 @@ function Profile() {
                 <input
                   type="text"
                   className={styles.inputbox}
-                  placeholder="Enter your College"
+                  placeholder="Enter your college"
+                  onChange={(e)=>{
+                    setUserData({...userData,college:e.target.value})
+                  }}
                   value={userData.college}
                 />
               </div>
@@ -94,7 +104,10 @@ function Profile() {
                 <input
                   type="text"
                   className={styles.inputbox}
-                  placeholder="Enter your College"
+                  placeholder="Enter your year of study"
+                  onChange={(e)=>{
+                    setUserData({...userData,year_of_study:e.target.value})
+                  }}
                   value={userData.year_of_study}
                 />
               </div>
@@ -103,7 +116,10 @@ function Profile() {
                 <input
                   type="text"
                   className={styles.inputbox}
-                  placeholder="Enter your College"
+                  placeholder="Enter your city"
+                  onChange={(e)=>{
+                    setUserData({...userData,city:e.target.value})
+                  }}
                   value={userData.city}
                 />
               </div>
@@ -112,6 +128,9 @@ function Profile() {
                 <input
                   type="file"
                   className={styles.resume}
+                  onChange={(e)=>{
+                    setUserData({...userData,resume:e.target.value})
+                  }}
                   value={userData.resume}
                 />
               </div>

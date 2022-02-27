@@ -45,9 +45,11 @@ export default function Home() {
             <div className={styles.line1}></div>
             <div className={styles.heading}>
               <div className={styles.welcome}>Welcome</div>
-              <div className={styles.internship}>Internship Drive</div>
-              {status==="authenticated"?<button className={styles.portalbtn}>Redirect to Portal</button>:<button className={styles.dashbtn}>Log in to Dashboard</button>}
-              {/* <button className={styles.portalbtn}>Redirect to Portal</button> */}
+              <div className={styles.middiv}>
+                <div className={styles.internship}>Internship Drive</div>
+                {status==="authenticated"?<button className={styles.portalbtn}>Redirect to Portal</button>:<button className={styles.dashbtn}>Log in to Dashboard</button>}
+                {/* <button className={styles.portalbtn}>Redirect to Portal</button> */}
+              </div>
             </div>
             <div className={styles.line2}></div>
           </div>
