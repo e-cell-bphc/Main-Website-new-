@@ -143,7 +143,7 @@ function Navbar() {
     }
   }
 
-  function profile() {
+  function Profile() {
     if (status == 'authenticated') {
       return (
         <Link href="/id/profile">
@@ -191,7 +191,7 @@ function Navbar() {
               </>
             )
           })}
-          {profile}
+          <Profile />
           {!paid ? (
             <div
               onClick={openRazorpay}
