@@ -37,7 +37,7 @@
 }
 @media screen and (max-width: 700px) {
   .social1 {
-    bottom: 100px;
+    bottom: 50px;
     color: grey;
     left: 50%;
     /* height: 0px; */

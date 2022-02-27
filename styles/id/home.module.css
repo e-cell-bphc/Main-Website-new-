@@ -16,12 +16,13 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
 .portalbtn,
 .dashbtn {
   background-color: transparent;
-  border: 2px solid rgb(0, 104, 189);
+  border: 1px solid rgb(0, 104, 189);
+  border-radius: 4px;
   color: white;
   font-size: 0.3em;
-  padding: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 1vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
 }
 
 .portalbtn:hover {
@@ -608,7 +609,22 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
   .heading {
     width: 80vw;
   }
+@keyframes up2 {
+  0% {
+   opacity: 0;
+    /* font-size: 1em; */
+  }
 
+  100% {
+    opacity: 1;
+  }
+}
+.portalbtn, .dashbtn{
+  animation: up2 0.2s 7s forwards;
+    opacity: 0;
+
+  transform: translate(0vw, -25vw);
+}
   .internship {
     transform: translate(80vw, -0vh);
   }
@@ -816,6 +832,21 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
   }
 }
 @media screen and (min-width: 380px) and (max-width: 420px) {
+  @keyframes up2 {
+  0% {
+   opacity: 0;
+    /* font-size: 1em; */
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+.portalbtn, .dashbtn{
+  opacity: 0;
+  animation: up2 0.2s 7s forwards;
+  transform: translate(0vw, -20vw);
+}
   @keyframes up {
     0% {
       transform: translate(80vw, -4vh);

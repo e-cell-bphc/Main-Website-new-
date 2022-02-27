@@ -49,11 +49,11 @@ export default function Home() {
             <div className={styles.heading}>
               <div className={styles.welcome}>Welcome</div>
               <div className={styles.internship}>Internship Drive</div>
-              <div className={styles.quote}>
+              {/* <div className={styles.quote}>
                 “The pebbles of knowledge must be bonded together by the cement
                 of experience.”
-              </div>
-              {/* {status === 'authenticated' ? (
+              </div> */}
+              {status === 'authenticated' ? (
                 <Link href="/id/profile">
                   <button className={styles.portalbtn}>
                     Redirect to Portal
@@ -71,7 +71,7 @@ export default function Home() {
                 >
                   Log in to Dashboard
                 </button>
-              )} */}
+              )}
               {/* <button className={styles.portalbtn}>Redirect to Portal</button> */}
             </div>
             <div className={styles.line2}></div>
