@@ -409,22 +409,22 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
     opacity: 1;
   }
 }
-@media screen and (min-width: 1300px) and (max-width: 1400px) {
-  @keyframes up {
+@media screen and (min-width: 1580px) and (max-width: 1700px){
+   @keyframes up {
     0% {
       transform: translate(44vw, -17vh);
-      font-size:0.8em;
+      font-size:1.1em;
     }
     33.33% {
-      font-size: 0.8em;
+      font-size: 1.1em;
       transform: translate(0vw, -17vh);
     }
     86.66% {
-      font-size: 0.8em;
+      font-size: 1.1em;
       transform: translate(0vw, -17vh);
     }
     100% {
-      font-size: 0.9em;
+      font-size: 1.3em;
       transform: translate(-26vw, -29vh);
     }
   }
@@ -580,7 +580,26 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
     font-size: 2.2em;
   }
 }
-
+@media screen and (min-width: 1100px) and (max-width: 1300px) {
+  @keyframes up {
+    0% {
+      transform: translate(44vw, -17vh);
+      font-size:0.8em;
+    }
+    33.33% {
+      font-size: 0.8em;
+      transform: translate(0vw, -17vh);
+    }
+    86.66% {
+      font-size: 0.8em;
+      transform: translate(0vw, -17vh);
+    }
+    100% {
+      font-size: 0.9em;
+      transform: translate(-26vw, -29vh);
+    }
+  }
+}
 @media screen and (max-width: 1100px) {
   .Companies {
     display: none;
