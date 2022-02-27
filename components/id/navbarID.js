@@ -201,7 +201,7 @@ function Navbar() {
             </div>
           ) : <Link href='/id/success'>
           <div
-              onClick={openRazorpay}
+    
               className={hamOn ? styles.fadeout : styles.fadein}
             >
               Pay Now
