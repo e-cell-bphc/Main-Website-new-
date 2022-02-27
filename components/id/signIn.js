@@ -37,38 +37,38 @@ function SignIn() {
     // event.stopPropagation()
 
     console.log('fn called')
-    signIn()
+    signIn(null, { callbackUrl: 'https://ecellbphc.in/id/profile' })
 
-    // signIn('credentials', {
-    //   name: '',
-    //   email,
-    //   password,
-    //   college: '',
-    //   phoneNumber: '',
-    //   callbackUrl: `${window.location.origin}/profile`,
-    //   redirect: true
-    // })
-    //   .then(function (result) {
-    //     console.log('result', result)
-    //     if (result.error !== null) {
-    //       if (result.status === 401) {
-    //         console.log('heeelooo1')
-    //         setLoginError(
-    //           'Your username/password combination was incorrect. Please try again'
-    //         )
-    //       } else {
-    //         console.log('heeeloo2o')
+    signIn('credentials', {
+      name: '',
+      email,
+      password,
+      college: '',
+      phoneNumber: '',
+      callbackUrl: `${window.location.origin}/profile`,
+      redirect: true
+    })
+      .then(function (result) {
+        console.log('result', result)
+        if (result.error !== null) {
+          if (result.status === 401) {
+            console.log('heeelooo1')
+            setLoginError(
+              'Your username/password combination was incorrect. Please try again'
+            )
+          } else {
+            console.log('heeeloo2o')
 
-    //         setLoginError(result.error)
-    //       }
-    //     } else {
-    //       console.log('heeelooo3')
-    //       router.push(result.url)
-    //     }
-    //   })
-    //   .catch((error) => {
-    //     console.log(error)
-    //   })
+            setLoginError(result.error)
+          }
+        } else {
+          console.log('heeelooo3')
+          router.push(result.url)
+        }
+      })
+      .catch((error) => {
+        console.log(error)
+      })
   }
 
   if (status == 'authenticated') {

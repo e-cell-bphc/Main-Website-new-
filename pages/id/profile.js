@@ -1,25 +1,25 @@
 import React from 'react'
 import styles from '../../styles/id/profile.module.css'
 import { useState, useEffect } from 'react'
-import launchpad from '../../assets/launchpad.png'
+import launchpad from '../../assets/Launchpad.png'
 import Image from 'next/image'
 import { useSession } from 'next-auth/react'
+import { useRouter } from 'next/router'
+import axios from 'axios'
+
 function Profile() {
-  const { data: session, status } = useSession()//
+  const { data: session, status } = useSession()
   const [userData, setUserData] = useState({
     name: '',
-    email: 'f20202055@hyderabad.bits-pilani.ac.in',//comment this out
-    // email: session.user.email, //uncomment after api active
-    phone: '',
+    email: '',
+    phoneNumber: '',
     college: '',
-    year_of_study: '',
-    city: '',
-    resume: ''
+    yos: '',
+    resumeURL: ''
   })
 
-  //   const [something, setSomething] = useState('')
+  const router = useRouter()
 
-  
   useEffect(() => {
     console.log(session)
     console.log(status)
@@ -34,12 +34,56 @@ function Profile() {
     } else {
       console.log('empty')
     }
+
+    if (status === 'authenticated') {
+      axios
+        .get(
+          `https://backend-api-2022.onrender.com/api/users/${session.user._id}`,
+          {
+            headers: {
+              Authorization: `Bearer ${session.accessToken}`
+            }
+          }
+        )
+        .then((res) => {
+          setUserData({
+            ...userData,
+            name: res.data.data.name,
+            email: res.data.data.email,
+            phoneNumber: res.data.data.phoneNumber,
+            college: res.data.data.college,
+            yos: res.data.data.yos,
+            resumeURL: res.data.data.resumeURL
+          })
+        })
+    }
+
+    if (status === 'unauthenticated') {
+      router.push('/id/portal')
+    }
   }, [session, status])
+
+  // useEffect(() => {}, [status])
 
   //   if (status === 'authenticated') {
   //     setSomething('sdjfbk')
   //   }
 
+  const handleUpdate = async (e) => {
+    e.preventDefault()
+    axios
+      .post(
+        'https://backend-api-2022.onrender.com/api/users/updateProfile',
+        userData
+      )
+      .then((res) => {
+        alert('Profile Updated')
+      })
+      .catch((err) => {
+        alert('There was some error ! Please Try Again')
+        console.log(err)
+      })
+  }
   return (
     <>
       <div className={styles.launchpad_logo}>
@@ -49,9 +93,7 @@ function Profile() {
         {/* <div className={styles.inner_left}>
                 </div> */}
         <div className={styles.inner_right}>
-          <div className={styles.inner_right_top}>
-            {status == 'authenticated' ? 'Your auth Profile' : 'Go away'}{/*change these messages later*/}
-          </div>
+          <div className={styles.inner_right_top}>Profile</div>
           <div className={styles.inner_right_bottom}>
             <div className={styles.user_form}>
               <div>
@@ -64,6 +106,9 @@ function Profile() {
                     setUserData({...userData,name:e.target.value})
                   }}
                   value={userData.name}
+                  onChange={(e) => {
+                    setUserData({ ...userData, name: e.target.value })
+                  }}
                 />
               </div>
               <div>
@@ -80,11 +125,11 @@ function Profile() {
                 <input
                   type="text"
                   className={styles.inputbox}
-                  placeholder="Enter your phone"
-                  onChange={(e)=>{
-                    setUserData({...userData,phone:e.target.value})
+                  placeholder="Enter your Phone"
+                  value={userData.phoneNumber}
+                  onChange={(e) => {
+                    setUserData({ ...userData, phoneNumber: e.target.value })
                   }}
-                  value={userData.phone}
                 />
               </div>
               <div>
@@ -97,6 +142,9 @@ function Profile() {
                     setUserData({...userData,college:e.target.value})
                   }}
                   value={userData.college}
+                  onChange={(e) => {
+                    setUserData({ ...userData, college: e.target.value })
+                  }}
                 />
               </div>
               <div>
@@ -104,26 +152,14 @@ function Profile() {
                 <input
                   type="text"
                   className={styles.inputbox}
-                  placeholder="Enter your year of study"
-                  onChange={(e)=>{
-                    setUserData({...userData,year_of_study:e.target.value})
+                  placeholder="Year Of Study"
+                  value={userData.yos}
+                  onChange={(e) => {
+                    setUserData({ ...userData, yos: e.target.value })
                   }}
-                  value={userData.year_of_study}
                 />
               </div>
-              <div>
-                <label className={styles.labels}>City</label>
-                <input
-                  type="text"
-                  className={styles.inputbox}
-                  placeholder="Enter your city"
-                  onChange={(e)=>{
-                    setUserData({...userData,city:e.target.value})
-                  }}
-                  value={userData.city}
-                />
-              </div>
-              <div>
+              {/* <div>
                 <label className={styles.labels}>Your Resume</label>
                 <input
                   type="file"
@@ -133,10 +169,15 @@ function Profile() {
                   }}
                   value={userData.resume}
                 />
-              </div>
+              </div> */}
               <div></div>
               <div>
-                <button className={styles.submit}>Update</button>
+                <button
+                  className={styles.submit}
+                  onClick={(e) => handleUpdate(e)}
+                >
+                  Update
+                </button>
               </div>
             </div>
           </div>

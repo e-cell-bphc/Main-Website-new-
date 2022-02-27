@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from '../../styles/id/home.module.css'
 import Social from '../../components/id/social'
 import Scroll from '../../components/id/scroll'
@@ -8,6 +9,8 @@ import CompCards from '../../components/id/comCards'
 import ReactPlayer from 'react-player'
 import { useEffect, useState } from 'react'
 import { useSession } from 'next-auth/react'
+import { signIn, signOut } from 'next-auth/react'
+
 export default function Home() {
   const [playing, setPlaying] = useState(false)
 
@@ -45,18 +48,38 @@ export default function Home() {
             <div className={styles.line1}></div>
             <div className={styles.heading}>
               <div className={styles.welcome}>Welcome</div>
-              <div className={styles.middiv}>
-                <div className={styles.internship}>Internship Drive</div>
-                {status==="authenticated"?<button className={styles.portalbtn}>Redirect to Portal</button>:<button className={styles.dashbtn}>Log in to Dashboard</button>}
-                {/* <button className={styles.portalbtn}>Redirect to Portal</button> */}
-              </div>
+              <div className={styles.internship}>Internship Drive</div>
+              {/* <div className={styles.quote}>
+                “The pebbles of knowledge must be bonded together by the cement
+                of experience.”
+              </div> */}
+              {status === 'authenticated' ? (
+                <Link href="/id/profile">
+                  <button className={styles.portalbtn}>
+                    Redirect to Portal
+                  </button>
+                </Link>
+              ) : (
+                <button
+                  className={styles.dashbtn}
+                  onClick={(e) => {
+                    e.preventDefault()
+                    signIn(null, {
+                      callbackUrl: 'https://ecellbphc.in/id/portal'
+                    })
+                  }}
+                >
+                  Log in to Dashboard
+                </button>
+              )}
+              {/* <button className={styles.portalbtn}>Redirect to Portal</button> */}
             </div>
             <div className={styles.line2}></div>
           </div>
           <div className={styles.video}>
             <ReactPlayer
-              playing={playing}
-              url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
+              // playing={playing}
+              url="https://drive.google.com/file/d/1-pPVpmJfOrv-vTn2OsTBUzHiWNw7Be9b/view?usp=sharing"
               width="100%"
               height="100%"
               controls={false}

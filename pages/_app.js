@@ -3,12 +3,23 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Navbar1 from '../components/id/navbarID'
 import { useState, useEffect } from 'react'
-import { set } from 'date-fns'
+import Head from 'next/head'
 import { SessionProvider } from 'next-auth/react'
+import Script from 'next/script'
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   const [nav, setNav] = useState(true)
   const [foot, setFoot] = useState(false)
+  const [render, setrender] = useState('')
+
+  // if (process.browser) {
+  //   let param = window.location.pathname
+  //   if (param == "/id/portal") {
+  //     setrender("ID")
+  //     console.log(render)
+  //   }
+  // }
+
   useEffect(() => {
     if (process.browser) {
       let params = window.location.pathname
@@ -46,15 +57,19 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
         setFoot(true)
       }
     }
-    console.log(nav)
-  }, [])
+  }, [render])
 
+  console.log(render)
   // console.log(nav + "hello");
   return (
     <>
+      <Head>
+        <Script src="https://checkout.razorpay.com/v1/checkout.js"></Script>
+        <title>ECell | Launchpad </title>
+      </Head>
       <SessionProvider session={session}>
         <div className={nav ? 'oldnav' : 'Navbar'}>
-          {nav ? <Navbar /> : <Navbar1 />}
+          {nav ? <Navbar hook={setrender} /> : <Navbar1 />}
         </div>
         <div className={nav ? 'nav0' : 'null'}>
           <Component {...pageProps} />

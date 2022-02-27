@@ -45,15 +45,23 @@
 .one {
   height: 210px;
 }
+.oneP {
+  height: 150px;
+}
 .two {
   height: 130px;
 }
 .three {
   height: 45px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 580px) {
   .one {
     height: auto;
+  }
+  .oneP {
+    height: auto;
+    font-size: 20px;
+    width: 75vw;
   }
   .two {
     height: auto;
@@ -63,6 +71,7 @@
   }
   .h {
     height: auto;
+    font-size: 24px;
   }
   .accordian {
     margin-top: 50px;
@@ -75,17 +84,27 @@
 }
 @media screen and (max-width: 1450px) {
   .h {
-    font-size: 17px;
+    font-size: 20px;
   }
   .one {
     height: 230px;
   }
+  .oneP{
+    height: 180px;
+  }
+  .qa{
+      margin-right: 3%;
+  margin-bottom: 3%;
+  }
 }
 @media screen and (max-width: 1250px) {
   .h {
-    font-size: 17px;
+    font-size: 23px;
   }
   .one {
+    height: auto;
+  }
+  .oneP {
     height: auto;
   }
   .two {

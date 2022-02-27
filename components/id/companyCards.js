@@ -1,47 +1,37 @@
-import React from 'react';
-import styles from "../../styles/id/companyCards.module.css"
-import Image from 'next/image';
+import React from 'react'
+import styles from '../../styles/id/companyCards.module.css'
+import Image from 'next/image'
 import launchpad from '../../assets/Launchpad.png'
+import { useSession } from 'next-auth/react'
 
 function CompanyCards() {
   const data = [
     {
       id: 1,
-      image: "./",
-      prop1: "Yantro-Mitra",
-      prop2: "Unpaid",
-      prop3: "kuch bhi",
-      path: "",
-      status: "Apply",
+      image: './',
+      prop1: 'Company X',
+      prop2: 'Unpaid',
+      prop3: 'XYZ developer',
+      path: '',
+      status: 'Apply'
     },
-    {
-      id: 2,
-      image: "",
-      prop1: "Apple",
-      prop2: "$1,000",
-      prop3: "Hardware CS",
-      path: "",
-      status: "Apply",
-    },
-    {
-      id: 3,
-      image: "#",
-      prop1: "HDFC",
-      prop2: "$600",
-      prop3: "Cyber-security",
-      path: "",
-      status: "Apply",
-    },
-    {
-      id: 4,
-      image: "#",
-      prop1: "Giordano",
-      prop2: "$200",
-      prop3: "Product Design",
-      path: "",
-      status: "Apply",
-    },
-  ];
+    
+  ]
+  const { data: session, status } = useSession()
+
+  {
+    data.map((data) => {
+      return(
+      function auth() {
+        if (status == 'authenticated') {
+          return (
+            <>
+              <div className={styles.button}>{data.status}</div>
+            </>
+          )
+        } else return null
+      }
+    )})}
   return (
     <>
       {data.map((data) => {
@@ -62,16 +52,18 @@ function CompanyCards() {
                   <a className={styles.Eligibilty}>{data.prop3}</a>
                 </div>
                 <div className={styles.propitem}>
-                  <a className={styles.Eligibilty} href={data.path} download>Job Description</a>
+                  <a className={styles.Eligibilty} href={data.path} download>
+                    Job Description
+                  </a>
                 </div>
               </div>
               <div className={styles.button}>{data.status}</div>
             </div>
           </>
-        );
+        )
       })}
     </>
-  );
+  )
 }
 
-export default CompanyCards;
+export default CompanyCards
