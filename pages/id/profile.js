@@ -106,9 +106,9 @@ function Profile() {
                     setUserData({...userData,name:e.target.value})
                   }}
                   value={userData.name}
-                  onChange={(e) => {
-                    setUserData({ ...userData, name: e.target.value })
-                  }}
+                  // onChange={(e) => {
+                  //   setUserData({ ...userData, name: e.target.value })
+                  // }}
                 />
               </div>
               <div>
@@ -142,9 +142,9 @@ function Profile() {
                     setUserData({...userData,college:e.target.value})
                   }}
                   value={userData.college}
-                  onChange={(e) => {
-                    setUserData({ ...userData, college: e.target.value })
-                  }}
+                  // onChange={(e) => {
+                  //   setUserData({ ...userData, college: e.target.value })
+                  // }}
                 />
               </div>
               <div>
