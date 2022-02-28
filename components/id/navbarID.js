@@ -79,11 +79,11 @@ function Navbar() {
       name: 'Dashboard',
       link: '/id/portal'
     },
-    {
-      id: 3,
-      name: 'Companies',
-      link: '/id/viewCompany'
-    }
+    // {
+    //   id: 3,
+    //   name: 'Companies',
+    //   link: '/id/viewCompany'
+    // }
     // {
     //   id: 4,
     //   name: "Pay Now",
@@ -160,7 +160,24 @@ function Navbar() {
         </Link>
       )
     } else return null
-  }
+  } function Company() {
+      return (
+       
+          <div
+            onClick={() => {
+            
+             alert('Companies are on their way!')
+              handleClick()
+              
+            }}
+            className={hamOn ? styles.fadeout : styles.fadein}
+          >
+           Companies
+          </div>
+       
+      )
+    } 
+  
 
   return (
     <>
@@ -195,8 +212,8 @@ function Navbar() {
               </>
             )
           })}
-
-          <Profile />
+          <Company/>
+          <Profile  />
           {!paids ? (
             <div
               onClick={openRazorpay}

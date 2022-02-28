@@ -4,13 +4,13 @@ import Cards from "../components/esummit/Launchpad_cards";
 import SummitEvents from "../components/esummit/events_esummit";
 import Carousel from "../components/esummit/carousel";
 import { carouselData } from "../components/esummit/carouselData";
-export default function Esummit() {
+export default function Esummit({setrender}) {
   return (
     <>
       <Head>
         <title>Launchpad | E-Cell BPHC </title>
       </Head>
-      <Launchpad />
+      <Launchpad prop={setrender} />
       <Cards />
       {/* <SummitEvents/> */}
     </>

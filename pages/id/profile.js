@@ -84,6 +84,9 @@ function Profile() {
         console.log(err)
       })
   }
+  // const handlePaid = () => {
+  //   alert('You&apos;ve already paid');
+  
   return (
     <>
       <div className={styles.launchpad_logo}>
@@ -181,8 +184,10 @@ function Profile() {
               </div>
             </div>
           </div>
-          <div></div>
         </div>
+       
+        {/* <div className={styles.Pay} onClick={() => { setHamOn(true) }}>Pay</div> */}
+      
       </div>
     </>
   )
