@@ -69,7 +69,7 @@ export default function Home() {
                     })
                   }}
                 >
-                  Log in to Dashboard
+                  REGISTER HERE
                 </button>
               )}
               {/* <button className={styles.portalbtn}>Redirect to Portal</button> */}
