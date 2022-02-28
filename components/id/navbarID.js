@@ -11,7 +11,7 @@ import { useSession } from 'next-auth/react'
 
 function Navbar() {
   const [hamOn, setHamOn] = useState(true)
-  const [paid, setPaid] = useState(false)
+  const [paids, setPaid] = useState(false)
 
   const handleClick = () => {
     setHamOn(() => !hamOn)
@@ -204,7 +204,7 @@ function Navbar() {
             >
               Pay Now
             </div>
-          ) : (
+          ) : 
             <Link href="/id/success">
               <div
                 onClick={handleClick}
@@ -213,7 +213,7 @@ function Navbar() {
                 Pay Now
               </div>
             </Link>
-          )}
+          }
         </div>
         <div
           className={hamOn ? styles.logout_off : styles.logout_on}
