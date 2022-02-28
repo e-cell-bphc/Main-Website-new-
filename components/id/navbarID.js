@@ -162,7 +162,7 @@ function Navbar() {
     } else return null
   } function Company() {
       return (
-       
+        <Link href="/id/profile">
           <div
             onClick={() => {
             
@@ -174,7 +174,7 @@ function Navbar() {
           >
            Companies
           </div>
-       
+        </Link>
       )
     } 
   
