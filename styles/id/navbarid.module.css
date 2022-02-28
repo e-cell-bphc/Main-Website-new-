@@ -357,9 +357,14 @@
 .logout_on {
     position: fixed;
     bottom: 5vh;
-    right: 20px;
+    right: 40px;
     height: 50px;
-    width: 50px;
+    width: auto;
+    font-size: 1.3em;
+    color: red;
+    border: 1px solid red;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
     animation: fadein 2s forwards;
 }
 

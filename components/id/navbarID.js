@@ -239,7 +239,7 @@ function Navbar() {
             signOut({ callbackUrl: 'https://ecellbphc.in/id/portal' })
           }}
         >
-          <Image src={logout} alt="logout" />
+          Log Out
         </div>
         <div className={hamOn ? styles.launchpad_off : styles.launchpad_on}>
           <Image src={launchpad} alt="logo" />
