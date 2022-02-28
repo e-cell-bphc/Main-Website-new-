@@ -79,11 +79,11 @@ function Navbar() {
       name: 'Dashboard',
       link: '/id/portal'
     },
-    {
-      id: 3,
-      name: 'Companies',
-      link: '/id/viewCompany'
-    }
+    // {
+    //   id: 3,
+    //   name: 'Companies',
+    //   link: '/id/viewCompany'
+    // }
     // {
     //   id: 4,
     //   name: "Pay Now",
@@ -160,7 +160,24 @@ function Navbar() {
         </Link>
       )
     } else return null
-  }
+  } function Company() {
+      return (
+        <Link href="/id/profile">
+          <div
+            onClick={() => {
+            
+             alert('Companies are on their way!')
+              handleClick()
+              
+            }}
+            className={hamOn ? styles.fadeout : styles.fadein}
+          >
+           Companies
+          </div>
+        </Link>
+      )
+    } 
+  
 
   return (
     <>
@@ -195,7 +212,7 @@ function Navbar() {
               </>
             )
           })}
-
+          <Company/>
           <Profile  />
           {!paids ? (
             <div
