@@ -3,7 +3,10 @@ import Link from "next/link";
 import Carousel from "./carousel";
 import Social from "../homepage/socialmedianew";
 import { carouselData } from "./carouselData";
-export default function Launchpad() {
+export default function Launchpad({ setrender }) {
+  const handleclick = () => {
+    setrender('IDP')
+  }
   return (
     <div className={styles.outer_container}>
       <div className={styles.container1}>
@@ -18,8 +21,10 @@ export default function Launchpad() {
         </div>
       </div>
       <Link href="/id/portal">
-        <button className={styles.buy_button}>BUY TICKETS</button>
+        <a className={styles.buy_button} onClick={
+          handleclick
+        }>BUY TICKETS</a>
       </Link>
     </div>
-  );
+  )
 }

@@ -10,7 +10,7 @@ import Script from 'next/script'
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   const [nav, setNav] = useState(true)
   const [foot, setFoot] = useState(false)
-  const [render, setrender] = useState('')
+  const [render, setrender] = useState('hrlo')
 
   // if (process.browser) {
   //   let param = window.location.pathname
@@ -72,7 +72,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
           {nav ? <Navbar hook={setrender} /> : <Navbar1 />}
         </div>
         <div className={nav ? 'nav0' : 'null'}>
-          <Component {...pageProps} />
+          <Component {...pageProps} hooks={setrender} />
         </div>
         {foot ? null : <Footer />}
       </SessionProvider>

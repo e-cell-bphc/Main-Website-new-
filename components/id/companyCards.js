@@ -24,9 +24,8 @@ function CompanyCards() {
         if (status == 'authenticated') {
           return (
             <>
-              <div className={styles.button} onClick={() => {
-                alert('Companies are on their way!')
-              }}>{prop.statuss}</div>
+              <div className={styles.button} 
+              >{prop.statuss}</div>
             </>
           )
         } else return null
