@@ -318,7 +318,7 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
 } */
 
 .internship {
-  font-size: 1em;
+  /* font-size: 1em; */
     transform: translate(44vw, -15vh);
   animation: up 3s 3.8s forwards;
 
@@ -626,11 +626,12 @@ background-image: linear-gradient(-50deg, #000000 0%, #003049 90%); */
 .portalbtn, .dashbtn{
   animation: up2 0.2s 7s forwards;
     opacity: 0;
+    z-index: 100000000000000;
 
   transform: translate(0vw, -25vw);
 }
   .internship {
-    /* transform: translate(80vw, -0vh); */
+    transform: translate(80vw, -0vh);
   }
 
   @keyframes up {

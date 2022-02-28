@@ -213,7 +213,7 @@ function Navbar() {
             )
           })}
           <Company/>
-          <Profile  />
+          <Profile hook={openRazorpay} />
           {!paids ? (
             <div
               onClick={openRazorpay}

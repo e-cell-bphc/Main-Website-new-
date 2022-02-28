@@ -7,7 +7,7 @@ import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
 import axios from 'axios'
 
-function Profile() {
+function Profile({openRazorPay}) {
   const { data: session, status } = useSession()
   const [userData, setUserData] = useState({
     name: '',
@@ -186,7 +186,7 @@ function Profile() {
           </div>
         </div>
        
-        {/* <div className={styles.Pay} onClick={() => { setHamOn(true) }}>Pay</div> */}
+        <div className={styles.Pay} onClick={() => { openRazorPay }}>Pay</div>
       
       </div>
     </>
