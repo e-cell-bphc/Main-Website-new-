@@ -13,25 +13,25 @@ function CompanyCards() {
       prop2: 'Unpaid',
       prop3: 'XYZ developer',
       path: '',
-      status: 'Apply'
+      statuss: 'Apply'
     },
     
   ]
   const { data: session, status } = useSession()
 
-  {
-    data.map((data) => {
-      return(
-      function auth() {
+
+  function Auth({ prop }) {
         if (status == 'authenticated') {
           return (
             <>
-              <div className={styles.button}>{data.status}</div>
+              <div className={styles.button} onClick={() => {
+                alert('Companies are on their way!')
+              }}>{prop.statuss}</div>
             </>
           )
         } else return null
       }
-    )})}
+ 
   return (
     <>
       {data.map((data) => {
@@ -57,7 +57,7 @@ function CompanyCards() {
                   </a>
                 </div>
               </div>
-              <div className={styles.button}>{data.status}</div>
+              <Auth prop={data}/>
             </div>
           </>
         )

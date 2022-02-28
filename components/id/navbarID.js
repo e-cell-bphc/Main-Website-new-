@@ -131,7 +131,7 @@ function Navbar() {
             }
             var rzp1 = new Razorpay(options)
             rzp1.open()
-          } else if( paid) {
+          } else if( paids) {
             alert('already paid')
           } else if (res.data.status == 'paid') {
             alert("You've already paid")
@@ -198,7 +198,7 @@ function Navbar() {
           })}
 
           <Profile />
-          {!paid ? (
+          {!paids ? (
             <div
               onClick={openRazorpay}
               className={hamOn ? styles.fadeout : styles.fadein}
@@ -206,7 +206,9 @@ function Navbar() {
               Pay Now
             </div>
 
-          ) : <Link href='/id/success'>
+          ) :
+            
+            <Link href='/id/success'>
               <div
                 onClick={handleClick}
               className={hamOn ? styles.fadeout : styles.fadein}
