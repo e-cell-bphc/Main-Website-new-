@@ -102,6 +102,9 @@ function Profile() {
                   type="text"
                   className={styles.inputbox}
                   placeholder="Enter your name"
+                  onChange={(e)=>{
+                    setUserData({...userData,name:e.target.value})
+                  }}
                   value={userData.name}
                   onChange={(e) => {
                     setUserData({ ...userData, name: e.target.value })
@@ -113,7 +116,7 @@ function Profile() {
                 <input
                   className={styles.inputbox}
                   type="text"
-                  placeholder="Enter your Email"
+                  placeholder="Enter your email"
                   value={userData.email}
                 />
               </div>
@@ -134,7 +137,10 @@ function Profile() {
                 <input
                   type="text"
                   className={styles.inputbox}
-                  placeholder="Enter your College"
+                  placeholder="Enter your college"
+                  onChange={(e)=>{
+                    setUserData({...userData,college:e.target.value})
+                  }}
                   value={userData.college}
                   onChange={(e) => {
                     setUserData({ ...userData, college: e.target.value })
@@ -158,6 +164,9 @@ function Profile() {
                 <input
                   type="file"
                   className={styles.resume}
+                  onChange={(e)=>{
+                    setUserData({...userData,resume:e.target.value})
+                  }}
                   value={userData.resume}
                 />
               </div> */}

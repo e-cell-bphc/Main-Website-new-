@@ -11,7 +11,7 @@ import { useSession } from 'next-auth/react'
 
 function Navbar() {
   const [hamOn, setHamOn] = useState(true)
-  const [paids, setPaid] = useState(false)
+  const [paid, setPaid] = useState(false)
 
   const handleClick = () => {
     setHamOn(() => !hamOn)
@@ -109,7 +109,7 @@ function Navbar() {
           if (res.data.id) {
             var options = {
               key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID, // Enter the Key ID generated from the Dashboard
-              amount: '50000', // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+              amount: '26500', // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
               currency: 'INR',
               name: 'ECell, BITS Pilani',
               description: 'Payment for Launchpad 2022',
@@ -142,8 +142,7 @@ function Navbar() {
         .catch((error) => {
           console.log
         })
-    }
-    else {
+    } else {
       alert('Login/Signup first')
     }
   }
@@ -205,17 +204,16 @@ function Navbar() {
             >
               Pay Now
             </div>
-
-          ) :
-            
-            <Link href='/id/success'>
+          ) : (
+            <Link href="/id/success">
               <div
                 onClick={handleClick}
-              className={hamOn ? styles.fadeout : styles.fadein}
-            >
-              Pay Now
-              </div></Link>}
-
+                className={hamOn ? styles.fadeout : styles.fadein}
+              >
+                Pay Now
+              </div>
+            </Link>
+          )}
         </div>
         <div
           className={hamOn ? styles.logout_off : styles.logout_on}

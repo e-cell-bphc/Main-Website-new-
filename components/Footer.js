@@ -1,16 +1,17 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import styles from "../styles/Footer.module.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Link from 'next/link'
+import styles from '../styles/Footer.module.css'
 import {
   faFacebook,
   faInstagram,
   faLinkedin,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
+  faTwitter
+} from '@fortawesome/free-brands-svg-icons'
+import termsandconditions from '../pages/termsandconditions'
 
 export default function Footer() {
-
   return (
-    <footer className={ styles.footerWrapper}>
+    <footer className={styles.footerWrapper}>
       <div className={styles.footer}>
         <div className={styles.footerLeft}>
           <div className={styles.info}>
@@ -61,6 +62,7 @@ export default function Footer() {
               ecell@hyderabad.bits-pilani.ac.in
             </a>
           </div>
+
           {/* <div className={styles.links}>
             <h2>Site Links</h2>
             <ul>
@@ -85,10 +87,19 @@ export default function Footer() {
             </ul>
           </div> */}
         </div>
+        <div className={styles.otherlinks}>
+          <h2>Other Links</h2>
+          <Link href="/termsandconditions">
+            <a className={styles.terms}>Terms and Conditions</a>
+          </Link>
+          <Link href="/privacypolicy">
+            <a className={styles.terms}>Privacy Policy</a>
+          </Link>
+        </div>
       </div>
       <div className={styles.copyright}>
         Copyright 2021 All rights reserved. Designed by E-Cell BITS Hyderabad
       </div>
     </footer>
-  );
+  )
 }

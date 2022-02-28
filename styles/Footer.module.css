@@ -70,7 +70,7 @@
   font-size: 13px;
 }
 
-.footerWrapper a.mail {
+.footerWrapper a.mail{
   position: relative;
 }
 .footerWrapper a.mail::before {
@@ -88,6 +88,13 @@
   width: 100%;
 }
 
+.otherlinks{
+  display: flex;
+  flex-direction: column;
+}
+a.terms:hover{
+  text-decoration: underline;
+}
 @media screen and (max-width: 930px) {
   .footer {
     margin-bottom: 10px;
