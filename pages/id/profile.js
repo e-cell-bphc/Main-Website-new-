@@ -138,8 +138,8 @@ function Profile() {
                   type="text"
                   className={styles.inputbox}
                   placeholder="Enter your college"
-                  onChange={(e)=>{
-                    setUserData({...userData,college:e.target.value})
+                  onChange={(e) => {
+                    setUserData({ ...userData, college: e.target.value })
                   }}
                   value={userData.college}
                   // onChange={(e) => {
