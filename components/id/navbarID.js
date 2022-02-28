@@ -196,7 +196,7 @@ function Navbar() {
             )
           })}
 
-          <Profile />
+          <Profile  />
           {!paids ? (
             <div
               onClick={openRazorpay}

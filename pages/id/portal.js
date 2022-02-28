@@ -56,7 +56,7 @@ export default function Home() {
               {status === 'authenticated' ? (
                 <Link href="/id/profile">
                   <button className={styles.portalbtn}>
-                    Redirect to Portal
+                    Complete Registration
                   </button>
                 </Link>
               ) : (
