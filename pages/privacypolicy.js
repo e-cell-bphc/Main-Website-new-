@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../styles/OtherLinks/terms.module.css'
-import Head from "next/head";
+import Head from 'next/head'
 import Link from 'next/link'
 function privacypolicies() {
   return (
@@ -15,7 +15,8 @@ function privacypolicies() {
           protects the data you provide to us when you visit and use our website{' '}
           <Link href="/">
             <a>https://www.ecellbphc.in/</a>
-          </Link>.
+          </Link>
+          .
           <br />
           <br />
           We reserve the right to change this policy at any given time, of which
@@ -82,7 +83,7 @@ function privacypolicies() {
             analysis, the data is completely removed from our systems.
             <br />
             <br />
-            Please note that cookies don't allow us to gain control of your
+            Please note that cookies don&apos;t allow us to gain control of your
             computer in any way. They are strictly used to monitor which pages
             you find useful and which you do not so that we can provide a better
             experience for you.
@@ -113,8 +114,8 @@ function privacypolicies() {
             <br />
             <br />
             When you are filling the forms on the website, make sure to check if
-            there is a box which you can leave unchecked, if you don't want to
-            disclose your personal information.
+            there is a box which you can leave unchecked, if you don&apos;t want
+            to disclose your personal information.
             <br />
             <br />
             If you have already agreed to share your information with us, feel
