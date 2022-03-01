@@ -169,8 +169,8 @@ function PitchersPilot() {
       .then((formdata) => {
         console.log(formdata)
       })
-      .then(showRazorpay())
-      .then(alert('Your Data has been Submitted :)'))
+      .then(await showRazorpay())
+      .then(alert('Your Data has been Submitted, please pay to complete your registration :)'))
       .catch((err) => {
         alert('Form Data Not Submitted :( . Please Refresh and Try Again')
       })
