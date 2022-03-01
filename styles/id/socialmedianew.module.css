@@ -1,11 +1,12 @@
 .social1 {
   position: absolute;
-  top: 55%;
+  top: 86%;
   left: 8px;
   transform: translateY(70%);
   margin: 0;
   padding: 0;
   padding-left: 10px;
+  height: max-content;
 }
 .icons1 {
   display: flex;
