@@ -161,17 +161,19 @@ function PitchersPilot() {
   }
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post(
-      'https://sheet.best/api/sheets/32e90bd5-af25-42e6-b3a5-ee58f57f6cc6',
-      formdata).then(
-        (formdata) => {
-          console.log(formdata);
-        }
-      ).then(
-        alert('Your Data has been Submitted :)')
-      ).then(showRazorpay()).catch((err) => {
-        alert("Form Data Not Submitted :( . Please Refresh and Try Again");
-      });
+    await axios
+      .post(
+        'https://sheet.best/api/sheets/32e90bd5-af25-42e6-b3a5-ee58f57f6cc6',
+        formdata
+      )
+      .then((formdata) => {
+        console.log(formdata)
+      })
+      .then(showRazorpay())
+      .then(alert('Your Data has been Submitted :)'))
+      .catch((err) => {
+        alert('Form Data Not Submitted :( . Please Refresh and Try Again')
+      })
     
   }
 
