@@ -159,27 +159,45 @@ function PitchersPilot() {
     setData({ ...formdata, [ e.target.name ]: e.target.value})
     console.log(formdata)
   }
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    await axios
-      .post(
-        'https://sheet.best/api/sheets/32e90bd5-af25-42e6-b3a5-ee58f57f6cc6',
-        formdata
-      )
-      .then((formdata) => {
-        console.log(formdata)
-      })
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   await axios
+  //     .post(
+  //       'https://sheet.best/api/sheets/32e90bd5-af25-42e6-b3a5-ee58f57f6cc6',
+  //       formdata
+  //     )
+  //     .then((formdata) => {
+  //       console.log(formdata)
+  //     })
+      
+  //     .then(alert('Your Data has been Submitted, please pay to complete your registration :)')).then(await showRazorpay())
+  //     .catch((err) => {
+  //       alert('Form Data Not Submitted :( . Please Refresh and Try Again')
+  //     })
+    
+  // }
 
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    await showRazorpay()
+      .then(
+        await axios
+          .post(
+            'https://sheet.best/api/sheets/32e90bd5-af25-42e6-b3a5-ee58f57f6cc6',
+            formdata
+          ))
+          .then((formdata) => {
+            console.log(formdata)
+          }
+      )
       .then(
         alert(
           'Your Data has been Submitted, please pay to complete your registration :)'
         )
       )
-      .then(await showRazorpay())
       .catch((err) => {
         alert('Form Data Not Submitted :( . Please Refresh and Try Again')
       })
-    
   }
 
   const showloader = () => {
