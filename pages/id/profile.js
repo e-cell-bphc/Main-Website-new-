@@ -186,7 +186,8 @@ function Profile({openRazorPay}) {
           </div>
         </div>
        
-        <div className={styles.Pay} onClick={() => { openRazorPay }}>Pay</div>
+{/*<div className={styles.Pay} onClick={() => { openRazorPay }}>Pay</div>*/}
+
       
       </div>
     </>
