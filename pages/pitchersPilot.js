@@ -185,22 +185,18 @@ function PitchersPilot() {
           )
         )
     } else {
-      await showRazorpay()
-        .then(
-          axios
-            .post(
-              'https://sheet.best/api/sheets/32e90bd5-af25-42e6-b3a5-ee58f57f6cc6',
-              formdata
+      await showRazorpay().then(
+        axios
+          .post(
+            'https://sheet.best/api/sheets/32e90bd5-af25-42e6-b3a5-ee58f57f6cc6',
+            formdata
+          )
+          .then(
+            alert(
+              'Your Data has been Submitted, please pay to complete your registration :)'
             )
-            .then(
-              alert(
-                'Your Data has been Submitted, please pay to complete your registration :)'
-              )
-            )
-        )
-        .catch((err) => {
-          alert('Form Data Not Submitted :( . Please Refresh and Try Again')
-        })
+          )
+      )
     }
   }
 
