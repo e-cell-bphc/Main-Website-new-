@@ -9,6 +9,7 @@ import { useEffect } from 'react'
 
 export default function Launchpad({ setrender }) {
   const { data: session, status } = useSession()
+
   useEffect(() => {
     console.log(session)
     console.log(status)
@@ -47,9 +48,7 @@ export default function Launchpad({ setrender }) {
       </div>
       {status === 'authenticated' ? (
         <Link href="/id/profile">
-          <button className={styles.buy_button} onClick={handleclick}>
-            BUY TICKETS
-          </button>
+          <button className={styles.buy_button}>BUY TICKETS</button>
         </Link>
       ) : (
         <button

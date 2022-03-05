@@ -1,16 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-
 .outer {
-    width: 100vw;
-    /* height: fit-content; */
-    min-height: 100vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    padding: 0;
-    margin: 0;
-    display: flex;
+  width: 100vw;
+  /* height: fit-content; */
+  min-height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  display: flex;
 }
 
 /* .inner_left {
@@ -20,171 +19,167 @@
 } */
 
 .inner_right {
-    width: 100vw;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    background-color: rgb(0, 0, 0); 
-
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  background-color: rgb(0, 0, 0);
 }
-.Pay{
-    position: absolute;
-    bottom: 10vh;
-    right: 10vh;
-    border: 1px solid blue;
-    border-radius: 4px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-left: 5vh;
-    padding-right: 5vh;
-    font-size: 4vh;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
+.Pay {
+  border: 1px solid blue;
+  border-radius: 4px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .inner_right_top {
-    color: white;
-    text-align: center;
-    font-weight: 100;
-    font-family: 'Bebas Neue', cursive;
-    padding: 5vh 0;
-    font-size: 3em;
+  color: white;
+  text-align: center;
+  font-weight: 100;
+  font-family: 'Bebas Neue', cursive;
+  padding: 5vh 0;
+  font-size: 3em;
 }
 
 .inner_right_bottom {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 5vh 5vw;    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5vh 5vw;
 }
 
 .user_form {
-    height: fit-content;
-    border-radius: 10px;
-    width: 95vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  height: fit-content;
+  border-radius: 10px;
+  width: 95vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .user_form > div:nth-child(2) {
-    width: 35vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
 }
 .user_form > div:nth-child(5) {
-    width: 35vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
 }
 
 .user_form > div {
-    width: 20vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
 }
 
 .labels {
-    width: 100%;
-    color: white;
-    font-family: 'Bebas Neue', cursive;
-    font-size: 1.7rem;
-    text-align: start;
-    margin-bottom: 2vh;
-    border-bottom: 1px solid rgb(0, 170, 255);
+  width: 100%;
+  color: white;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.7rem;
+  text-align: start;
+  margin-bottom: 2vh;
+  border-bottom: 1px solid rgb(0, 170, 255);
 }
 
 .inputbox {
-    background: transparent;
-    color: wheat;
-    border: none;
-    width: 100%;
-    font-size: 1.5rem;
-    padding: 20px;
+  background: transparent;
+  color: wheat;
+  border: none;
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 20px;
 }
 
 .resume {
-    width: 100%;
-    padding: 20px;
-    font-size: 1.5rem;
-    background: transparent;
+  width: 100%;
+  padding: 20px;
+  font-size: 1.5rem;
+  background: transparent;
 }
 
 .submit {
-    padding: 10px 14px;
-    width: 50%;
-    background: rgb(0, 170, 255);
-    font-size: 2rem;
-    text-transform: uppercase;
-    font-family: 'Bebas Neue', cursive;
-    border-radius: 5px;
+  padding: 10px 14px;
+  width: 40%;
+  background: rgb(0, 170, 255);
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: 'Bebas Neue', cursive;
+  border-radius: 5px;
 }
 
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90vw;
+}
 
 .launchpad_logo {
-    position: fixed;
-    top: 1vh;
-    left: 2vw;
-    height: 50px;
-    width: 100px;
+  position: fixed;
+  top: 1vh;
+  left: 2vw;
+  height: 50px;
+  width: 100px;
 }
-@media screen and (max-width: 1400px){
-    .submit{
-        transform: scale(0.7);
-    }
-    .labels{
-        transform: scale(0.8);
-    }
-    .inputbox{
-        transform: scale(0.8);
-    }
-    .outer{
-        overflow-x: hidden;
-    }
-    .inner_right_bottom{
-        padding: 0;
-    }
-    .inner_right_top{
-        transform: scale(0.8);
-    }
-    .resume{
-        transform: scale(0.7);
-        padding: 15px;
-    }
+@media screen and (max-width: 1400px) {
+  .submit {
+    transform: scale(0.7);
+  }
+  .labels {
+    transform: scale(0.8);
+  }
+  .inputbox {
+    transform: scale(0.8);
+  }
+  .outer {
+    overflow-x: hidden;
+  }
+  .inner_right_bottom {
+    padding: 0;
+  }
+  .inner_right_top {
+    transform: scale(0.8);
+  }
+  .resume {
+    transform: scale(0.7);
+    padding: 15px;
+  }
 }
 @media screen and (max-width: 549px) {
-    .user_form > div {
+  .user_form > div {
     width: 80vw;
-}   
+  }
 
-.user_form > div:nth-child(2) {
+  .user_form > div:nth-child(2) {
     width: 80vw;
-}
-.user_form > div:nth-child(5) {
-
+  }
+  .user_form > div:nth-child(5) {
     width: 80vw;
-}
-.launchpad_logo{
+  }
+  .launchpad_logo {
     display: none;
-}
-.inner_right_top{
+  }
+  .inner_right_top {
     margin-top: 8vh;
-}
-.submit{
+  }
+  .submit {
     margin-left: auto;
     margin-right: auto;
-}
+  }
 }

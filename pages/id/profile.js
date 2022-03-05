@@ -6,9 +6,33 @@ import Image from 'next/image'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
 import axios from 'axios'
-
-function Profile({openRazorPay}) {
+function Profile() {
   const { data: session, status } = useSession()
+  const [paids, setPaid] = useState(false)
+
+  useEffect(() => {
+    async function get() {
+      axios
+        .post(
+          'https://backend-api-2022.onrender.com/api/payments/getPaymentStatus',
+          {
+            email: session.user.email
+          }
+        )
+        .then((res) => {
+          if (res.data.paid) {
+            setPaid(res.data.paid, () => {})
+          }
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+    }
+    if (status === 'authenticated' && session.user.email) {
+      get()
+    }
+  }, [])
+
   const [userData, setUserData] = useState({
     name: '',
     email: '',
@@ -19,6 +43,80 @@ function Profile({openRazorPay}) {
   })
 
   const router = useRouter()
+
+  const initializeRazorpay = () => {
+    return new Promise((resolve) => {
+      const script = document.createElement('script')
+      script.src = 'https://checkout.razorpay.com/v1/checkout.js'
+
+      script.onload = () => {
+        resolve(true)
+      }
+      script.onerror = () => {
+        resolve(false)
+      }
+
+      document.body.appendChild(script)
+    })
+  }
+
+  async function openRazorpay(e) {
+    e.preventDefault()
+    const res = await initializeRazorpay()
+
+    if (session?.user.email && session?.user._id && res) {
+      axios
+        .post(
+          'https://backend-api-2022.onrender.com/api/payments/createOrder',
+          {
+            email: session.user.email,
+            _id: session.user._id
+          }
+        )
+        .then((res) => {
+          console.log('res', res.data)
+          if (res.data.id) {
+            var options = {
+              key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID, // Enter the Key ID generated from the Dashboard
+              amount: '26500', // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+              currency: 'INR',
+              name: 'ECell, BITS Pilani',
+              description: 'Payment for Launchpad 2022',
+              image:
+                'https://www.ecellbphc.in/_next/image?url=%2F_next%2Fstatic%2Fimage%2Fassets%2Fimages%2Fmainlogo.9c338b5ed23edcdf418f531e5ac4ab38.png&w=256&q=75',
+              order_id: res.data.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+              // callback_url: 'https://ecellbphc.in/esummit',
+              // prefill: {
+              //   name: 'Gaurav Kumar',
+              //   email: 'gaurav.kumar@example.com',
+              //   contact: '9999999999'
+              // },
+              notes: {
+                address: 'Razorpay Corporate Office'
+              },
+              theme: {
+                color: '#3399cc'
+              }
+            }
+            var rzp1 = new Razorpay(options)
+            rzp1.open()
+
+            // window.location.replace('https://ecellbphc.in/esummit')
+          } else if (paids) {
+            alert('already paid')
+          } else if (res.data.status == 'paid') {
+            alert("You've already paid")
+          } else {
+            alert('Something blew up')
+          }
+        })
+        .catch((error) => {
+          console.log
+        })
+    } else {
+      alert('Login/Signup first')
+    }
+  }
 
   useEffect(() => {
     console.log(session)
@@ -86,7 +184,7 @@ function Profile({openRazorPay}) {
   }
   // const handlePaid = () => {
   //   alert('You&apos;ve already paid');
-  
+
   return (
     <>
       <div className={styles.launchpad_logo}>
@@ -174,21 +272,24 @@ function Profile({openRazorPay}) {
                 />
               </div> */}
               <div></div>
-              <div>
-                <button
-                  className={styles.submit}
-                  onClick={(e) => handleUpdate(e)}
-                >
-                  Update
+            </div>
+            <div className={styles.buttons}>
+              <button
+                className={styles.submit}
+                onClick={(e) => handleUpdate(e)}
+              >
+                Update
+              </button>
+              {!paids ? (
+                <button className={styles.submit} onClick={openRazorpay}>
+                  Pay
                 </button>
-              </div>
+              ) : (
+                <div className={styles.submit}>You&apos;ve paid</div>
+              )}
             </div>
           </div>
         </div>
-       
-{/*<div className={styles.Pay} onClick={() => { openRazorPay }}>Pay</div>*/}
-
-      
       </div>
     </>
   )
