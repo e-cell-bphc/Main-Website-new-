@@ -4,7 +4,7 @@
   flex-direction: column;
   background-color: black;
   /* background-color: #cccccc; */
-background-image: linear-gradient(0deg, #000000 0%, #003049 130%);
+  background-image: linear-gradient(0deg, #000000 0%, #003049 130%);
   /* background: rgb(2,0,36);
   background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 0%, rgba(3,12,40,1) 73%, rgba(0,21,88,1) 98%); */
   justify-content: center;
@@ -107,14 +107,15 @@ background-image: linear-gradient(0deg, #000000 0%, #003049 130%);
   border: 1px solid #1280d4;
   /* box-shadow: inset -2px -2px 40px rgba(0,0,255,0.1),
                     2px 2px 6px rgba(0,0,255,0.8) */
-}@media screen and (max-width: 1400px){
-  .headings{
+}
+@media screen and (max-width: 1400px) {
+  .headings {
     transform: scale(0.8);
   }
-  .box{
+  .box {
     transform: scale(0.8);
   }
-  .buy_button{
+  .buy_button {
     transform: scale(0.8);
   }
 }
@@ -172,12 +173,11 @@ background-image: linear-gradient(0deg, #000000 0%, #003049 130%);
     transform: scale(0.7);
     box-shadow: -2px -2px 6px rgba(0, 0, 255, 0.1),
       2px 2px 15px rgba(0, 0, 255, 0.3);
-      margin-top: 4em;
-      margin-bottom: 4em;
+    margin-top: 4em;
+    margin-bottom: 4em;
   }
   .heading1 {
     font-size: 50px;
-    
   }
 }
 @media only screen and (max-width: 400px) {

@@ -65,7 +65,7 @@ export default function Home() {
                   onClick={(e) => {
                     e.preventDefault()
                     signIn(null, {
-                      callbackUrl: 'https://ecellbphc.in/id/portal'
+                      callbackUrl: '/id/profile'
                     })
                   }}
                 >

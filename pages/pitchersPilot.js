@@ -59,7 +59,7 @@ function PitchersPilot() {
 
   const [cost, setCost] = useState(300)
   const [coupon, setCoupon] = useState('')
-  const [couponText, setCouponText] = useState('Check Coupon')
+  const [couponText, setCouponText] = useState('Apply Coupon')
 
   const switchForm = (e) => {
     setRegister(true)
@@ -203,11 +203,25 @@ function PitchersPilot() {
   const showloader = () => {
     console.log('loadinggg....')
   }
+
+  const initializeRazorpay = () => {
+    return new Promise((resolve) => {
+      const script = document.createElement('script')
+      script.src = 'https://checkout.razorpay.com/v1/checkout.js'
+
+      script.onload = () => {
+        resolve(true)
+      }
+      script.onerror = () => {
+        resolve(false)
+      }
+
+      document.body.appendChild(script)
+    })
+  }
+
   const showRazorpay = async () => {
-    const script = document.createElement('script')
-    script.src = 'https://checkout.razorpay.com/v1/checkout.js'
-    document.body.appendChild(script)
-    script.onload = showloader()
+    const res = await initializeRazorpay()
 
     const data = await fetch('/api/razor', { method: 'POST' })
 
@@ -235,7 +249,7 @@ function PitchersPilot() {
     }
     var rzp1 = new Razorpay(options)
 
-    rzp1.open()
+    res & rzp1.open()
   }
 
   const handleCouponChange = (e) => {
@@ -352,7 +366,7 @@ function PitchersPilot() {
                   onChange={(e) => {
                     {
                       setCoupon(e.target.value)
-                      setCouponText('Check Coupon')
+                      setCouponText('Apply Coupon')
                       setCost(300)
                     }
                   }}

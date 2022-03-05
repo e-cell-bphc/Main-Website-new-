@@ -1,5 +1,5 @@
-const app = require('express');
-const path = require('path');
+const app = require('express')
+const path = require('path')
 const shortid = require('shortid')
 const Razorpay = require('razorpay')
 
@@ -9,15 +9,12 @@ const razorpay = new Razorpay({
 })
 
 app.post('/razorpay', async (req, res) => {
-  const amount =49900
+  const amount = 49900
   const currency = 'INR'
 
   const options = {
     amount,
     currency,
-    receipt: shortid.generate(),
+    receipt: shortid.generate()
   }
-
- 
 })
-

@@ -1,11 +1,36 @@
-import styles from "../../styles/esummit/launchpad.module.css";
-import Link from "next/link";
-import Carousel from "./carousel";
-import Social from "../homepage/socialmedianew";
-import { carouselData } from "./carouselData";
+import styles from '../../styles/esummit/launchpad.module.css'
+import Link from 'next/link'
+import Carousel from './carousel'
+import Social from '../homepage/socialmedianew'
+import { carouselData } from './carouselData'
+import { signIn } from 'next-auth/react'
+import { useSession } from 'next-auth/react'
+import { useEffect } from 'react'
+
 export default function Launchpad({ setrender }) {
-  const handleclick = () => {
-    setrender('IDP')
+  const { data: session, status } = useSession()
+  useEffect(() => {
+    console.log(session)
+    console.log(status)
+    if (session) {
+      console.log('something', session)
+      // return (
+      //   <>
+      //     Signed in as {session} <br />
+      //     <button onClick={() => signOut()}>Sign out</button>
+      //   </>
+      // )
+    } else {
+      console.log('empty')
+    }
+  }, [session, status])
+
+  const handleclick = (e) => {
+    //setrender('IDP')
+    e.preventDefault()
+    signIn(null, {
+      callbackUrl: '/id/profile'
+    })
   }
   return (
     <div className={styles.outer_container}>
@@ -20,11 +45,25 @@ export default function Launchpad({ setrender }) {
           </div>
         </div>
       </div>
-      <Link href="/id/portal">
-        <a className={styles.buy_button} onClick={
-          handleclick
-        }>BUY TICKETS</a>
-      </Link>
+      {status === 'authenticated' ? (
+        <Link href="/id/profile">
+          <button className={styles.buy_button} onClick={handleclick}>
+            BUY TICKETS
+          </button>
+        </Link>
+      ) : (
+        <button
+          className={styles.buy_button}
+          onClick={(e) => {
+            e.preventDefault()
+            signIn(null, {
+              callbackUrl: '/id/profile'
+            })
+          }}
+        >
+          REGISTER HERE
+        </button>
+      )}
     </div>
   )
 }
