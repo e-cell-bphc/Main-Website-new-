@@ -161,8 +161,24 @@ function Navbar() {
       )
     } else return null
   } function Company() {
+    if (status == 'authenticated') {
       return (
-        <Link href="/id/profile">
+        <>
+          <Link href="/id/viewCompany">
+            <div
+              onClick={
+                handleClick
+              }
+              className={hamOn ? styles.fadeout : styles.fadein}
+            >
+              Companies
+            </div>
+          </Link>
+        </>
+      )
+    }
+    return (
+        <Link href="/id/portal">
           <div
             onClick={() => {
             
