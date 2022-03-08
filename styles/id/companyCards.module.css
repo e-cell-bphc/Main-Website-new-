@@ -14,7 +14,7 @@
 } */
 
 .cardContainer{
-    height: 30em;
+    height: 31em;
     width: 22em;
     background: rgb(7, 7, 7);
     margin: 5vh;
@@ -119,7 +119,7 @@
 @media screen and (max-width: 512px) {
     .cardContainer{
         margin: 5vh, 0 , 5vh, 0;
-        height: 27em;
+        height: 30em;
     }
 }
 @media screen and (max-width:1000px) {
