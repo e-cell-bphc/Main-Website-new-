@@ -1,25 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from '../../styles/id/companyCards.module.css'
 import Image from 'next/image'
 import launchpad from '../../assets/Launchpad.png'
 import { useSession } from 'next-auth/react'
+import axios from 'axios'
 
 function CompanyCards() {
-  const data = [
-    {
-      id: 1,
-      image: './',
-      prop1: 'Company X',
-      prop2: 'Unpaid',
-      prop3: 'XYZ developer',
-      path: '',
-      statuss: 'Apply'
-    },
-    
-  ]
   const { data: session, status } = useSession()
+  const [datas, setData] = useState([
 
+  ])
+  useEffect(
+    async function datacall() {
+      axios.post('https://backend-api-2022.onrender.com/api/company/getCompany').then((res) => {
+        console.log(res.data)
+        setData(res.data)
+      }).catch((err) => {
+       alert(err)
+     })
+    }, [])
 
+    console.log(datas)
   function Auth({ prop }) {
         if (status == 'authenticated') {
           return (
@@ -33,7 +34,7 @@ function CompanyCards() {
  
   return (
     <>
-      {data.map((data) => {
+      {datas.map((data) => {
         return (
           <>
             <div className={styles.cardContainer}>
@@ -42,21 +43,30 @@ function CompanyCards() {
               </div>
               <div className={styles.props}>
                 <div className={styles.propitem}>
-                  <a className={styles.companyName}>{data.prop1}</a>
+                  <a className={styles.companyName}>{data.name}</a>
                 </div>
                 <div className={styles.propitem}>
-                  <a className={styles.companyStipend}>{data.prop2}</a>
+                  <a className={styles.companyStipend} href={data.websiteLink}>
+                    {data.websiteLink}
+                  </a>
+                </div>
+                <div className={styles.headprop}>Roles</div>
+                <div className={styles.propitem1}>
+                  {data.roles.map((data) => {
+                    return <a className={styles.Eligibilty}>{data}</a>
+                  })}
                 </div>
                 <div className={styles.propitem}>
-                  <a className={styles.Eligibilty}>{data.prop3}</a>
-                </div>
-                <div className={styles.propitem}>
-                  <a className={styles.Eligibilty} href={data.path} download>
+                  <a
+                    className={styles.Eligibilty}
+                    href={data.companyDesc}
+                    download
+                  >
                     Job Description
                   </a>
                 </div>
               </div>
-              <Auth prop={data}/>
+              {/* <Auth prop={data} /> */}
             </div>
           </>
         )

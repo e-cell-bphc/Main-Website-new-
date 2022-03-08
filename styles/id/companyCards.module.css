@@ -14,7 +14,7 @@
 } */
 
 .cardContainer{
-    height: 27em;
+    height: 30em;
     width: 22em;
     background: rgb(7, 7, 7);
     margin: 5vh;
@@ -31,12 +31,43 @@
     transform: scale(1.03);
     transition-duration: 0.25s;
 }
-
+/* 
+.Eligibility{
+    height: 10em;
+    width: 18em;
+} */
 
 .propitem{
+    
     text-align: center;
+    overflow-y: auto;
     margin-top: 1.2vh;
     margin-bottom: 1.2vh;}
+.headprop{
+    margin-left: auto; 
+    margin-right: auto; 
+    text-align: center;
+    overflow-y: auto;
+    font-size: 19px;
+    margin-top: 1.2vh;
+    width: fit-content;
+    border-bottom:1px solid white ;
+    margin-bottom: 1.2vh;}
+.propitem1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+    text-align: center;
+    padding: 0.6em;
+    border: 1px solid rgb(44, 44, 44);
+    height: 6em;
+    width: 15em;
+
+    overflow-y: auto;
+    margin-top: 2vh;
+    border-radius: 5px;
+    margin-bottom: 2vh;}
 .companyName{
     font-size: 2em;
     font-family: 'Bebas Neue', cursive;

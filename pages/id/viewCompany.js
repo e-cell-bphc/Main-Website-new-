@@ -79,7 +79,7 @@ function ViewCompany() {
             <CompanyCards />
           </div>
           <div className={handleClass2(toggle)}>
-            <CompanyCards />
+            {/* <CompanyCards /> */}
           </div>
         </div>
         <div
