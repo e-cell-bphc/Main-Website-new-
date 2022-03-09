@@ -211,8 +211,8 @@ function Navbar() {
         <div className={hamOn ? styles.none : styles.innerdown}>
           {cards.map((data) => {
             return (
-              <>
-                <Link key={data.link} href={data.link}>
+              <div key={data.link}>
+                <Link href={data.link}>
                   <div
                     onClick={handleClick}
                     className={hamOn ? styles.fadeout : styles.fadein}
@@ -221,7 +221,7 @@ function Navbar() {
                     {data.name}
                   </div>
                 </Link>
-              </>
+              </div>
             )
           })}
           <Company />
