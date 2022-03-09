@@ -211,12 +211,11 @@ function Navbar() {
         <div className={hamOn ? styles.none : styles.innerdown}>
           {cards.map((data) => {
             return (
-              <div key={data.link}>
+              <div key={data.id}>
                 <Link href={data.link}>
                   <div
                     onClick={handleClick}
                     className={hamOn ? styles.fadeout : styles.fadein}
-                    key={data.id}
                   >
                     {data.name}
                   </div>
