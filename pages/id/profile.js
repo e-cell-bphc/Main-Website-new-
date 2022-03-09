@@ -80,7 +80,7 @@ function Profile() {
           if (res.data.id) {
             var options = {
               key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID, // Enter the Key ID generated from the Dashboard
-              amount: $`value`', // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+              amount: $`value`, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
               currency: 'INR',
               name: 'ECell, BITS Pilani',
               description: 'Payment for Launchpad 2022',
