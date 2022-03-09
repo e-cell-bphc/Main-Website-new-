@@ -182,7 +182,7 @@ function Navbar() {
           <div
             onClick={() => {
             
-             alert('Companies are on their way!')
+             alert('Register/LogIn First!')
               handleClick()
               
             }}
