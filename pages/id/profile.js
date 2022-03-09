@@ -9,6 +9,7 @@ import axios from 'axios'
 function Profile() {
   const { data: session, status } = useSession()
   const [paids, setPaid] = useState(false)
+  const [value, setValue] = useState (26500)
 
   useEffect(() => {
     async function get() {
@@ -39,7 +40,8 @@ function Profile() {
     phoneNumber: '',
     college: '',
     yos: '',
-    resumeURL: ''
+    resumeURL: '',
+    couponCode: ''
   })
 
   const router = useRouter()
@@ -78,7 +80,7 @@ function Profile() {
           if (res.data.id) {
             var options = {
               key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID, // Enter the Key ID generated from the Dashboard
-              amount: '26500', // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+              amount: $`value`', // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
               currency: 'INR',
               name: 'ECell, BITS Pilani',
               description: 'Payment for Launchpad 2022',
@@ -260,6 +262,17 @@ function Profile() {
                   }}
                 />
               </div>
+<div>
+                <label className={styles.labels}>Coupon Code</label>
+                <input
+                  type="text"
+                  className={styles.inputbox}
+                  placeholder="Coupon Code"
+                  value={userData.couponCode}
+                  onChange={(e) => {
+                    setUserData({ ...userData, couponCode: e.target.value })
+                  }}
+                />
               {/* <div>
                 <label className={styles.labels}>Your Resume</label>
                 <input
