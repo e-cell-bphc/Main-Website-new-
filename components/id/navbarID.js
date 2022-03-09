@@ -78,7 +78,7 @@ function Navbar() {
       id: 1,
       name: 'Dashboard',
       link: '/id/portal'
-    },
+    }
     // {
     //   id: 3,
     //   name: 'Companies',
@@ -131,7 +131,7 @@ function Navbar() {
             }
             var rzp1 = new Razorpay(options)
             rzp1.open()
-          } else if( paids) {
+          } else if (paids) {
             alert('already paid')
           } else if (res.data.status == 'paid') {
             alert("You've already paid")
@@ -160,15 +160,14 @@ function Navbar() {
         </Link>
       )
     } else return null
-  } function Company() {
+  }
+  function Company() {
     if (status == 'authenticated') {
       return (
         <>
           <Link href="/id/viewCompany">
             <div
-              onClick={
-                handleClick
-              }
+              onClick={handleClick}
               className={hamOn ? styles.fadeout : styles.fadein}
             >
               Companies
@@ -178,22 +177,19 @@ function Navbar() {
       )
     }
     return (
-        <Link href="/id/portal">
-          <div
-            onClick={() => {
-            
-             alert('Register/LogIn First!')
-              handleClick()
-              
-            }}
-            className={hamOn ? styles.fadeout : styles.fadein}
-          >
-           Companies
-          </div>
-        </Link>
-      )
-    } 
-  
+      <Link href="/id/portal">
+        <div
+          onClick={() => {
+            alert('Register/LogIn First!')
+            handleClick()
+          }}
+          className={hamOn ? styles.fadeout : styles.fadein}
+        >
+          Companies
+        </div>
+      </Link>
+    )
+  }
 
   return (
     <>
@@ -216,7 +212,7 @@ function Navbar() {
           {cards.map((data) => {
             return (
               <>
-                <Link href={data.link}>
+                <Link key={data.link} href={data.link}>
                   <div
                     onClick={handleClick}
                     className={hamOn ? styles.fadeout : styles.fadein}
@@ -228,7 +224,7 @@ function Navbar() {
               </>
             )
           })}
-          <Company/>
+          <Company />
           <Profile hook={openRazorpay} />
           {!paids ? (
             <div
@@ -237,7 +233,7 @@ function Navbar() {
             >
               Pay Now
             </div>
-          ) : 
+          ) : (
             <Link href="/id/success">
               <div
                 onClick={handleClick}
@@ -246,7 +242,7 @@ function Navbar() {
                 Pay Now
               </div>
             </Link>
-          }
+          )}
         </div>
         <div
           className={hamOn ? styles.logout_off : styles.logout_on}
