@@ -45,7 +45,10 @@ function Profile() {
   })
 
   const router = useRouter()
-
+  const couponCheck = () => {
+    if (userData.couponCode === "COIGN")
+      setValue(20000)
+  }
   const initializeRazorpay = () => {
     return new Promise((resolve) => {
       const script = document.createElement('script')
@@ -80,7 +83,7 @@ function Profile() {
           if (res.data.id) {
             var options = {
               key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID, // Enter the Key ID generated from the Dashboard
-              amount: $`value`, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+              amount: `${value}`, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
               currency: 'INR',
               name: 'ECell, BITS Pilani',
               description: 'Payment for Launchpad 2022',
@@ -273,6 +276,7 @@ function Profile() {
                     setUserData({ ...userData, couponCode: e.target.value })
                   }}
                 />
+                <div onClick={couponCheck} style={{cursor:"pointer", fontSize:"15px"}}>APPLY COUPON</div>
 </div>
               {/* <div>
                 <label className={styles.labels}>Your Resume</label>
