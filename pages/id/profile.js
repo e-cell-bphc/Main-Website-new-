@@ -262,7 +262,7 @@ function Profile() {
                   }}
                 />
               </div>
-<div>
+              <div>
                 <label className={styles.labels}>Coupon Code</label>
                 <input
                   type="text"
@@ -273,6 +273,7 @@ function Profile() {
                     setUserData({ ...userData, couponCode: e.target.value })
                   }}
                 />
+                </div>
               {/* <div>
                 <label className={styles.labels}>Your Resume</label>
                 <input

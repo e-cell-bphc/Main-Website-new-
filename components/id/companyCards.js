@@ -61,7 +61,7 @@ function CompanyCards() {
                 <div className={styles.headprop}>Roles</div>
                 <div className={styles.propitem1}>
                   {data.roles.map((data) => {
-                    return <a className={styles.Eligibilty}>{data}</a>
+                    return (<a key={data} className={styles.Eligibilty}>{data}</a>)
                   })}
                 </div>
                 <div className={styles.propitem}>
