@@ -8,6 +8,7 @@ import launchpad from '../../assets/Launchpad.png'
 import { signOut } from 'next-auth/react'
 import axios from 'axios'
 import { useSession } from 'next-auth/react'
+import { stat } from 'fs'
 
 function Navbar() {
   const [hamOn, setHamOn] = useState(true)
@@ -159,7 +160,7 @@ function Navbar() {
           </div>
         </Link>
       )
-    } else
+    } else if (status == 'authenticated' && paids) {
       return (
         <>
           <div
@@ -173,6 +174,9 @@ function Navbar() {
           </div>
         </>
       )
+    } else {
+      alert('Please Login/Register first')
+    }
   }
   function Profile() {
     if (status == 'authenticated') {
