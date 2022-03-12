@@ -46,7 +46,9 @@ function Profile() {
   })
 
   const router = useRouter()
-
+  const couponCheck = () => {
+    if (userData.couponCode === 'COIGN') setValue(20000)
+  }
   const initializeRazorpay = () => {
     return new Promise((resolve) => {
       const script = document.createElement('script')
@@ -79,6 +81,7 @@ function Profile() {
         .then((res) => {
           console.log('res', res.data)
           if (res.data.id) {
+            if (userData.couponCode === 'COIGN') setValue(20000)
             var options = {
               key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID, // Enter the Key ID generated from the Dashboard
               amount: value, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
