@@ -6,10 +6,11 @@ import Image from 'next/image'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
 import axios from 'axios'
+
 function Profile() {
   const { data: session, status } = useSession()
   const [paids, setPaid] = useState(false)
-  const [value, setValue] = useState (26500)
+  const [value, setValue] = useState(26500)
 
   useEffect(() => {
     async function get() {
@@ -80,7 +81,7 @@ function Profile() {
           if (res.data.id) {
             var options = {
               key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID, // Enter the Key ID generated from the Dashboard
-              amount: $`value`', // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+              amount: value, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
               currency: 'INR',
               name: 'ECell, BITS Pilani',
               description: 'Payment for Launchpad 2022',
@@ -188,7 +189,7 @@ function Profile() {
   //   alert('You&apos;ve already paid');
 
   return (
-    <>
+    <div>
       <div className={styles.launchpad_logo}>
         <Image src={launchpad} alt="logout" />
       </div>
@@ -262,7 +263,7 @@ function Profile() {
                   }}
                 />
               </div>
-<div>
+              <div>
                 <label className={styles.labels}>Coupon Code</label>
                 <input
                   type="text"
@@ -273,7 +274,7 @@ function Profile() {
                     setUserData({ ...userData, couponCode: e.target.value })
                   }}
                 />
-              {/* <div>
+                {/* <div>
                 <label className={styles.labels}>Your Resume</label>
                 <input
                   type="file"
@@ -284,27 +285,28 @@ function Profile() {
                   value={userData.resume}
                 />
               </div> */}
-              <div></div>
-            </div>
-            <div className={styles.buttons}>
-              <button
-                className={styles.submit}
-                onClick={(e) => handleUpdate(e)}
-              >
-                Update
-              </button>
-              {!paids ? (
-                <button className={styles.submit} onClick={openRazorpay}>
-                  Pay
+                <div></div>
+              </div>
+              <div className={styles.buttons}>
+                <button
+                  className={styles.submit}
+                  onClick={(e) => handleUpdate(e)}
+                >
+                  Update
                 </button>
-              ) : (
-                <div className={styles.submit}>You&apos;ve paid</div>
-              )}
+                {!paids ? (
+                  <button className={styles.submit} onClick={openRazorpay}>
+                    Pay
+                  </button>
+                ) : (
+                  <div className={styles.submit}>You&apos;ve paid</div>
+                )}
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

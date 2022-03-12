@@ -38,14 +38,14 @@ function CompanyCards() {
     <>
       {datas.map((data) => {
         return (
-          <div key={data.name}>
+          <div key={data._id}>
             <div className={styles.cardContainer}>
               <div className={styles.image}>
                 {
                   <Image
                     src={`/assets/${data.logoURL}`}
                     width={160}
-                    height={160}
+                    height={90}
                   />
                 }
               </div>
@@ -61,7 +61,11 @@ function CompanyCards() {
                 <div className={styles.headprop}>Roles</div>
                 <div className={styles.propitem1}>
                   {data.roles.map((data) => {
-                    return <a className={styles.Eligibilty}>{data}</a>
+                    return (
+                      <a className={styles.Eligibilty} key={data._id}>
+                        {data}
+                      </a>
+                    )
                   })}
                 </div>
                 <div className={styles.propitem}>
