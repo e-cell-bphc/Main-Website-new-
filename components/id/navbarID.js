@@ -147,6 +147,33 @@ function Navbar() {
     }
   }
 
+  function PayNow() {
+    if (status == 'authenticated' && !paids) {
+      return (
+        <Link href="/id/paynow">
+          <div
+            className={hamOn ? styles.fadeout : styles.fadein}
+            onClick={handleClick}
+          >
+            PayNow
+          </div>
+        </Link>
+      )
+    } else
+      return (
+        <>
+          <div
+            onClick={(e) => {
+              e.preventDefault
+              alert('You have already paid')
+            }}
+            className={hamOn ? styles.fadeout : styles.fadein}
+          >
+            Pay Now
+          </div>
+        </>
+      )
+  }
   function Profile() {
     if (status == 'authenticated') {
       return (
@@ -225,10 +252,10 @@ function Navbar() {
           })}
           <Company />
           <Profile hook={openRazorpay} />
-          {!paids ? (
+          {/* {!paids ? (
             <div
               onClick={openRazorpay}
-              className={hamOn ? styles.fadeout : styles.fadein}
+              className={hamOn ? styles.fadeout : styles.fadei~n}
             >
               Pay Now
             </div>
@@ -241,7 +268,8 @@ function Navbar() {
                 Pay Now
               </div>
             </Link>
-          )}
+          )} */}
+          <PayNow />
         </div>
         <div
           className={hamOn ? styles.logout_off : styles.logout_on}

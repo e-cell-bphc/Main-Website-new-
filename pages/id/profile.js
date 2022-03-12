@@ -267,7 +267,7 @@ function Profile() {
                 />
               </div>
               <div>
-                <label className={styles.labels}>Coupon Code</label>
+                {/* <label className={styles.labels}>Coupon Code</label>
                 <input
                   type="text"
                   className={styles.inputbox}
@@ -276,7 +276,7 @@ function Profile() {
                   onChange={(e) => {
                     setUserData({ ...userData, couponCode: e.target.value })
                   }}
-                />
+                /> */}
                 {/* <div>
                 <label className={styles.labels}>Your Resume</label>
                 <input
@@ -297,13 +297,13 @@ function Profile() {
                 >
                   Update
                 </button>
-                {!paids ? (
+                {/* {!paids ? (
                   <button className={styles.submit} onClick={openRazorpay}>
                     Pay
                   </button>
                 ) : (
                   <div className={styles.submit}>You&apos;ve paid</div>
-                )}
+                )} */}
               </div>
             </div>
           </div>

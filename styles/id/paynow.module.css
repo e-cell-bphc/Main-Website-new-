@@ -1,0 +1,88 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: rgb(12, 12, 12);
+  width: 40em;
+  text-align: center;
+}
+.header {
+  font-size: 3em;
+  font-weight: 700;
+  border-bottom: 1px solid rgb(8, 126, 223);
+  margin-bottom: 1em;
+  font-family: 'Montserrat', sans-serif;
+}
+.Amount {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.couponHeader {
+  font-size: 25px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.inputcoupon {
+  outline: none;
+  background-color: black;
+  border: none;
+  height: 2em;
+  margin-top: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.1em;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.CheckCoupon {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-weight: 800;
+  font-size: 1.2em;
+  width: auto;
+  height: auto;
+  font-family: 'Montserrat', sans-serif;
+  background: rgb(5, 124, 221);
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+}
+.CheckCoupon:hover {
+  cursor: pointer;
+}
+.payment {
+  margin-top: 35px;
+  margin-bottom: 1em;
+  font-weight: 800;
+  font-size: 1.2em;
+  width: auto;
+  height: auto;
+  font-family: 'Montserrat', sans-serif;
+  background: rgb(5, 124, 221);
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+}
+.none {
+  display: none;
+}
+.howerror {
+  display: block;
+  color: red;
+}
+@media screen and (max-width: 600px) {
+  .box {
+    width: 90%;
+  }
+}
