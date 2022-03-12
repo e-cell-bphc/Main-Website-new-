@@ -175,7 +175,19 @@ function Navbar() {
         </>
       )
     } else {
-      alert('Please Login/Register first')
+      return (
+        <>
+          <div
+            onClick={(e) => {
+              e.preventDefault
+              alert('Login/Register first')
+            }}
+            className={hamOn ? styles.fadeout : styles.fadein}
+          >
+            Pay Now
+          </div>
+        </>
+      )
     }
   }
   function Profile() {
