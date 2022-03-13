@@ -149,7 +149,7 @@ function Navbar() {
   }
 
   function PayNow() {
-    if (status == 'authenticated' && !paids) {
+    if (status == 'authenticated') {
       return (
         <Link href="/id/paynow">
           <div

@@ -7,6 +7,9 @@ import axios from 'axios'
 import { useSession } from 'next-auth/react'
 
 function Paynow() {
+    const [paids, setPaid] = useState(false)
+
+
   const [coupon, setCoupon] = useState('')
   const [text, setText] = useState('Enter Coupon Code')
   const [cost, setCost] = useState(265)

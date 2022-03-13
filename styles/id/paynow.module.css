@@ -74,6 +74,10 @@
   padding: 10px 20px 10px 20px;
   border-radius: 5px;
 }
+.payment:hover{
+  cursor: pointer;
+}
+
 .none {
   display: none;
 }
