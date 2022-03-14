@@ -8,6 +8,7 @@ import { useSession } from 'next-auth/react'
 
 function Paynow() {
     const [paids, setPaid] = useState(false)
+  const [bool, setbool] = useState(false)
 
 
   const [coupon, setCoupon] = useState('')
@@ -144,8 +145,34 @@ function Paynow() {
       alert('Login/Signup first')
     }
   }
+
+  const cs = []
+  
+  for (let csnum = 1; csnum <= 30; csnum++){
+    if (csnum < 10) {
+      cs[csnum] = 'CA00' + csnum
+    }
+    else {
+      cs[csnum] = 'CA0' + csnum;
+    }
+  }
+  console.log(cs)
+
+  
+  function handlecs(e) {
+    e.preventDefault
+    for (let i = 1; i <= 30; i++){
+      if (coupon == cs[i]) {
+        setbool(true)
+        break;
+      }
+    }
+    return bool
+  }
+
   const [btn, setBtn] = useState(true)
   const [valid, setValid] = useState('false')
+
   function handleCouponCode(e) {
     e.preventDefault
     setCoupon(e.target.value)
@@ -167,7 +194,14 @@ function Paynow() {
       if (valid != 'false') {
         setValid('false')
       }
-    } else {
+    } else if (bool) {
+      setCost(225)
+      setBtn(false)
+      if (valid != 'false') {
+        setValid('false')
+      }
+    }
+    else {
       setValid('true')
       setBtn(false)
     }
@@ -190,11 +224,15 @@ function Paynow() {
                 setText('Apply Coupon')
                 setCost(265)
                 setBtn(true)
+                setbool(false)
               }}
             ></input>
             <div
               className={btn ? styles.CheckCoupon : styles.none}
-              onClick={handleCouponCode}
+              onClick={(e) => {
+                handleCouponCode(e);
+                handlecs(e);
+              }}
             >
               {text}
             </div>
