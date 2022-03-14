@@ -4,7 +4,6 @@ import Image from 'next/image'
 import launchpad from '../../assets/Launchpad.png'
 import { useSession } from 'next-auth/react'
 import axios from 'axios'
-import e from 'express'
 
 function CompanyCards() {
   const { data: session, status } = useSession()
@@ -24,42 +23,49 @@ function CompanyCards() {
     get()
   }, [])
 
-  function applyNow(companyID){
-    if(status=='authenticated'){
+  function applyNow(companyID) {
+    if (status == 'authenticated') {
       axios
         .post(
           'https://backend-api-2022.onrender.com/api/applications/apply',
           {
             applicantID: session.user._id,
-            companyID:companyID,
-            footnotes:"footnotes"
-
+            companyID,
+            footnotes: 'footnotes'
+          },
+          {
+            headers: {
+              'Content-Type': 'application/json',
+              Authorization: 'Bearer ' + session.accessToken
+            }
           }
         )
         .then((res) => {
-          if (res.status(400).json(applicationLimitReached)) {
-            return(
-              <p>Sorry , Application Limit Reached</p>
-            )
+          if (res.data.status === 'ok') {
+            alert('Applied Successfully')
           }
 
-          if (res.status(500).json(applyFailed)) {
-            return(
-              <p>Sorry , Failed to Apply</p>
-            )
-          }
-
-          if (res.status(400).json(invalidApplication)) {
-            return(
-              <p>Sorry , Invalid Application</p>
-            )
-          }
-          
+          // if (res.status(400).json(applicationLimitReached)) {
+          //   return <p>Sorry , Application Limit Reached</p>
+          // }
+          // if (res.status(500).json(applyFailed)) {
+          //   return <p>Sorry , Failed to Apply</p>
+          // }
+          // if (res.status(400).json(invalidApplication)) {
+          //   return <p>Sorry , Invalid Application</p>
+          // }
         })
         .catch((err) => {
           console.log(err)
+          console.log(err.response.data)
+
+          if (err.response.data.code === '403') {
+            alert('Application Limit Reached')
+          } else {
+            alert("Couldn't apply, try again")
+          }
         })
-    } 
+    }
   }
 
   console.log(datas)
@@ -108,10 +114,16 @@ function CompanyCards() {
                   })}
                 </div>
                 <div className={styles.propitem}>
-                  <a className={styles.Eligibilty} href={data.companyDesc} target="_blank">
+                  <a
+                    className={styles.Eligibilty}
+                    href={data.companyDesc}
+                    target="_blank"
+                  >
                     Job Description
                   </a>
-                    <button onClick={() => e.preventDefault(applyNow(data._id))}>Apply Now</button>
+                  <button onClick={(e) => e.preventDefault(applyNow(data._id))}>
+                    Apply Now
+                  </button>
                 </div>
               </div>
               {/* <Auth prop={data} /> */}
