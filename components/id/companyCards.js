@@ -4,6 +4,7 @@ import Image from 'next/image'
 import launchpad from '../../assets/Launchpad.png'
 import { useSession } from 'next-auth/react'
 import axios from 'axios'
+import e from 'express'
 
 function CompanyCards() {
   const { data: session, status } = useSession()
@@ -22,6 +23,44 @@ function CompanyCards() {
     }
     get()
   }, [])
+
+  function applyNow(companyID){
+    if(status=='authenticated'){
+      axios
+        .post(
+          'https://backend-api-2022.onrender.com/api/applications/apply',
+          {
+            applicantID: session.user._id,
+            companyID:companyID,
+            footnotes:"footnotes"
+
+          }
+        )
+        .then((res) => {
+          if (res.status(400).json(applicationLimitReached)) {
+            return(
+              <p>Sorry , Application Limit Reached</p>
+            )
+          }
+
+          if (res.status(500).json(applyFailed)) {
+            return(
+              <p>Sorry , Failed to Apply</p>
+            )
+          }
+
+          if (res.status(400).json(invalidApplication)) {
+            return(
+              <p>Sorry , Invalid Application</p>
+            )
+          }
+          
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+    } 
+  }
 
   console.log(datas)
   function Auth({ prop }) {
@@ -69,9 +108,10 @@ function CompanyCards() {
                   })}
                 </div>
                 <div className={styles.propitem}>
-                  <a className={styles.Eligibilty} href={data.companyDesc}>
+                  <a className={styles.Eligibilty} href={data.companyDesc} target="_blank">
                     Job Description
                   </a>
+                    <button onClick={() => e.preventDefault(applyNow(data._id))}>Apply Now</button>
                 </div>
               </div>
               {/* <Auth prop={data} /> */}
