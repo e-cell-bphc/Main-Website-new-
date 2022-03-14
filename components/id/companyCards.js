@@ -118,6 +118,7 @@ function CompanyCards() {
                     className={styles.Eligibilty}
                     href={data.companyDesc}
                     target="_blank"
+                    rel="noreferrer"
                   >
                     Job Description
                   </a>
