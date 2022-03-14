@@ -23,6 +23,51 @@ function CompanyCards() {
     get()
   }, [])
 
+  function applyNow(companyID) {
+    if (status == 'authenticated') {
+      axios
+        .post(
+          'https://backend-api-2022.onrender.com/api/applications/apply',
+          {
+            applicantID: session.user._id,
+            companyID,
+            footnotes: 'footnotes'
+          },
+          {
+            headers: {
+              'Content-Type': 'application/json',
+              Authorization: 'Bearer ' + session.accessToken
+            }
+          }
+        )
+        .then((res) => {
+          if (res.data.status === 'ok') {
+            alert('Applied Successfully')
+          }
+
+          // if (res.status(400).json(applicationLimitReached)) {
+          //   return <p>Sorry , Application Limit Reached</p>
+          // }
+          // if (res.status(500).json(applyFailed)) {
+          //   return <p>Sorry , Failed to Apply</p>
+          // }
+          // if (res.status(400).json(invalidApplication)) {
+          //   return <p>Sorry , Invalid Application</p>
+          // }
+        })
+        .catch((err) => {
+          console.log(err)
+          console.log(err.response.data)
+
+          if (err.response.data.code === '403') {
+            alert('Application Limit Reached')
+          } else {
+            alert("Couldn't apply, try again")
+          }
+        })
+    }
+  }
+
   console.log(datas)
   function Auth({ prop }) {
     if (status == 'authenticated') {
@@ -69,9 +114,17 @@ function CompanyCards() {
                   })}
                 </div>
                 <div className={styles.propitem}>
-                  <a className={styles.Eligibilty} href={data.companyDesc}>
+                  <a
+                    className={styles.Eligibilty}
+                    href={data.companyDesc}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     Job Description
                   </a>
+                  <button onClick={(e) => e.preventDefault(applyNow(data._id))}>
+                    Apply Now
+                  </button>
                 </div>
               </div>
               {/* <Auth prop={data} /> */}
