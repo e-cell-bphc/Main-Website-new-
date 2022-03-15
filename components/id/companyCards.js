@@ -61,6 +61,8 @@ function CompanyCards() {
 
           if (err.response.data.code === '403') {
             alert('Application Limit Reached')
+          } else if (err.response.data.code === '406') {
+            alert('Please complete the payment before you apply')
           } else {
             alert("Couldn't apply, try again")
           }
