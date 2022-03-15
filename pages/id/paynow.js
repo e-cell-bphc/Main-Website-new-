@@ -8,7 +8,7 @@ import { useSession } from 'next-auth/react'
 
 function Paynow() {
     const [paids, setPaid] = useState(false)
-  const [bool, setbool] = useState(false)
+  const [bool, setbool] = useState('')
 
 
   const [coupon, setCoupon] = useState('')
@@ -159,11 +159,11 @@ function Paynow() {
   console.log(cs)
 
   
-  function handlecs(e) {
+ async function handlecs(e) {
     e.preventDefault
-    for (let i = 1; i <= 30; i++){
+     for (let i = 1; i <= 30; i++){
       if (coupon == cs[i]) {
-        setbool(true)
+        setbool(cs[i])
         break;
       }
     }
@@ -194,7 +194,7 @@ function Paynow() {
       if (valid != 'false') {
         setValid('false')
       }
-    } else if (bool) {
+    } else if (coupon==bool) {
       setCost(225)
       setBtn(false)
       if (valid != 'false') {
@@ -229,9 +229,9 @@ function Paynow() {
             ></input>
             <div
               className={btn ? styles.CheckCoupon : styles.none}
-              onClick={(e) => {
+              onClick={async (e) => {
+                await handlecs(e);
                 handleCouponCode(e);
-                handlecs(e);
               }}
             >
               {text}
