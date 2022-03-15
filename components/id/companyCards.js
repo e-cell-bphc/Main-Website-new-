@@ -11,7 +11,7 @@ function CompanyCards() {
   useEffect(() => {
     async function get() {
       axios
-        .post('https://backend-api-2022.onrender.com/api/company/getCompany')
+        .get('https://backend-api-2022.onrender.com/api/company/getCompanies')
         .then((res) => {
           console.log(res.data)
           setData(res.data)
