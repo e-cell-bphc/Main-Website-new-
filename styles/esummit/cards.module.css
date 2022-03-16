@@ -97,10 +97,10 @@
   /* transition: .5s; */
 }
 @media screen and (max-width: 1400px) {
-    .card{
-      transform: scale(0.9);
-      margin: 35px;
-    }
+  .card {
+    transform: scale(0.9);
+    margin: 35px;
+  }
 }
 @media only screen and (min-width: 1000px) {
   .card:hover {

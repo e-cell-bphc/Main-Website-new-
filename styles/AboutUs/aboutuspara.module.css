@@ -26,11 +26,11 @@
   word-spacing: 3px;
   text-align: center;
 }
-@media screen and (max-width: 1400px){
-  .head{
+@media screen and (max-width: 1400px) {
+  .head {
     transform: scale(0.8);
   }
-  .info{
+  .info {
     transform: scale(0.95);
   }
 }

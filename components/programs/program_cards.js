@@ -1,23 +1,23 @@
-import cards from "../../styles/programs/program_cards.module.css";
-import Link from "next/link";
+import cards from '../../styles/programs/program_cards.module.css'
+import Link from 'next/link'
 export default function Cards() {
   const data = [
     {
       id: 1,
-      head: "Passes",
-      Desc: "Get free pass for the Launchpad 2021 - 5th Edition and access to internship drive. ",
+      head: 'Passes',
+      Desc: 'Get free pass for the Launchpad 2021 - 5th Edition and access to internship drive. '
     },
     {
       id: 2,
-      head: "Certification",
-      Desc: "The campus ambassador gets a certificate from E-Cell, BITS Pilani Hyderabad Campus, after the completion of the Summit.",
+      head: 'Certification',
+      Desc: 'The campus ambassador gets a certificate from E-Cell, BITS Pilani Hyderabad Campus, after the completion of the Summit.'
     },
     {
       id: 3,
-      head: "Social Media",
-      Desc: "You would be featured in our social media pages.",
-    },
-  ];
+      head: 'Social Media',
+      Desc: 'You would be featured in our social media pages.'
+    }
+  ]
   return (
     <>
       <div className={cards.Eventsname}>Campus Ambassador</div>
@@ -38,5 +38,5 @@ export default function Cards() {
         </div>
       </div>
     </>
-  );
+  )
 }

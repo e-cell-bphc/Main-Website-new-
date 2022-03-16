@@ -18,7 +18,7 @@ const events = [
     heading: 'Pitchers Pilot',
     link: '/pitchersPilot',
     description:
-      "It provides a platform for seed-stage startups seeking funds and mentorship to pitch their ideas directly to our esteemed panel, who can choose to invest in the company based on their reasoning. "
+      'It provides a platform for seed-stage startups seeking funds and mentorship to pitch their ideas directly to our esteemed panel, who can choose to invest in the company based on their reasoning. '
   },
   {
     id: 4,
@@ -42,4 +42,4 @@ const events = [
       'E-cell hosts several workshops which provide everyone with a chance to experience the entrepreneurial essence and culture of our college.'
   }
 ]
-export default events;
+export default events

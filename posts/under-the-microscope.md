@@ -1,6 +1,6 @@
 ---
-title: "Under the microscope: Entrepreneurship"
-date: "2021-08-01"
+title: 'Under the microscope: Entrepreneurship'
+date: '2021-08-01'
 ---
 
 The word &#39;entrepreneur&#39; is a loanword from French and has Latin origins with the merger of two words _&#39;entre&#39; - which means to swim out_ and _&#39;prends&#39; - which means to grasp, understand or capture._ This simple merger of these two words perfectly encapsulates the meaning of what being an entrepreneur is, an adventurer who chooses to take on the challenge of starting their ventures and sail through countless unpredictable challenges.
@@ -11,7 +11,7 @@ Entrepreneurship has grown a lot with time; however, a few things have remained 
 
 Today, when we talk about entrepreneurship, the first things that come to mind are giant tech empires. We usually overlook the diverse and rich scope that entrepreneurship has in its present and its great past.
 
-![xyz](/images/blog1.png "graphic")
+![xyz](/images/blog1.png 'graphic')
 
 The constants in entrepreneurship can be evidently seen on comparing the past of entrepreneurship to the present.
 

@@ -39,7 +39,7 @@
   transform: scale(1.08);
 }
 @media screen and (max-width: 1400px) {
-    .slider{
-      transform: scale(0.9);
-    }
+  .slider {
+    transform: scale(0.9);
+  }
 }

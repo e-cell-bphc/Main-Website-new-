@@ -13,23 +13,23 @@
     justify-content: center;
 } */
 
-.cardContainer{
-    height: 31em;
-    width: 22em;
-    background: rgb(7, 7, 7);
-    margin: 5vh;
-    border-radius: 10px;
-    color: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-       transition-duration: 0.25s;
+.cardContainer {
+  height: 31em;
+  width: 22em;
+  background: rgb(7, 7, 7);
+  margin: 5vh;
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.25s;
 }
 
-.cardContainer:hover{
-    transform: scale(1.03);
-    transition-duration: 0.25s;
+.cardContainer:hover {
+  transform: scale(1.03);
+  transition-duration: 0.25s;
 }
 /* 
 .Eligibility{
@@ -37,63 +37,66 @@
     width: 18em;
 } */
 
-.propitem{
-    
-    text-align: center;
-    overflow-y: auto;
-    margin-top: 1.2vh;
-    margin-bottom: 1.2vh;}
-.headprop{
-    margin-left: auto; 
-    margin-right: auto; 
-    text-align: center;
-    overflow-y: auto;
-    font-size: 19px;
-    margin-top: 1.2vh;
-    width: fit-content;
-    border-bottom:1px solid white ;
-    margin-bottom: 1.2vh;}
-.propitem1{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: baseline;
-    text-align: center;
-    padding: 0.6em;
-    border: 1px solid rgb(44, 44, 44);
-    height: 6em;
-    width: 15em;
+.propitem {
+  text-align: center;
+  overflow-y: auto;
+  margin-top: 1.2vh;
+  margin-bottom: 1.2vh;
+}
+.headprop {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  overflow-y: auto;
+  font-size: 19px;
+  margin-top: 1.2vh;
+  width: fit-content;
+  border-bottom: 1px solid white;
+  margin-bottom: 1.2vh;
+}
+.propitem1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: baseline;
+  text-align: center;
+  padding: 0.6em;
+  border: 1px solid rgb(44, 44, 44);
+  height: 6em;
+  width: 15em;
 
-    overflow-y: auto;
-    margin-top: 2vh;
-    border-radius: 5px;
-    margin-bottom: 2vh;}
-.companyName{
-    font-size: 2em;
-    font-family: 'Bebas Neue', cursive;
+  overflow-y: auto;
+  margin-top: 2vh;
+  border-radius: 5px;
+  margin-bottom: 2vh;
+}
+.companyName {
+  font-size: 2em;
+  font-family: 'Bebas Neue', cursive;
 }
 
-
 .button {
-    margin-top: 1em;
+  margin-top: 1em;
   background-color: rgb(0, 108, 196);
   border: 1px solid transparent;
-  border-radius: .75rem;
+  border-radius: 0.75rem;
   box-sizing: border-box;
-  color: #FFFFFF;
+  color: #ffffff;
   cursor: pointer;
   flex: 0 0 auto;
-  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-family: 'Inter var', ui-sans-serif, system-ui, -apple-system, system-ui,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.5rem;
-  padding: .75rem 1.2rem;
+  padding: 0.75rem 1.2rem;
   text-align: center;
-  text-decoration: none #6B7280 solid;
+  text-decoration: none #6b7280 solid;
   text-decoration-thickness: auto;
-  transition-duration: .2s;
-  transition-property: background-color,border-color,color,fill,stroke;
-  transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+  transition-duration: 0.2s;
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -101,8 +104,8 @@
 }
 
 .button:hover {
-    background-color: #363838;
-    transition-duration: 0.25s;
+  background-color: #363838;
+  transition-duration: 0.25s;
 }
 
 .button:focus {
@@ -113,17 +116,17 @@
 
 @media (min-width: 768px) {
   .button {
-    padding: .75rem 1.5rem;
+    padding: 0.75rem 1.5rem;
   }
 }
 @media screen and (max-width: 512px) {
-    .cardContainer{
-        margin: 5vh, 0 , 5vh, 0;
-        height: 30em;
-    }
+  .cardContainer {
+    margin: 5vh, 0, 5vh, 0;
+    height: 30em;
+  }
 }
-@media screen and (max-width:1000px) {
-    .cardContainer{
-        margin: 2vh;
-    }
+@media screen and (max-width: 1000px) {
+  .cardContainer {
+    margin: 2vh;
+  }
 }

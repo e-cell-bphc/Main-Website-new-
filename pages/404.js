@@ -1,7 +1,7 @@
-import React from "react";
-import Link from "next/link";
-import styles from "../styles/404.module.css";
-import Head from "next/head";
+import React from 'react'
+import Link from 'next/link'
+import styles from '../styles/404.module.css'
+import Head from 'next/head'
 
 const notFound = () => {
   return (
@@ -14,14 +14,14 @@ const notFound = () => {
 
         <h2 className={styles.h2}>But we dont have anything here</h2>
         <h3 className={styles.h3}>
-          Click here to return to{" "}
+          Click here to return to{' '}
           <Link href="/">
             <a className={styles.a}>homepage</a>
           </Link>
         </h3>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default notFound;
+export default notFound

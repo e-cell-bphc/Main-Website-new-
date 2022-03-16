@@ -1,6 +1,6 @@
-import cstyles from "../../styles/esummit/cards.module.css";
-import Card from "./card_esummit";
-import events from "./eventlist_esummit";
+import cstyles from '../../styles/esummit/cards.module.css'
+import Card from './card_esummit'
+import events from './eventlist_esummit'
 export default function Cards() {
   return (
     <div className={cstyles.outer_container}>
@@ -13,5 +13,5 @@ export default function Cards() {
         ))}
       </div>
     </div>
-  );
+  )
 }

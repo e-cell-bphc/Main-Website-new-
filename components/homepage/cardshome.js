@@ -1,6 +1,6 @@
-import cards from "../../styles/homepage/cards.module.css";
-import Link from "next/link";
-import Image from "next/image";
+import cards from '../../styles/homepage/cards.module.css'
+import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Cards({ src, info, headname, link }) {
   return (
@@ -23,5 +23,5 @@ export default function Cards({ src, info, headname, link }) {
         </div>
       </div>
     </>
-  );
+  )
 }

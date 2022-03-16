@@ -1,4 +1,4 @@
-import about from "../../styles/AboutUs/aboutuspara.module.css";
+import about from '../../styles/AboutUs/aboutuspara.module.css'
 export default function About() {
   return (
     <section className={about.box}>
@@ -10,5 +10,5 @@ export default function About() {
         platform to jump from ‘Idea’ to ‘Product’.
       </p>
     </section>
-  );
+  )
 }

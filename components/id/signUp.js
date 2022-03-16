@@ -1,6 +1,6 @@
-import React from "react";
-import Link from "next/link";
-import styles from "../../styles/id/login.module.css";
+import React from 'react'
+import Link from 'next/link'
+import styles from '../../styles/id/login.module.css'
 
 function SignUp() {
   return (
@@ -46,7 +46,7 @@ function SignUp() {
         <button className={styles.Sbtn}>SIGN UP</button>
       </div>
     </div>
-  );
+  )
 }
 
-export default SignUp;
+export default SignUp

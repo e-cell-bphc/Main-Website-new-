@@ -1,6 +1,6 @@
-import comp from "../styles/Competitions/competitions.module.css";
-import Cards from "../components/Competitions/cards";
-import Head from "next/head";
+import comp from '../styles/Competitions/competitions.module.css'
+import Cards from '../components/Competitions/cards'
+import Head from 'next/head'
 
 export default function Competitions() {
   return (
@@ -21,5 +21,5 @@ export default function Competitions() {
         <Cards />
       </div>
     </>
-  );
+  )
 }

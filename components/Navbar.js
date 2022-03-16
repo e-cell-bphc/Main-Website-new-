@@ -6,14 +6,14 @@ import pic1 from '../assets/images/mainlogo.png'
 import pic2 from '../assets/images/e_logo.png'
 
 export default function Navbar(props) {
-  const [isHamOn, setIsHamOn] = useState(false);
+  const [isHamOn, setIsHamOn] = useState(false)
   const handleClick = () => {
-    setIsHamOn(!isHamOn);
-  };
+    setIsHamOn(!isHamOn)
+  }
   const handleClickID = () => {
-    setIsHamOn(!isHamOn);
-     setrender('ID')
-  };
+    setIsHamOn(!isHamOn)
+    setrender('ID')
+  }
 
   return (
     <>
@@ -52,7 +52,6 @@ export default function Navbar(props) {
             >
               Internship Drive
             </a>
-
           </Link>
           {/*<Link href="/welcome/signup">
             <a className={(Navbarcss.button, Navbarcss.rightmostbutton)}>
@@ -117,9 +116,7 @@ export default function Navbar(props) {
             About Us
           </a>
         </Link>
-        <Link
-          href="/id/portal"
-        >
+        <Link href="/id/portal">
           <a onClick={() => handleClickID()} className={Navbarcss.mobilebtn}>
             Internship Drive
           </a>

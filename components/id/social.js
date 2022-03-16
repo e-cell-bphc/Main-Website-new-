@@ -1,11 +1,11 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import styles from "../../styles/id/socialmedianew.module.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import styles from '../../styles/id/socialmedianew.module.css'
 import {
   faFacebook,
   faInstagram,
   faLinkedin,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
+  faTwitter
+} from '@fortawesome/free-brands-svg-icons'
 
 export default function Social() {
   return (
@@ -43,5 +43,5 @@ export default function Social() {
         </div>
       </div>
     </>
-  );
+  )
 }

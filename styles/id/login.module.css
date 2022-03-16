@@ -21,12 +21,11 @@
 }
 
 .signInBtn {
-
   font-size: 1.2rem;
   color: white;
   width: 10vw;
   height: 45px;
-    transform: scale(0.7);
+  transform: scale(0.7);
 
   padding-bottom: 4px;
   padding-top: 4px;
@@ -37,9 +36,8 @@
   justify-content: center;
   border: 1px solid grey;
   transition: 0.2s;
-
 }
-.signInBtn:hover{
+.signInBtn:hover {
   background: white;
   color: black;
   cursor: pointer;
@@ -47,7 +45,7 @@
 .signinoff {
   font-size: 1.2rem;
   border-radius: 5px;
-    width: 10vw;
+  width: 10vw;
   transform: scale(0.7);
 
   height: 45px;
@@ -72,7 +70,7 @@
   padding-bottom: 4px;
   padding-top: 4px;
   border-radius: 5px;
-    transform: scale(0.7);
+  transform: scale(0.7);
 
   display: flex;
   flex-direction: column;
@@ -83,8 +81,8 @@
   transition: 0.2s;
 }
 
-.signupbtnoff{
-    font-size: 1.2rem;
+.signupbtnoff {
+  font-size: 1.2rem;
   color: white;
   width: 10vw;
   transform: scale(0.7);
@@ -101,7 +99,7 @@
   transition: 0.2s;
 }
 
-.signupbtnoff:hover{
+.signupbtnoff:hover {
   color: black;
   background: white;
   cursor: pointer;
@@ -121,7 +119,6 @@
   margin-top: 6vh;
   margin-right: 5vw;
   margin-left: 5vw;
-
 }
 
 .signIn {
@@ -141,7 +138,7 @@
   align-items: center;
   justify-content: space-around;
   min-height: 25vh;
-  margin:15px 0 15px 0 ;
+  margin: 15px 0 15px 0;
 }
 
 .inp {
@@ -159,7 +156,7 @@
   border-radius: 5px;
   color: white;
   font-size: large;
-    margin:10px 0 10px 0 ;
+  margin: 10px 0 10px 0;
 }
 
 /* .inputField:focus {
@@ -183,7 +180,7 @@
   font-size: medium;
   cursor: pointer;
   border-radius: 5px;
-} 
+}
 
 .Sbtn {
   margin-bottom: 5vh;
@@ -197,9 +194,10 @@
   color: white;
   font-size: medium;
   cursor: pointer;
-} 
+}
 
-.btn:hover, .Sbtn:hover {
+.btn:hover,
+.Sbtn:hover {
   background-color: rgb(3, 75, 134);
 }
 
@@ -236,17 +234,15 @@
   border-bottom: 2px solid white;
 }
 
-
-
 @media only screen and(max-width: 620px) {
-  .cardContainer{
+  .cardContainer {
     width: 90vw;
   }
 }
 
 @media only screen and (max-width: 1000px) {
   .cardContainer {
-     width: 60vw;
+    width: 60vw;
     padding-left: 10vw;
     padding-right: 10vw;
   }
@@ -259,7 +255,7 @@
   .inputFieldSignup {
     width: 60vw;
   }
-  .Sbtn{
+  .Sbtn {
     width: 20vw;
   }
   .inputs {
@@ -288,7 +284,7 @@
   .inputs {
     margin-top: 5vh;
   } */
-  .signInBtn{
+  .signInBtn {
     font-size: 1.7em;
     height: 10vh;
     width: 17vw;
@@ -296,25 +292,28 @@
   .signinoff {
     font-size: 1.7em;
     height: 10vh;
-    width: 17vw;  }
-  .signUpBtn{
+    width: 17vw;
+  }
+  .signUpBtn {
     font-size: 1.7em;
     height: 10vh;
-    width: 17vw;  }
-  .signupbtnoff{
+    width: 17vw;
+  }
+  .signupbtnoff {
     font-size: 1.7em;
     height: 10vh;
-    width: 17vw;  }
-  .inputField{
+    width: 17vw;
+  }
+  .inputField {
     width: 35vw;
   }
-  .links{
+  .links {
     margin-right: 3vw;
     margin-left: 3vw;
   }
 }
 @media only screen and(max-width: 620px) {
-  .cardContainer{
+  .cardContainer {
     width: 90vw;
   }
 }
@@ -341,11 +340,11 @@
   }
 } */
 
-.Header{
+.Header {
   color: white;
   font-size: 3em;
-margin-left: auto;
-margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
   font-family: 'Bebas Neue', cursive;
   border-bottom: 1px solid rgb(0, 133, 241);
   width: fit-content;

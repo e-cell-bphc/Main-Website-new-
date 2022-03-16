@@ -1,11 +1,8 @@
 import React from 'react'
 import styles from '../../styles/id/paynow.module.css'
 import { useState, useEffect } from 'react'
-import Link from 'next/link'
-import { signOut } from 'next-auth/react'
 import axios from 'axios'
 import { useSession } from 'next-auth/react'
-import { StreamCopyUsage } from 'three'
 
 function Paynow() {
   const [paids, setPaid] = useState(false)

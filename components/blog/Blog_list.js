@@ -1,7 +1,7 @@
-import React from "react";
-import style from "../../styles/blog/blog_list.module.css";
-import Blog_Home from "./Blog_Home";
-import Blog_Tiles from "./Blog_Tiles";
+import React from 'react'
+import style from '../../styles/blog/blog_list.module.css'
+import Blog_Home from './Blog_Home'
+import Blog_Tiles from './Blog_Tiles'
 
 function Blog_list({ selectedOption, allPostsData }) {
   return (
@@ -14,7 +14,7 @@ function Blog_list({ selectedOption, allPostsData }) {
         ) : null}
       </div>
     </>
-  );
+  )
 }
 
-export default Blog_list;
+export default Blog_list

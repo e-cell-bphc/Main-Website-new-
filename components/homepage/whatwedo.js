@@ -1,4 +1,4 @@
-import what from "../../styles/homepage/whatwedo.module.css";
+import what from '../../styles/homepage/whatwedo.module.css'
 export default function Whatwedo() {
   return (
     <section className={what.box}>
@@ -17,5 +17,5 @@ export default function Whatwedo() {
         community of innovation and excellence.
       </p>
     </section>
-  );
+  )
 }

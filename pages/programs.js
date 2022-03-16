@@ -1,7 +1,7 @@
-import program from "../styles/programs/programcss.module.css";
-import Cards from "../components/programs/program_cards";
-import Link from "next/dist/client/link";
-import Head from "next/head";
+import program from '../styles/programs/programcss.module.css'
+import Cards from '../components/programs/program_cards'
+import Link from 'next/dist/client/link'
+import Head from 'next/head'
 
 export default function programs() {
   return (
@@ -42,5 +42,5 @@ export default function programs() {
         <Cards />
       </section>
     </>
-  );
+  )
 }

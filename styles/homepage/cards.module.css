@@ -153,8 +153,8 @@
     margin-right: 40%;
   }
 } */
-@media screen and (max-width: 1400px){
-  .card{
+@media screen and (max-width: 1400px) {
+  .card {
     transform: scale(0.9);
   }
 }

@@ -13,10 +13,10 @@ body {
   color: white;
   overflow-x: hidden;
 }
-.oldnav{
+.oldnav {
   padding-bottom: 9vh;
 }
-.Navbar{
+.Navbar {
   position: fixed;
   z-index: 20;
 }
@@ -31,15 +31,15 @@ a {
   line-height: 1.5;
   box-sizing: border-box;
 }
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 /* width */
 ::-webkit-scrollbar {
   width: 7px;
   border-left: 1px solid #666;
 }
-.nav0{
-  padding-top: "9vh"; 
-  position: "relative" 
+.nav0 {
+  padding-top: '9vh';
+  position: 'relative';
 }
 
 /* Track */

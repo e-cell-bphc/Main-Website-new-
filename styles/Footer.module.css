@@ -70,11 +70,11 @@
   font-size: 13px;
 }
 
-.footerWrapper a.mail{
+.footerWrapper a.mail {
   position: relative;
 }
 .footerWrapper a.mail::before {
-  content: "";
+  content: '';
   height: 1px;
   background: white;
   position: absolute;
@@ -88,11 +88,11 @@
   width: 100%;
 }
 
-.otherlinks{
+.otherlinks {
   display: flex;
   flex-direction: column;
 }
-a.terms:hover{
+a.terms:hover {
   text-decoration: underline;
 }
 @media screen and (max-width: 930px) {

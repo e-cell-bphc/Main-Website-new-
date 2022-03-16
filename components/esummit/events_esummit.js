@@ -1,4 +1,4 @@
-import styles from "../../styles/esummit/es_event.module.css";
+import styles from '../../styles/esummit/es_event.module.css'
 export default function SummitEvents() {
   return (
     <>
@@ -21,5 +21,5 @@ export default function SummitEvents() {
         </div>
       </div>
     </>
-  );
+  )
 }

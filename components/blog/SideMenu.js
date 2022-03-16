@@ -1,26 +1,26 @@
-import { useEffect } from "react";
-import styles from "../../styles/blog/sidemenu.module.css";
+import { useEffect } from 'react'
+import styles from '../../styles/blog/sidemenu.module.css'
 
 function SideMenu({ setSelectedOption, selectedOption }) {
   const handleClick = (index) => {
     setSelectedOption({
       ...selectedOption,
-      activeOption: selectedOption.options[index],
-    });
-  };
+      activeOption: selectedOption.options[index]
+    })
+  }
   useEffect(() => {
     setSelectedOption({
       ...selectedOption,
-      activeOption: selectedOption.options[0],
-    });
-  }, []);
+      activeOption: selectedOption.options[0]
+    })
+  }, [])
   const toggleActiveOption = (index) => {
     if (selectedOption.options[index] == selectedOption.activeOption) {
-      return styles.topic_active;
+      return styles.topic_active
     } else {
-      return styles.topic_inactive;
+      return styles.topic_inactive
     }
-  };
+  }
   return (
     <>
       <div className={styles.sidebar}>
@@ -34,12 +34,12 @@ function SideMenu({ setSelectedOption, selectedOption }) {
               >
                 {option.name}
               </div>
-            );
+            )
           })}
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default SideMenu;
+export default SideMenu

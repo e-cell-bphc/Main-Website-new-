@@ -56,7 +56,7 @@
   font-weight: 100;
 }
 .bar::after {
-  content: "";
+  content: '';
   width: 10px;
   height: 27%;
   background: linear-gradient(rgb(10, 186, 255), rgb(14, 53, 180));

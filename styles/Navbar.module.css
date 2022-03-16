@@ -27,7 +27,7 @@
 }
 
 .button::before {
-  content: "";
+  content: '';
   height: 1px;
   position: absolute;
   background: rgb(77, 149, 218);
@@ -94,12 +94,12 @@
 .mobilebtn:hover {
   color: rgb(0, 183, 255);
 }
-@media screen and (max-width: 1400px){
-  .button{
+@media screen and (max-width: 1400px) {
+  .button {
     transform: scale(0.8);
     margin-right: 10px;
   }
-  .buttons{
+  .buttons {
     margin-right: 2%;
   }
 }
@@ -177,4 +177,3 @@
   margin: 0 auto;
   width: 50px;
 }
-

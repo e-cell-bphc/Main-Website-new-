@@ -1,6 +1,6 @@
 .box {
   width: 60vw;
-  align-items: center;  
+  align-items: center;
   background: radial-gradient(
     circle,
     rgba(31, 31, 31, 1) 0.2%,
@@ -16,17 +16,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 50px;
   margin: 30px;
 }
- 
+
 .formwrap {
-  height: fit-content;  
+  height: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding : 5vh;
+  padding: 5vh;
   width: 100%;
 }
 .name {
@@ -49,20 +49,20 @@
 .name:hover {
   border-color: blue;
 }
- 
+
 .formheading {
   font-size: 50px;
   font-weight: 750;
   text-align: left;
   margin-left: 6%;
   margin-bottom: 40px;
-  background: url("../assets/images/text-bg2.webp");
+  background: url('../assets/images/text-bg2.webp');
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   animation: moveBg 90s linear infinite;
   -webkit-animation: moveBg 10s linear infinite;
-  animation: moveBg 10s ;
+  animation: moveBg 10s;
 }
 .insidebox {
   display: flex;
@@ -105,9 +105,7 @@
   color: rgb(0, 170, 255);
   cursor: pointer;
 }
- 
- 
- 
+
 .registerbutton {
   outline: none;
   text-decoration: none;
@@ -123,7 +121,7 @@
   color: white;
   margin-top: 15px;
 }
- 
+
 .registerbutton:hover {
   background-color: rgb(0, 170, 255);
   border-color: rgb(0, 170, 255);

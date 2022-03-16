@@ -1,32 +1,32 @@
-import React, { useEffect, useState } from "react";
-import SideMenu from "../../components/blog/SideMenu";
-import styles from "../../styles/blog/index_blog.module.css";
-import Blog_list from "../../components/blog/Blog_list";
-import { getSortedPostsData } from "../../lib/posts";
-import Head from "next/head";
+import React, { useEffect, useState } from 'react'
+import SideMenu from '../../components/blog/SideMenu'
+import styles from '../../styles/blog/index_blog.module.css'
+import Blog_list from '../../components/blog/Blog_list'
+import { getSortedPostsData } from '../../lib/posts'
+import Head from 'next/head'
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
-  console.log(allPostsData);
+  const allPostsData = getSortedPostsData()
+  console.log(allPostsData)
   return {
     props: {
-      allPostsData,
-    },
-  };
+      allPostsData
+    }
+  }
 }
 
 function Blogs({ allPostsData }) {
   const [selectedOption, setSelectedOption] = useState({
-    activeOption: { id: 1, name: "Homepage" },
+    activeOption: { id: 1, name: 'Homepage' },
     options: [
-      { id: 1, name: "Homepage" },
-      { id: 2, name: "Entrepreneurship" },
-      { id: 3, name: "Finance" },
-      { id: 4, name: "Marketing" },
-      { id: 5, name: "Cryptocurrency" },
-      { id: 6, name: "Product Management" },
-    ],
-  });
+      { id: 1, name: 'Homepage' },
+      { id: 2, name: 'Entrepreneurship' },
+      { id: 3, name: 'Finance' },
+      { id: 4, name: 'Marketing' },
+      { id: 5, name: 'Cryptocurrency' },
+      { id: 6, name: 'Product Management' }
+    ]
+  })
   return (
     <>
       <Head>
@@ -45,6 +45,6 @@ function Blogs({ allPostsData }) {
         </div>
       </div>
     </>
-  );
+  )
 }
-export default Blogs;
+export default Blogs

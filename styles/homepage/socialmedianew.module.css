@@ -31,7 +31,7 @@
   margin-right: 14px;
 }
 @media screen and (max-width: 1400px) {
-  .icons1{
+  .icons1 {
     transform: scale(0.8);
   }
 }

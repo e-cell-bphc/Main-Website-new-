@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "../../styles/events/event_home.module.css";
+import React from 'react'
+import styles from '../../styles/events/event_home.module.css'
 function Event_Home() {
   return (
     <>
@@ -7,7 +7,7 @@ function Event_Home() {
         <div>Welcome to ECell Events Page</div>
       </div>
     </>
-  );
+  )
 }
 
-export default Event_Home;
+export default Event_Home

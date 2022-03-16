@@ -1,8 +1,8 @@
-import carousel from "../styles/carousel.module.css";
-import Image from "next/dist/client/image";
-import img_1 from "../assets/images/img_1.png";
-import img_2 from "../assets/images/img_2.png";
-import img_3 from "../assets/images/img_3.png";
+import carousel from '../styles/carousel.module.css'
+import Image from 'next/dist/client/image'
+import img_1 from '../assets/images/img_1.png'
+import img_2 from '../assets/images/img_2.png'
+import img_3 from '../assets/images/img_3.png'
 
 export default function Carousel() {
   return (
@@ -80,5 +80,5 @@ export default function Carousel() {
         </main>
       </div>
     </>
-  );
+  )
 }

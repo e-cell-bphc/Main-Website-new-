@@ -1,7 +1,7 @@
-import Link from "next/link";
-import React from "react";
-import styles from "../../styles/blog/blog_tiles.module.css";
-import Date from "./date";
+import Link from 'next/link'
+import React from 'react'
+import styles from '../../styles/blog/blog_tiles.module.css'
+import Date from './date'
 function Blog_Tiles({ allPostsData }) {
   return (
     <>
@@ -18,7 +18,7 @@ function Blog_Tiles({ allPostsData }) {
         </Link>
       ))}
     </>
-  );
+  )
 }
 
-export default Blog_Tiles;
+export default Blog_Tiles

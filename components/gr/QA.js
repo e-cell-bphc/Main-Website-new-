@@ -1,7 +1,7 @@
-import React from "react";
-import styles from "../../styles/GR/QA.module.css";
-import Image from "next/image";
-import info from "../../assets/images/info.png";
+import React from 'react'
+import styles from '../../styles/GR/QA.module.css'
+import Image from 'next/image'
+import info from '../../assets/images/info.png'
 export default function QA({ question, answer, classy, questionid }) {
   return (
     <>
@@ -17,5 +17,5 @@ export default function QA({ question, answer, classy, questionid }) {
         </div>
       </div>
     </>
-  );
+  )
 }

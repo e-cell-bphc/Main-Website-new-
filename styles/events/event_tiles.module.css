@@ -1,71 +1,71 @@
 .form {
-    margin: auto;
-    justify-content: center;
+  margin: auto;
+  justify-content: center;
 }
 
 .div {
-    font-size: 2em;
+  font-size: 2em;
 }
 
 .input {
-    margin-top: 3vh;
-    margin-bottom: 3vh;
-    margin-right: 2vw;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  margin-right: 2vw;
 }
 
 .inputbox {
-    position: relative;
-    border-radius: 3px;
-    border: none;
-    box-shadow: 5px 5px 10px rgb(0, 119, 255) ;
-    background-color: black;
-    width: 20vw;
-    margin: 0px;
-    height: 5vh;
-    color: rgb(0, 119, 255);
+  position: relative;
+  border-radius: 3px;
+  border: none;
+  box-shadow: 5px 5px 10px rgb(0, 119, 255);
+  background-color: black;
+  width: 20vw;
+  margin: 0px;
+  height: 5vh;
+  color: rgb(0, 119, 255);
 }
 
 .inputbox1 {
-    position: relative;
-    border: none;
-    border-radius: 3px;
-    box-shadow: 5px 5px 10px rgb(0, 119, 255) ;
-    background-color: black;
-    width: 30vw;
-    margin: 0px;
-    height: 10vh;
-    color: rgb(0, 119, 255);
+  position: relative;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 5px 5px 10px rgb(0, 119, 255);
+  background-color: black;
+  width: 30vw;
+  margin: 0px;
+  height: 10vh;
+  color: rgb(0, 119, 255);
 }
 
 .distri {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
-.submit{
-    color: white;
-    background-color: rgb(0, 119, 255);
-    border: none;
-    border-radius: 3px;
-    width: 10vw;
-    height: 5vh;
-    font-size: large;
-    margin-left: 27.5vw;
+.submit {
+  color: white;
+  background-color: rgb(0, 119, 255);
+  border: none;
+  border-radius: 3px;
+  width: 10vw;
+  height: 5vh;
+  font-size: large;
+  margin-left: 27.5vw;
 }
 
 @media screen and (max-width: 1200px) {
-    .distri {
-        flex-direction: column;
-    }
-    .inputbox {
-        width: 60vw;
-    }
-    .inputbox1 {
-        width: 60vw;
-        height: 20vh;
-    }
-    .submit {
-        width: 60vw;
-        margin-left: auto;
-    }
+  .distri {
+    flex-direction: column;
   }
+  .inputbox {
+    width: 60vw;
+  }
+  .inputbox1 {
+    width: 60vw;
+    height: 20vh;
+  }
+  .submit {
+    width: 60vw;
+    margin-left: auto;
+  }
+}

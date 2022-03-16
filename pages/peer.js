@@ -1,7 +1,7 @@
-import peer from "../styles/peer/peer.module.css";
-import Cards from "../components/PeerToPeer/cards";
-import what from "../styles/peer/aim.module.css";
-import Head from "next/head";
+import peer from '../styles/peer/peer.module.css'
+import Cards from '../components/PeerToPeer/cards'
+import what from '../styles/peer/aim.module.css'
+import Head from 'next/head'
 
 export default function Programs() {
   return (
@@ -36,5 +36,5 @@ export default function Programs() {
         <Cards />
       </div>
     </>
-  );
+  )
 }
