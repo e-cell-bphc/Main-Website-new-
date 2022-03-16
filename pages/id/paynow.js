@@ -176,7 +176,7 @@ function Paynow() {
         setValid('false')
       }
     } else if (coupon === 'COIGN') {
-      setCost(199)
+      setCost(100)
       setBtn(false)
       if (valid != 'false') {
         setValid('false')

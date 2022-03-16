@@ -1,10 +1,14 @@
 import React, { useState } from 'react'
+
+import { v4 as uuidv4 } from 'uuid'
+
 import CompanyCards from '../../components/id/companyCards'
 import AppliedCards from '../../components/id/appliedCards'
 import styles from '../../styles/id/viewcompany.module.css'
 
 function ViewCompany() {
   const [toggle, setToggle] = useState(1)
+  const [randomString, setRandomString] = useState(uuidv4())
 
   const handleClass = (toggle) => {
     if (toggle == 1) {
@@ -70,12 +74,13 @@ function ViewCompany() {
           <CompanyCards />
         </div>
         <div className={handleClass2(toggle)}>
-          <AppliedCards />
+          <AppliedCards randomString={randomString} />
         </div>
       </div>
       <div
         onClick={() => {
           setToggle(2)
+          setRandomString(uuidv4())
         }}
         className={handlebtnClass1(toggle)}
       >

@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { useSession } from 'next-auth/react'
 import axios from 'axios'
 
-function AppliedCards() {
+function AppliedCards({ randomString }) {
   const { data: session, status } = useSession()
   const [datas, setData] = useState([])
   useEffect(() => {
@@ -31,7 +31,7 @@ function AppliedCards() {
     if (status == 'authenticated') {
       get()
     }
-  }, [status])
+  }, [status, randomString])
 
   return (
     <>
