@@ -9,6 +9,9 @@ function Paynow() {
   const cs = []
   const [bool, setbool] = useState('hi')
 
+  const [btn, setBtn] = useState(true)
+  const [valid, setValid] = useState('false')
+
   const [coupon, setCoupon] = useState('')
   const [text, setText] = useState('Enter Coupon Code')
   const [cost, setCost] = useState(265)
@@ -98,7 +101,8 @@ function Paynow() {
           {
             email: session.user.email,
             _id: session.user._id,
-            cost
+            cost,
+            coupon
           }
         )
         .then((res) => {
@@ -152,14 +156,11 @@ function Paynow() {
         cs[csnum] = 'CA0' + csnum
       }
     }
-  })
-  const [btn, setBtn] = useState(true)
-  const [valid, setValid] = useState('false')
+  }, [])
 
   async function handleCouponCode(e) {
-    e.preventDefault()
     let check = false
-    for (let i = 0; i < 30; i++) {
+    for (let i = 1; i <= 30; i++) {
       if (cs[i] === coupon) {
         check = true
         break
