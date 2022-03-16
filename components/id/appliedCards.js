@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import styles from '../../styles/id/companyCards.module.css'
+import styles from '../../styles/id/appliedCards.module.css'
 import Image from 'next/image'
-import launchpad from '../../assets/Launchpad.png'
 import { useSession } from 'next-auth/react'
 import axios from 'axios'
 
