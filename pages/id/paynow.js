@@ -5,11 +5,12 @@ import Link from 'next/link'
 import { signOut } from 'next-auth/react'
 import axios from 'axios'
 import { useSession } from 'next-auth/react'
+import { StreamCopyUsage } from 'three'
 
 function Paynow() {
-    const [paids, setPaid] = useState(false)
-  const [bool, setbool] = useState('')
-
+  const [paids, setPaid] = useState(false)
+  const cs = []
+  const [bool, setbool] = useState('hi')
 
   const [coupon, setCoupon] = useState('')
   const [text, setText] = useState('Enter Coupon Code')
@@ -146,36 +147,28 @@ function Paynow() {
     }
   }
 
-  const cs = []
-  
-  for (let csnum = 1; csnum <= 30; csnum++){
-    if (csnum < 10) {
-      cs[csnum] = 'CA00' + csnum
-    }
-    else {
-      cs[csnum] = 'CA0' + csnum;
-    }
-  }
-  console.log(cs)
-
-  
- async function handlecs(e) {
-    e.preventDefault
-     for (let i = 1; i <= 30; i++){
-      if (coupon == cs[i]) {
-        setbool(cs[i])
-        break;
+  useEffect(() => {
+    for (let csnum = 1; csnum <= 30; csnum++) {
+      if (csnum < 10) {
+        cs[csnum] = 'CA00' + csnum
+      } else {
+        cs[csnum] = 'CA0' + csnum
       }
     }
-    return bool
-  }
-
+  })
   const [btn, setBtn] = useState(true)
   const [valid, setValid] = useState('false')
 
-  function handleCouponCode(e) {
-    e.preventDefault
-    setCoupon(e.target.value)
+  async function handleCouponCode(e) {
+    e.preventDefault()
+    let check = false
+    for (let i = 0; i < 30; i++) {
+      if (cs[i] === coupon) {
+        check = true
+        break
+      }
+    }
+    setCoupon(e.target.value, () => {})
     if (coupon == '') {
       setCost(265)
       setBtn(true)
@@ -189,23 +182,24 @@ function Paynow() {
         setValid('false')
       }
     } else if (coupon === 'BITSIAN') {
-      setCost(179)
+      setCost(179, () => {})
+      setBtn(false, () => {})
+      if (valid != 'false') {
+        setValid('false', () => {})
+      }
+    } else if (check) {
+      setCost(229)
       setBtn(false)
       if (valid != 'false') {
         setValid('false')
+      } else {
+        setCost(265)
+        setBtn(false)
+        setValid('true')
       }
-    } else if (coupon==bool) {
-      setCost(225)
-      setBtn(false)
-      if (valid != 'false') {
-        setValid('false')
-      }
-    }
-    else {
-      setValid('true')
-      setBtn(false)
     }
   }
+
   return (
     <>
       <div className={styles.container}>
@@ -224,14 +218,12 @@ function Paynow() {
                 setText('Apply Coupon')
                 setCost(265)
                 setBtn(true)
-                setbool(false)
               }}
             ></input>
             <div
               className={btn ? styles.CheckCoupon : styles.none}
-              onClick={async (e) => {
-                await handlecs(e);
-                handleCouponCode(e);
+              onClick={(e) => {
+                handleCouponCode(e)
               }}
             >
               {text}
