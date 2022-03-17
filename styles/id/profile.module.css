@@ -96,11 +96,12 @@
   margin-bottom: 2vh;
   border-bottom: 1px solid rgb(0, 170, 255);
 }
-.resumeinput{
-  display: none;
-}
-.resume{
-
+.resumeinput {
+  width: auto;
+  height: auto;
+  outline: none;
+  background: blue;
+  font-family: 'Bebas Neue', cursive;
 }
 
 .inputbox {
@@ -115,7 +116,7 @@
 .resume {
   position: absolute;
   bottom: 18%;
-    font-family: 'Bebas Neue', cursive;
+  font-family: 'Bebas Neue', cursive;
 
   width: auto;
   height: auto;
@@ -127,27 +128,47 @@
 
   right: 10%;
 }
-.resume:hover{
+.resume:hover {
   cursor: pointer;
 }
 
 .submit {
   padding: 10px 14px;
-  width: 40%;
+  width: max-content;
   background: rgb(0, 170, 255);
   font-size: 2rem;
   text-transform: uppercase;
   font-family: 'Bebas Neue', cursive;
   border-radius: 5px;
 }
-
+.submit2 {
+  padding: 10px 14px;
+  width: max-content;
+  background: rgb(0, 170, 255);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-family: 'Bebas Neue', cursive;
+  border-radius: 5px;
+  color: black;
+}
+.none {
+  display: none;
+}
+.resumeUploadCluster {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 .buttons {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 90vw;
 }
-
+.resumebtn {
+  color: white;
+}
 .launchpad_logo {
   position: fixed;
   top: 1vh;
@@ -175,7 +196,7 @@
     transform: scale(0.8);
   }
   .resume {
-    transform: scale(0.7);
+    transform: scale(0.8);
     padding: 15px;
   }
 }
@@ -183,7 +204,13 @@
   .user_form > div {
     width: 80vw;
   }
-
+  .resume {
+    position: relative;
+    bottom: -20%;
+    right: auto;
+    margin-bottom: 5vh;
+    font-size: 25px;
+  }
   .user_form > div:nth-child(2) {
     width: 80vw;
   }
@@ -197,6 +224,7 @@
     margin-top: 8vh;
   }
   .submit {
+    /* margin-top: 10vh; */
     margin-left: auto;
     margin-right: auto;
   }
