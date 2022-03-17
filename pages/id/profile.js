@@ -193,6 +193,7 @@ function Profile() {
   }
   // const handlePaid = () => {
   //   alert('You&apos;ve already paid');
+  const [resume, setResume] = useState('No files uploaded');
 
   // Handling file selection from input
   const onFileSelected = (e) => {
@@ -340,15 +341,17 @@ function Profile() {
                   Update
                 </button>
 
-                <label className={styles.resume}>
+                {/* <label className={styles.resume} for="resume">
                   Resume Upload
+                  </label> */}
                   <input
-                    className={styles.resumeinput}
+                    className={styles.resume}
                     type="file"
-                    name="Resume Upload"
+                  max-size="5000"
+                  id="resume"
+                    name="resume"
                     accept="application/pdf"
                   />
-                </label>
                 {/* {!paids ? (
                   <button className={styles.submit} onClick={openRazorpay}>
                     Pay
