@@ -303,6 +303,7 @@ function Profile() {
                   <input
                     className={styles.resumeinput}
                     type="file"
+                    max-size="5000"
                     name="Resume Upload"
                     accept="application/pdf"
                   />
