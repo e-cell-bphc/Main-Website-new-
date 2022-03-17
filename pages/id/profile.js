@@ -298,7 +298,7 @@ function Profile() {
                   Update
                 </button>
 
-                {/* <label className={styles.resume}>
+                <label className={styles.resume}>
                   Resume Upload
                   <input
                     className={styles.resumeinput}
@@ -306,7 +306,7 @@ function Profile() {
                     name="Resume Upload"
                     accept="application/pdf"
                   />
-                </label> */}
+                </label>
                 {/* {!paids ? (
                   <button className={styles.submit} onClick={openRazorpay}>
                     Pay

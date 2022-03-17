@@ -175,7 +175,7 @@
     transform: scale(0.8);
   }
   .resume {
-    transform: scale(0.7);
+    transform: scale(0.8);
     padding: 15px;
   }
 }
@@ -183,7 +183,13 @@
   .user_form > div {
     width: 80vw;
   }
-
+  .resume{
+    position: relative;
+    bottom: -20%;
+    right: auto;
+    margin-bottom:5vh ;
+    font-size: 25px;
+  }
   .user_form > div:nth-child(2) {
     width: 80vw;
   }
@@ -197,6 +203,7 @@
     margin-top: 8vh;
   }
   .submit {
+    /* margin-top: 10vh; */
     margin-left: auto;
     margin-right: auto;
   }
