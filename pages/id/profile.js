@@ -9,10 +9,11 @@ import ClipLoader from 'react-spinners/ClipLoader'
 import axios from 'axios'
 
 function Profile() {
+  const { data: session, status } = useSession()
+
   const [selectedFile, setSelectedFile] = useState(null)
   const [fileName, setFileName] = useState(null)
   const [loader, setLoader] = useState(false)
-  const { data: session, status } = useSession()
   const [paids, setPaid] = useState(false)
   const [value, setValue] = useState(26500)
 
@@ -178,8 +179,6 @@ function Profile() {
   //   }
 
   const handleUpdate = async (e) => {
-    const { data: session, status } = useSession()
-
     e.preventDefault()
     axios
       .post(
