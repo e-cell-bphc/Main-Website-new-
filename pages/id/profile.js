@@ -8,6 +8,9 @@ import { useRouter } from 'next/router'
 import axios from 'axios'
 
 function Profile() {
+  const [selectedFile, setSelectedFile] = useState(null)
+  const [fileName, setFileName] = useState(null)
+
   const { data: session, status } = useSession()
   const [paids, setPaid] = useState(false)
   const [value, setValue] = useState(26500)
@@ -190,6 +193,45 @@ function Profile() {
   }
   // const handlePaid = () => {
   //   alert('You&apos;ve already paid');
+
+  // Handling file selection from input
+  const onFileSelected = (e) => {
+    if (e.target.files[0]) {
+      setSelectedFile(e.target.files[0])
+      setFileName(e.target.files[0].name)
+      // setIsDisabled(false) // Enabling upload button
+      // setButtonText("Let's upload this!")
+    }
+  }
+
+  // Uploading image to Cloud Storage
+  const handleFileUpload = async (e) => {
+    e.preventDefault()
+
+    try {
+      if (selectedFile !== '') {
+        // Creating a FormData object
+        let fileData = new FormData()
+
+        // Adding the 'image' field and the selected file as value to our FormData object
+        // Changing file name to make it unique and avoid potential later overrides
+        fileData.set(
+          'image',
+          selectedFile,
+          `${Date.now()}-${selectedFile.name}`
+        )
+
+        await axios({
+          method: 'post',
+          url: 'http://localhost:4000/api/users/uploadResume',
+          data: fileData,
+          headers: { 'Content-Type': 'multipart/form-data' }
+        })
+      }
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   return (
     <div>
