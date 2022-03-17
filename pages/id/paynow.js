@@ -5,12 +5,20 @@ import axios from 'axios'
 import { useSession } from 'next-auth/react'
 
 function Paynow() {
-  const [paids, setPaid] = useState(false)
   const cs = []
+  for (let csnum = 1; csnum <= 30; csnum++) {
+    if (csnum < 10) {
+      cs[csnum] = 'CA00' + csnum
+    } else {
+      cs[csnum] = 'CA0' + csnum
+    }
+  }
+
+  const [paids, setPaid] = useState(false)
   const [bool, setbool] = useState('hi')
 
   const [btn, setBtn] = useState(true)
-  const [valid, setValid] = useState('false')
+  const [valid, setValid] = useState(false)
 
   const [coupon, setCoupon] = useState('')
   const [text, setText] = useState('Enter Coupon Code')
@@ -148,15 +156,15 @@ function Paynow() {
     }
   }
 
-  useEffect(() => {
-    for (let csnum = 1; csnum <= 30; csnum++) {
-      if (csnum < 10) {
-        cs[csnum] = 'CA00' + csnum
-      } else {
-        cs[csnum] = 'CA0' + csnum
-      }
-    }
-  }, [])
+  // useEffect(() => {
+  //   for (let csnum = 1; csnum <= 30; csnum++) {
+  //     if (csnum < 10) {
+  //       cs[csnum] = 'CA00' + csnum
+  //     } else {
+  //       cs[csnum] = 'CA0' + csnum
+  //     }
+  //   }
+  // }, [])
 
   async function handleCouponCode(e) {
     let check = false
@@ -166,34 +174,34 @@ function Paynow() {
         break
       }
     }
-    setCoupon(e.target.value, () => {})
+    // setCoupon(e.target.value)
     if (coupon == '') {
       setCost(265)
       setBtn(true)
-      if (valid != 'false') {
-        setValid('false')
+      if (valid != false) {
+        setValid(false)
       }
     } else if (coupon === 'COIGN') {
       setCost(100)
       setBtn(false)
-      if (valid != 'false') {
-        setValid('false')
+      if (valid != false) {
+        setValid(false)
       }
     } else if (coupon === 'BITSIAN') {
-      setCost(179, () => {})
-      setBtn(false, () => {})
-      if (valid != 'false') {
-        setValid('false', () => {})
+      setCost(179)
+      setBtn(false)
+      if (valid != false) {
+        setValid(false)
       }
     } else if (check) {
       setCost(229)
       setBtn(false)
-      if (valid != 'false') {
-        setValid('false')
+      if (valid == false) {
+        setValid(false)
       } else {
         setCost(265)
         setBtn(false)
-        setValid('true')
+        setValid(true)
       }
     }
   }
@@ -226,7 +234,7 @@ function Paynow() {
             >
               {text}
             </div>
-            <div className={valid == 'true' ? styles.howerror : styles.none}>
+            <div className={valid == true ? styles.howerror : styles.none}>
               *Please enter a valid coupon code*
             </div>
             <div
