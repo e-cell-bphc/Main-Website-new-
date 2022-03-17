@@ -5,12 +5,13 @@ import launchpad from '../../assets/Launchpad.png'
 import Image from 'next/image'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
+import ClipLoader from 'react-spinners/ClipLoader'
 import axios from 'axios'
 
 function Profile() {
   const [selectedFile, setSelectedFile] = useState(null)
   const [fileName, setFileName] = useState(null)
-
+  const [loader, setLoader] = useState(false)
   const { data: session, status } = useSession()
   const [paids, setPaid] = useState(false)
   const [value, setValue] = useState(26500)
@@ -177,11 +178,18 @@ function Profile() {
   //   }
 
   const handleUpdate = async (e) => {
+    const { data: session, status } = useSession()
+
     e.preventDefault()
     axios
       .post(
         'https://backend-api-2022.onrender.com/api/users/updateProfile',
-        userData
+        userData,
+        {
+          headers: {
+            Authorization: `Bearer ${session.accessToken}`
+          }
+        }
       )
       .then((res) => {
         alert('Profile Updated')
@@ -193,7 +201,7 @@ function Profile() {
   }
   // const handlePaid = () => {
   //   alert('You&apos;ve already paid');
-  const [resume, setResume] = useState('No files uploaded');
+  const [resume, setResume] = useState('No files uploaded')
 
   // Handling file selection from input
   const onFileSelected = (e) => {
@@ -221,13 +229,25 @@ function Profile() {
           selectedFile,
           `${Date.now()}-${selectedFile.name}`
         )
-
-        await axios({
+        setLoader(true)
+        axios({
           method: 'post',
-          url: 'http://localhost:4000/api/users/uploadResume',
+          url: 'https://backend-api-2022.onrender.com/api/users/uploadResume',
           data: fileData,
-          headers: { 'Content-Type': 'multipart/form-data' }
+          headers: {
+            'Content-Type': 'multipart/form-data',
+            Authorization: `Bearer ${session.accessToken}`
+          }
         })
+          .then((res) => {
+            setLoader(false)
+            console.log(res)
+            alert('Resume Uploaded')
+          })
+          .catch((err) => {
+            console.log(err)
+            alert('Resume upload failed')
+          })
       }
     } catch (error) {
       console.log(error)
@@ -340,18 +360,26 @@ function Profile() {
                 >
                   Update
                 </button>
-
-                {/* <label className={styles.resume} for="resume">
-                  Resume Upload
-                  </label> */}
+                <div className={styles.resume}>
                   <input
-                    className={styles.resume}
                     type="file"
-                  max-size="5000"
-                  id="resume"
+                    max-size="5000"
+                    id="resume"
+                    onChange={(e) => {
+                      onFileSelected(e)
+                    }}
                     name="resume"
                     accept="application/pdf"
                   />
+                  <div className={styles.submit2} onClick={handleFileUpload}>
+                    Resume Upload
+                    <div
+                      className={loader ? styles.displayloader : styles.none}
+                    >
+                      <ClipLoader />
+                    </div>
+                  </div>
+                </div>
                 {/* {!paids ? (
                   <button className={styles.submit} onClick={openRazorpay}>
                     Pay
