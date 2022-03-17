@@ -166,7 +166,7 @@ function Paynow() {
   //   }
   // }, [])
 
-  async function handleCouponCode(e) {
+  function handleCouponCode(e) {
     let check = false
     for (let i = 1; i <= 30; i++) {
       if (cs[i] === coupon) {
@@ -196,13 +196,13 @@ function Paynow() {
     } else if (check) {
       setCost(229)
       setBtn(false)
-      if (valid == false) {
+      if (valid == true) {
         setValid(false)
-      } else {
-        setCost(265)
-        setBtn(false)
-        setValid(true)
       }
+    } else {
+      setCost(265)
+      setBtn(false)
+      setValid(true)
     }
   }
 

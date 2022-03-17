@@ -297,6 +297,16 @@ function Profile() {
                 >
                   Update
                 </button>
+
+                {/* <label className={styles.resume}>
+                  Resume Upload
+                  <input
+                    className={styles.resumeinput}
+                    type="file"
+                    name="Resume Upload"
+                    accept="application/pdf"
+                  />
+                </label> */}
                 {/* {!paids ? (
                   <button className={styles.submit} onClick={openRazorpay}>
                     Pay
