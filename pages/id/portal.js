@@ -56,7 +56,7 @@ export default function Home() {
               {status === 'authenticated' ? (
                 <Link href="/id/profile">
                   <button className={styles.portalbtn}>
-                    Complete Registration
+                    My Profile
                   </button>
                 </Link>
               ) : (
@@ -69,7 +69,7 @@ export default function Home() {
                     })
                   }}
                 >
-                  REGISTER HERE
+                  Login
                 </button>
               )}
               {/* <button className={styles.portalbtn}>Redirect to Portal</button> */}

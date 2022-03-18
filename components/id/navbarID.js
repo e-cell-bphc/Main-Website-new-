@@ -285,7 +285,7 @@ function Navbar() {
               </div>
             </Link>
           )} */}
-          <PayNow />
+          {/* <PayNow /> */}
         </div>
         <div
           className={hamOn ? styles.logout_off : styles.logout_on}
