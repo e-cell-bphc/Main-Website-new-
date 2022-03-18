@@ -14,7 +14,7 @@
 } */
 
 .cardContainer {
-  height: 31em;
+  height: 28em;
   width: 22em;
   background: rgb(7, 7, 7);
   margin: 5vh;
@@ -40,7 +40,7 @@
 .propitem {
   text-align: center;
   overflow-y: auto;
-  margin-top: 1.2vh;
+  margin-top: 1.3vh;
   margin-bottom: 1.2vh;
 }
 .headprop {

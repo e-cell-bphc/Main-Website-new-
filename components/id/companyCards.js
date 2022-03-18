@@ -126,14 +126,14 @@ function CompanyCards() {
                   >
                     Job Description
                   </a>
-                  <div>
+                  {/* <div>
                     <button
                       className={styles.button}
                       onClick={(e) => e.preventDefault(applyNow(data._id))}
                     >
                       Apply Now
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               {/* <Auth prop={data} /> */}
