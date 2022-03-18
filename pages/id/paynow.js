@@ -208,7 +208,7 @@ function Paynow() {
 
   return (
     <>
-      <div className={styles.container}>
+      {/* <div className={styles.container}>
         <div className={styles.box}>
           <div className={styles.header}>Pay Here</div>
           <div className={styles.coupon}>
@@ -247,6 +247,9 @@ function Paynow() {
             </div>
           </div>
         </div>
+      </div> */}
+      <div className={styles.container}>
+        <div style={{ fontSize: '1.5em'}}> Registrations have closed !!</div>
       </div>
     </>
   )
