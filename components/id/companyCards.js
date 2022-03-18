@@ -63,6 +63,8 @@ function CompanyCards() {
             alert('Application Limit Reached')
           } else if (err.response.data.code === '406') {
             alert('Please complete the payment before you apply')
+          } else if (err.response.data.code === '404') {
+            alert('Please upload your resume before you apply')
           } else {
             alert("Couldn't apply, try again")
           }
