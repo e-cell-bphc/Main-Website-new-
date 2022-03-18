@@ -253,6 +253,11 @@ function Profile() {
     }
   }
 
+  function ResumeHandler() {
+    if (userData.resumeURL) return 'Update Resume'
+    else return 'Upload Resume'
+  }
+
   return (
     <div>
       <div className={styles.launchpad_logo}>
@@ -371,7 +376,7 @@ function Profile() {
                     accept="application/pdf"
                   />
                   <div className={styles.submit2} onClick={handleFileUpload}>
-                    Resume Upload
+                    <ResumeHandler />
                     <div
                       className={loader ? styles.displayloader : styles.none}
                     >
