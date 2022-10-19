@@ -1,19 +1,22 @@
 import Image from 'next/image'
 import style from '../../styles/AboutUs/aboutuscards.module.css'
-import Anushka from '../../assets/images/Executives/1.jpg'
-import sonakshi from '../../assets/images/Executives/2.jpg'
-import nikhil from '../../assets/images/Executives/nikhil.jpg'
-import Yashsav from '../../assets/images/Executives/Yashsav_Gupta.jpg'
-import Pratyush from '../../assets/images/Executives/Pratyush_Choudhary.png'
-import Sneh from '../../assets/images/Executives/sneh.png'
+import Anushka from '../../assets/images/Executives-2019/1.jpg'
+import sonakshi from '../../assets/images/Executives-2019/2.jpg'
+import nikhil from '../../assets/images/Executives-2019/nikhil.jpg'
+// import Yashsav from '../../assets/images/Executives/Yashsav_Gupta.jpg'
+// import Pratyush from '../../assets/images/Executives/Pratyush_Choudhary.png'
+// import Sneh from '../../assets/images/Executives/sneh.png'
 import Sanchit from '../../assets/images/tech/sanchit.jpeg'
 import Akshat from '../../assets/images/tech/AkshatK.jpg'
+import Soni from '../../assets/images/Executives-2020/Soni2.jpeg'
+import harshil from '../../assets/images/Executives-2020/zamn.jpeg'
+import Paritosh from '../../assets/images/Executives-2020/Pari.jpeg'
 import Raghuvir from '../../assets/images/tech/Raghuvir.jpg'
 import Rushil from '../../assets/images/tech/Rushil.jpg'
 import Ashwin from '../../assets/images/tech/ashwin-pic.jpeg'
-import Sambhav from '../../assets/images/Executives/Sambhav.jpeg'
+import Sambhav from '../../assets/images/Executives-2019/Sambhav.jpeg'
 import AkshatO from '../../assets/images/tech/AkshatO.jpg'
-import Susho from '../../assets/images/Executives/Susho.jpeg'
+import Susho from '../../assets/images/Executives-2019/Susho.jpeg'
 
 export default function Aboutus() {
   const list = [
@@ -43,10 +46,10 @@ export default function Aboutus() {
     },
     {
       id: 4,
-      src: Yashsav,
-      name: 'Yashsav Gupta',
-      classy: 'positionlong',
-      position: 'Vice-President Projects and Initiatives',
+      src: Soni,
+      name: 'Shreyans Soni',
+      classy: 'position',
+      position: 'Vice-Chairman',
       email: 'f20191459@hyderabad.bits-pilani.ac.in'
     },
     {
@@ -59,18 +62,18 @@ export default function Aboutus() {
     },
     {
       id: 5,
-      src: Pratyush,
-      name: 'Pratyush Choudhary',
+      src: Paritosh,
+      name: 'Paritosh Kadam',
       classy: 'position',
-      position: 'Videography Head',
-      email: 'f20190372@hyderabad.bits-pilani.ac.in'
+      position: 'Technical Head',
+      email: 'f20202281@hyderabad.bits-pilani.ac.in'
     },
     {
       id: 6,
-      src: Sneh,
-      name: 'Sneh Chellani',
+      src: harshil,
+      name: 'Harshil Kankane',
       classy: 'position',
-      position: 'Editorial Head',
+      position: 'Videography Head',
       email: 'f20191193@hyderabad.bits-pilani.ac.in'
     },
     {

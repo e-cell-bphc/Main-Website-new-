@@ -79,12 +79,12 @@ function Navbar() {
       id: 1,
       name: 'Dashboard',
       link: '/id/portal'
+    },
+    {
+      id: 3,
+      name: 'Companies',
+      link: '/id/viewCompany'
     }
-    // {
-    //   id: 3,
-    //   name: 'Companies',
-    //   link: '/id/viewCompany'
-    // }
     // {
     //   id: 4,
     //   name: "Pay Now",
