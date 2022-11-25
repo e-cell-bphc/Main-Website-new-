@@ -128,9 +128,9 @@ export default function Navbar(props) {
             About Us
           </a>
         </Link>
-        <Link href="/id/portal">
+        <Link href="/suitUP">
           <a onClick={() => handleClickID()} className={Navbarcss.mobilebtn}>
-            Internship Drive
+            Suit Up
           </a>
         </Link>
 
