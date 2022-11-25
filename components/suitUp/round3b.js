@@ -113,6 +113,9 @@ function Round3b() {
         // console.log(teamCode)
         setCode(e.target.value)
     }
+
+    const [display, setDisplay] = useState(true)
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         money[0].teamCode = teamCode
@@ -132,175 +135,189 @@ function Round3b() {
                     // }
                     console.log(res)
                   })
+        setDisplay(false)
     }
   return (
     <>
-      <div className={styles.main}>
-              <div className={styles.header}>Round 3b - Hiring Employees</div>
-              <div className={styles.team}>
-                  <div className={styles.teamTag}>Team Code</div>
-                  <input className={styles.input} name="teamCode" type="text" value={teamCode} onChange={handleChange} />
-              </div>
-        <div className={styles.form}>
-          <div className={styles.sect}>
-            <div className={styles.mil1}></div>
-            <div className={styles.mil1}>R&D</div>
-            <div className={styles.mil1}>Logistics</div>
-            <div className={styles.mil1}>IT</div>
-            <div className={styles.mil1}>Marketing</div>
+      {display ? (
+        <div className={styles.main}>
+          <div className={styles.header}>Round 3b - Hiring Employees</div>
+          <div className={styles.team}>
+            <div className={styles.teamTag}>Team Code</div>
+            <input
+              className={styles.input}
+              name="teamCode"
+              type="text"
+              value={teamCode}
+              onChange={handleChange}
+            />
           </div>
-          {emp.map((data) => {
-            return (
-              <>
-                <div className={styles.sect}>
-                  <div className={styles.sectName}>{data.head}</div>
-                  <div className={styles.mil}>
-                    <div className={styles.interestInput}>
-                      <div
-                        className={styles.editCount}
-                        onClick={(e) => {
-                          if (money[data.id].rnd != 0) {
+          <div className={styles.form}>
+            <div className={styles.sect}>
+              <div className={styles.mil1}></div>
+              <div className={styles.mil1}>R&D</div>
+              <div className={styles.mil1}>Logistics</div>
+              <div className={styles.mil1}>IT</div>
+              <div className={styles.mil1}>Marketing</div>
+            </div>
+            {emp.map((data) => {
+              return (
+                <>
+                  <div className={styles.sect}>
+                    <div className={styles.sectName}>{data.head}</div>
+                    <div className={styles.mil}>
+                      <div className={styles.interestInput}>
+                        <div
+                          className={styles.editCount}
+                          onClick={(e) => {
+                            if (money[data.id].rnd != 0) {
+                              e.preventDefault()
+                              money[data.id].rnd -= 1
+                              setMoney({ ...money })
+                              sub()
+                            }
+                          }}
+                        >
+                          {' '}
+                          -{' '}
+                        </div>
+
+                        <div className={styles.Count}>{money[data.id].rnd}</div>
+
+                        <div
+                          className={styles.editCount}
+                          onClick={(e) => {
                             e.preventDefault()
-                            money[data.id].rnd -= 1
-                            setMoney({ ...money })
-                            sub()
-                          }
-                        }}
-                      >
-                        {' '}
-                        -{' '}
+                            if (true) {
+                              money[data.id].rnd += 1
+                              setMoney({ ...money })
+                              add()
+                            }
+                          }}
+                        >
+                          {' '}
+                          +{' '}
+                        </div>
                       </div>
+                    </div>
+                    <div className={styles.mil}>
+                      <div className={styles.interestInput}>
+                        <div
+                          className={styles.editCount}
+                          onClick={(e) => {
+                            e.preventDefault()
+                            if (money[data.id].log != 0) {
+                              money[data.id].log -= 1
+                              setMoney({ ...money })
+                              sub()
+                            }
+                          }}
+                        >
+                          {' '}
+                          -{' '}
+                        </div>
 
-                      <div className={styles.Count}>{money[data.id].rnd}</div>
+                        <div className={styles.Count}>{money[data.id].log}</div>
 
-                      <div
-                        className={styles.editCount}
-                        onClick={(e) => {
-                          e.preventDefault()
-                          if (true) {
-                            money[data.id].rnd += 1
+                        <div
+                          className={styles.editCount}
+                          onClick={(e) => {
+                            e.preventDefault()
+                            money[data.id].log += 1
                             setMoney({ ...money })
                             add()
-                          }
-                        }}
-                      >
-                        {' '}
-                        +{' '}
+                          }}
+                        >
+                          {' '}
+                          +{' '}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div className={styles.mil}>
-                    <div className={styles.interestInput}>
-                      <div
-                        className={styles.editCount}
-                        onClick={(e) => {
-                          e.preventDefault()
-                          if (money[data.id].log != 0) {
-                            money[data.id].log -= 1
+                    <div className={styles.mil}>
+                      <div className={styles.interestInput}>
+                        <div
+                          className={styles.editCount}
+                          onClick={(e) => {
+                            e.preventDefault()
+                            if (money[data.id].it != 0) {
+                              money[data.id].it -= 1
+                              setMoney({ ...money })
+                              sub()
+                            }
+                          }}
+                        >
+                          {' '}
+                          -{' '}
+                        </div>
+
+                        <div className={styles.Count}>{money[data.id].it}</div>
+
+                        <div
+                          className={styles.editCount}
+                          onClick={(e) => {
+                            e.preventDefault()
+                            money[data.id].it += 1
                             setMoney({ ...money })
-                            sub()
-                          }
-                        }}
-                      >
-                        {' '}
-                        -{' '}
-                      </div>
-
-                      <div className={styles.Count}>{money[data.id].log}</div>
-
-                      <div
-                        className={styles.editCount}
-                        onClick={(e) => {
-                          e.preventDefault()
-                          money[data.id].log += 1
-                          setMoney({ ...money })
-                          add()
-                        }}
-                      >
-                        {' '}
-                        +{' '}
+                            add()
+                          }}
+                        >
+                          {' '}
+                          +{' '}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div className={styles.mil}>
-                    <div className={styles.interestInput}>
-                      <div
-                        className={styles.editCount}
-                        onClick={(e) => {
-                          e.preventDefault()
-                          if (money[data.id].it != 0) {
-                            money[data.id].it -= 1
+                    <div className={styles.mil}>
+                      <div className={styles.interestInput}>
+                        <div
+                          className={styles.editCount}
+                          onClick={(e) => {
+                            e.preventDefault()
+                            if (money[data.id].market != 0) {
+                              money[data.id].market -= 1
+                              setMoney({ ...money })
+                              sub()
+                            }
+                          }}
+                        >
+                          {' '}
+                          -{' '}
+                        </div>
+
+                        <div className={styles.Count}>
+                          {money[data.id].market}
+                        </div>
+
+                        <div
+                          className={styles.editCount}
+                          onClick={(e) => {
+                            e.preventDefault()
+                            money[data.id].market += 1
                             setMoney({ ...money })
-                            sub()
-                          }
-                        }}
-                      >
-                        {' '}
-                        -{' '}
-                      </div>
-
-                      <div className={styles.Count}>{money[data.id].it}</div>
-
-                      <div
-                        className={styles.editCount}
-                        onClick={(e) => {
-                          e.preventDefault()
-                          money[data.id].it += 1
-                          setMoney({ ...money })
-                          add()
-                        }}
-                      >
-                        {' '}
-                        +{' '}
+                            add()
+                          }}
+                        >
+                          {' '}
+                          +{' '}
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div className={styles.mil}>
-                    <div className={styles.interestInput}>
-                      <div
-                        className={styles.editCount}
-                        onClick={(e) => {
-                          e.preventDefault()
-                          if (money[data.id].market != 0) {
-                            money[data.id].market -= 1
-                            setMoney({ ...money })
-                            sub()
-                          }
-                        }}
-                      >
-                        {' '}
-                        -{' '}
-                      </div>
-
-                      <div className={styles.Count}>
-                        {money[data.id].market}
-                      </div>
-
-                      <div
-                        className={styles.editCount}
-                        onClick={(e) => {
-                          e.preventDefault()
-                          money[data.id].market += 1
-                          setMoney({ ...money })
-                          add()
-                        }}
-                      >
-                        {' '}
-                        +{' '}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </>
-            )
-          })}
+                </>
+              )
+            })}
+          </div>
+          <div className={styles.total}>Total Employees : {spent}</div>
+          <div className={styles.total}>
+            Total money spend : {sumEmp.pro + sumEmp.proAdv + sumEmp.amature}k{' '}
+          </div>
+          <div className={styles.submit} onClick={handleSubmit}>
+            Submit
+          </div>
         </div>
-        <div className={styles.total}>Total Employees : {spent}</div>
-        <div className={styles.total}>
-          Total money spend : {sumEmp.pro + sumEmp.proAdv + sumEmp.amature}k{' '}
-              </div>
-        <div className={styles.submit} onClick={handleSubmit}>Submit</div>
-      </div>
+      ) : (
+        <div className={styles.approve}>Your Response has been recorded</div>
+    
+      )}
     </>
   )
 }

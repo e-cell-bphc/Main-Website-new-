@@ -51,6 +51,9 @@ function Round5() {
               </>
             )
     }
+
+    const [display, setDisplay]= useState(true)
+
     const handleSubmit = async () => {
         axios
           .post(
@@ -65,68 +68,70 @@ function Round5() {
             // }
             console.log(res)
           })
+        setDisplay(false)
     }
 
   return (
     <>
-      <div className={styles.main}>
-        <div className={styles.header}>Round 5 - Advertising</div>
-        <div className={styles.team}>
-          <div className={styles.teamTag}>Team Code</div>
-          <input
-            className={styles.input}
-            name="teamCode"
-            type="text"
-            value={data.teamCode}
-            onChange={handleChange}
-          />
-        </div>
-        <div className={styles.matrix}>
-          <div className={styles.sect}>
-            <div className={styles.mil1}></div>
-            <div className={styles.mil1}>Avenues</div>
-            <div className={styles.mil1}>Price</div>
-            <div className={styles.mil1}>Quantity</div>
+      {display ? (
+        <div className={styles.main}>
+          <div className={styles.header}>Round 5 - Advertising</div>
+          <div className={styles.team}>
+            <div className={styles.teamTag}>Team Code</div>
+            <input
+              className={styles.input}
+              name="teamCode"
+              type="text"
+              value={data.teamCode}
+              onChange={handleChange}
+            />
           </div>
-          <div className={styles.sect}>
-            <div className={styles.col}>
-              <div className={styles.col2}>Digital Marketing Type 1</div>
-              <div className={styles.col2}>Digital Marketing Type 2</div>
-              <div className={styles.col2}>Print Media and Goodies</div>
-              <div className={styles.col2}>Broadcast</div>
-              <div className={styles.col2}>BITS Techfest SponsorShip</div>
+          <div className={styles.matrix}>
+            <div className={styles.sect}>
+              <div className={styles.mil1}></div>
+              <div className={styles.mil1}>Avenues</div>
+              <div className={styles.mil1}>Price</div>
+              <div className={styles.mil1}>Quantity</div>
             </div>
-            <div className={styles.col}>
-              <div className={styles.col1}>Google Ads</div>
-              <div className={styles.col1}>Facebook Ads</div>
-              <div className={styles.col1}>YouTube Ads</div>
-              <div className={styles.col1}>Chatbots</div>
-              <div className={styles.col1}>Cold Mail</div>
-              <div className={styles.col1}>Blogs</div>
-              <div className={styles.col1}>Newspaper</div>
-              <div className={styles.col1}>Banners</div>
-              <div className={styles.col1}>Magazines</div>
-              <div className={styles.col1}>Goodies</div>
-              <div className={styles.col1}>Television</div>
-              <div className={styles.col1}>Radio</div>
-              <div className={styles.col1}></div>
-            </div>
-            <div className={styles.col}>
-              <div className={styles.col1}>400k</div>
-              <div className={styles.col1}>350k</div>
-              <div className={styles.col1}>300k</div>
-              <div className={styles.col1}>300k</div>
-              <div className={styles.col1}>300k</div>
-              <div className={styles.col1}>300k</div>
-              <div className={styles.col1}>1000k</div>
-              <div className={styles.col1}>800k</div>
-              <div className={styles.col1}>750k</div>
-              <div className={styles.col1}>500k</div>
-              <div className={styles.col1}>1000k</div>
-              <div className={styles.col1}>750k</div>
-              <div className={styles.col1}>750k</div>
-            </div>
-            <div className={styles.col}>
+            <div className={styles.sect}>
+              <div className={styles.col}>
+                <div className={styles.col2}>Digital Marketing Type 1</div>
+                <div className={styles.col2}>Digital Marketing Type 2</div>
+                <div className={styles.col2}>Print Media and Goodies</div>
+                <div className={styles.col2}>Broadcast</div>
+                <div className={styles.col2}>BITS Techfest SponsorShip</div>
+              </div>
+              <div className={styles.col}>
+                <div className={styles.col1}>Google Ads</div>
+                <div className={styles.col1}>Facebook Ads</div>
+                <div className={styles.col1}>YouTube Ads</div>
+                <div className={styles.col1}>Chatbots</div>
+                <div className={styles.col1}>Cold Mail</div>
+                <div className={styles.col1}>Blogs</div>
+                <div className={styles.col1}>Newspaper</div>
+                <div className={styles.col1}>Banners</div>
+                <div className={styles.col1}>Magazines</div>
+                <div className={styles.col1}>Goodies</div>
+                <div className={styles.col1}>Television</div>
+                <div className={styles.col1}>Radio</div>
+                <div className={styles.col1}></div>
+              </div>
+              <div className={styles.col}>
+                <div className={styles.col1}>400k</div>
+                <div className={styles.col1}>350k</div>
+                <div className={styles.col1}>300k</div>
+                <div className={styles.col1}>300k</div>
+                <div className={styles.col1}>300k</div>
+                <div className={styles.col1}>300k</div>
+                <div className={styles.col1}>1000k</div>
+                <div className={styles.col1}>800k</div>
+                <div className={styles.col1}>750k</div>
+                <div className={styles.col1}>500k</div>
+                <div className={styles.col1}>1000k</div>
+                <div className={styles.col1}>750k</div>
+                <div className={styles.col1}>750k</div>
+              </div>
+              <div className={styles.col}>
                 {retCols(0)}
                 {retCols(1)}
                 {retCols(2)}
@@ -140,11 +145,16 @@ function Round5() {
                 {retCols(10)}
                 {retCols(11)}
                 {retCols(12)}
+              </div>
             </div>
           </div>
-              </div>
-              <div className={styles.submit} onClick={handleSubmit}>Submit</div>
-      </div>
+          <div className={styles.submit} onClick={handleSubmit}>
+            Submit
+          </div>
+        </div>
+      ) : (
+        <div className={styles.approve}>Your Response has been recorded</div>
+      )}
     </>
   )
 }

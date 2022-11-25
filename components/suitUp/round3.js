@@ -18,6 +18,9 @@ function Round3a() {
         service: 0,
         TeamName: ''
     })
+
+    const [display, setDisplay] = useState(true)
+
     const handleSubmit = async (e) => {
         count.TeamName = teamName;
         setCount({...count})
@@ -36,6 +39,7 @@ function Round3a() {
             // }
             console.log(res)
           })
+        setDisplay(false)
         }
     const [total, setTotal] = useState(0)
 
@@ -89,81 +93,88 @@ function Round3a() {
     //         setTotal(total-1)
     //         // setCount( data = data- 1);
     //     }
-    
   return (
     <>
-      <div className={styles.main}>
-        <div className={styles.mainHead}> Round 3a - Asset Management</div>
-        <div className={styles.inputTeamName}>
-          <div className={styles.TeamName1}>Team Code</div>
-          <input
-            className={styles.TeamName}
-            name="teamname"
-            value={teamName}
-            onChange={handleChangeTeam}
-          />
-        </div>
-        {/* <div className={styles.getscore}>Get Stats</div>
+      {display ? (
+        <div className={styles.main}>
+          <div className={styles.mainHead}> Round 3a - Asset Management</div>
+          <div className={styles.inputTeamName}>
+            <div className={styles.TeamName1}>Team Code</div>
+            <input
+              className={styles.TeamName}
+              name="teamname"
+              value={teamName}
+              onChange={handleChangeTeam}
+            />
+          </div>
+          {/* <div className={styles.getscore}>Get Stats</div>
         <div className={styles.output}>Your % outreach in Market is : </div>
         <div className={styles.output}> Amount Remaining : </div> */}
-        <div className={styles.purchasing}>
-          <div className={styles.header}>Purchasing assets</div>
-          <div className={styles.subheader}>
-            Each asset will cost you 1 million
-          </div>
-          <div className={styles.subheader}>
-            note : You can spend a maximum of 10 Million in this round.
-          </div>
-          <div className={styles.Matrix}>
-            {list.map((data) => {
-              return (
-                <div className={styles.row} key={data.id}>
-                  <div className={styles.name1}>{data.name}</div>
-                  <div className={styles.name}>
-                    <div
-                      className={styles.add}
-                      onClick={() => {
-                        console.log(Object.values(count)[data.id])
-                        if (Object.values(count)[data.id] != 0) {
-                          setCount({
-                            ...count,
-                            [Object.keys(count)[data.id]]: Object.values(count)[data.id]-1
-                          })
-                          setTotal(total - 1)
-                        }
-                      }}
-                    >
-                      -
-                    </div>
-                    <div className={styles.add1}>
-                      {Object.values(count)[data.id]}
-                    </div>
-                    <div
-                      className={styles.add}
-                      onClick={() => {
-                        console.log(Object.values(count)[data.id])
-                        if (total < 10) {
-                          setCount({
-                            ...count,
-                            [Object.keys(count)[data.id]]: Object.values(count)[data.id]+1
-                          })
-                          setTotal(total + 1)
-                        }
-                      }}
-                    >
-                      +
+          <div className={styles.purchasing}>
+            <div className={styles.header}>Purchasing assets</div>
+            <div className={styles.subheader}>
+              Each asset will cost you 1 million
+            </div>
+            <div className={styles.subheader}>
+              note : You can spend a maximum of 10 Million in this round.
+            </div>
+            <div className={styles.Matrix}>
+              {list.map((data) => {
+                return (
+                  <div className={styles.row} key={data.id}>
+                    <div className={styles.name1}>{data.name}</div>
+                    <div className={styles.name}>
+                      <div
+                        className={styles.add}
+                        onClick={() => {
+                          console.log(Object.values(count)[data.id])
+                          if (Object.values(count)[data.id] != 0) {
+                            setCount({
+                              ...count,
+                              [Object.keys(count)[data.id]]:
+                                Object.values(count)[data.id] - 1
+                            })
+                            setTotal(total - 1)
+                          }
+                        }}
+                      >
+                        -
+                      </div>
+                      <div className={styles.add1}>
+                        {Object.values(count)[data.id]}
+                      </div>
+                      <div
+                        className={styles.add}
+                        onClick={() => {
+                          console.log(Object.values(count)[data.id])
+                          if (total < 10) {
+                            setCount({
+                              ...count,
+                              [Object.keys(count)[data.id]]:
+                                Object.values(count)[data.id] + 1
+                            })
+                            setTotal(total + 1)
+                          }
+                        }}
+                      >
+                        +
+                      </div>
                     </div>
                   </div>
-                </div>
-              )
-            })}
+                )
+              })}
+            </div>
+            <div className={styles.total}>
+              Total amount spent in this round : {total} million
+            </div>
+            <div className={styles.submit} onClick={handleSubmit}>
+              Submit
+            </div>
           </div>
-          <div className={styles.total}>
-            Total amount spent in this round : {total} million
-                  </div>
-                  <div className={styles.submit} onClick={handleSubmit}>Submit</div>
         </div>
-      </div>
+      ) : (
+        <div className={styles.approve}>Your Response has been recorded</div>
+      )}
     </>
   )
 }
