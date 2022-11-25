@@ -1,0 +1,179 @@
+.main{
+    width: 90vw;
+}
+.sect{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: auto;
+}
+.sectName{
+    width: 30vh;
+    height: 18vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.8vh;
+    padding: 4vh;
+    border: 0.5px solid white;
+    text-align: center;
+    transition: 0.2s ease-in
+    ;}
+.sectName1{
+    width: 40vh;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vh;
+    padding: 4vh;
+    border: 0.5px solid white;
+    text-align: center;
+    transition: 0.2s ease-in
+    ;}
+.mil{
+    width: 30vh;
+    height: 18vh;
+    font-size: 2.5vh;
+    padding: 4vh;
+    border: 1px solid white;
+    text-align: center;
+    transition: 0.2s ease-in
+    ;
+}
+.mil1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center ;
+    width: 30vh;
+    height: 10vh;
+    font-size: 2.5vh;
+    padding: 4vh;
+    border: 1px solid white;
+    text-align: center;
+    transition: 0.2s ease-in
+    ;
+}
+.sectName:hover{
+    background: white;
+    color: black;
+    cursor: pointer;
+}
+.interestInput{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.editCount{
+    width: 4vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 4vh;
+    background: rgb(11, 11, 11);
+    border-radius: 5px;
+    transition: 0.2s
+}
+.editCount:hover{
+    cursor: pointer;
+    background: white;
+    color: black;
+}
+.Count{
+    width: auto;
+    height: auto;
+    padding: 1vh;
+}
+.total{
+    font-size: 3vh;
+    margin: 5vh;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;justify-content: center;
+    text-align: center;
+    margin-bottom: 5vh;
+}
+.input{
+  outline: none;
+  background-color: rgb(29, 29, 29);
+  border: none;
+  height: 3em;
+  margin-top: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.1em;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.input:focus {
+  border: 1px solid white;
+}
+.teamTag{
+    font-size: 3vh;
+}
+.team{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5vh;
+}
+
+.submit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:20vh;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius: 5px;
+    height: auto;
+    font-size: 3vh;
+    padding: 2vh 4vh 2vh 4vh;
+    background: rgb(8, 126, 223);
+}
+@media screen and (max-width: 500px) {
+/*  */
+    .header{
+        font-size: 3vh;
+    }
+    .main{
+        padding: 2vh;
+        overflow-y: scroll;
+    }
+    .UserBox{
+        flex-direction: column;
+    }
+    /* .form{
+        transform: scale(0.95);
+        margin-left: 180vh;
+    } */
+    .editCount{
+        width: 5vh;
+        height: 5vh;
+    }
+    .form{
+        margin-left: 160vw;
+    }
+    .interestInput{
+        margin-top: 0.5vh;
+    }
+}

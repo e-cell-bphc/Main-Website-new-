@@ -43,7 +43,7 @@ export default function Navbar(props) {
           <Link href="/about">
             <a className={Navbarcss.button}>About us</a>
           </Link>
-          <Link href="/id/portal">
+          {/* <Link href="/id/portal">
             <a
               onClick={() => {
                 setrender('ID')
@@ -52,7 +52,19 @@ export default function Navbar(props) {
             >
               Internship Drive
             </a>
-          </Link>
+          </Link> */}
+          {' '}
+          <Link href="/suitUP">
+            <a
+              // onClick={() => {
+              //   setrender('ID')
+              // }}
+              className={Navbarcss.button}
+            >
+              Suit Up
+            </a>
+          </Link>{' '}
+          
           {/*<Link href="/welcome/signup">
             <a className={(Navbarcss.button, Navbarcss.rightmostbutton)}>
               Sign Up

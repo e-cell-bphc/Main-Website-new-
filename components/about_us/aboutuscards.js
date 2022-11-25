@@ -3,8 +3,11 @@ import style from '../../styles/AboutUs/aboutuscards.module.css'
 import Anushka from '../../assets/images/Executives-2019/1.jpg'
 import sonakshi from '../../assets/images/Executives-2019/2.jpg'
 import nikhil from '../../assets/images/Executives-2019/nikhil.jpg'
+import Noll from '../../assets/images/Executives-2020/noll.png'
+import MadhuMita from '../../assets/images/Executives-2020/Madhu.jpeg'
 // import Yashsav from '../../assets/images/Executives/Yashsav_Gupta.jpg'
 // import Pratyush from '../../assets/images/Executives/Pratyush_Choudhary.png'
+import Tushar from '../../assets/images/Executives-2020/TusharNew.jpeg'
 // import Sneh from '../../assets/images/Executives/sneh.png'
 import Sanchit from '../../assets/images/tech/sanchit.jpeg'
 import Akshat from '../../assets/images/tech/AkshatK.jpg'
@@ -22,27 +25,27 @@ export default function Aboutus() {
   const list = [
     {
       id: 1,
-      src: Anushka,
-      name: 'Anushka Chaudhary',
+      src: Tushar,
+      name: 'Tushar Komali Reddy',
       classy: 'position',
       position: 'President',
-      email: 'f20190393@hyderabad.bits-pilani.ac.in'
+      email: 'f20201381@hyderabad.bits-pilani.ac.in'
     },
     {
       id: 8,
-      src: Susho,
-      name: 'Sushobhit Srivastava',
+      src: MadhuMita,
+      name: 'Madhumita Phadke',
       classy: 'position',
-      position: 'Secretary',
-      email: 'f20191262@hyderabad.bits-pilani.ac.in'
+      position: 'Vice-President',
+      email: 'f20200441@hyderabad.bits-pilani.ac.in'
     },
     {
       id: 2,
-      src: sonakshi,
-      name: 'Sonakshi Mishra',
-      classy: 'positionlong',
-      position: 'Vice-President Events and Learning',
-      email: 'f20190866@hyderabad.bits-pilani.ac.in'
+      src: Noll,
+      name: 'Dhyey Rajguru',
+      classy: 'position',
+      position: 'Chairman',
+      email: 'f20202222@hyderabad.bits-pilani.ac.in'
     },
     {
       id: 4,
@@ -54,11 +57,11 @@ export default function Aboutus() {
     },
     {
       id: 3,
-      src: nikhil,
-      name: 'Nikhil Gupta',
+      src: Noll,
+      name: 'Ayush Varshney',
       classy: 'position',
-      position: 'Launchpad Chairman',
-      email: 'f20191562@hyderabad.bits-pilani.ac.in'
+      position: 'Treasurer',
+      email: 'f20200000@hyderabad.bits-pilani.ac.in'
     },
     {
       id: 5,
@@ -78,11 +81,11 @@ export default function Aboutus() {
     },
     {
       id: 7,
-      src: Sambhav,
-      name: 'Sambhav Jain',
+      src: Noll,
+      name: 'Amaan Khan',
       classy: 'position',
       position: 'Design Head',
-      email: 'f20191100@hyderabad.bits-pilani.ac.in'
+      email: 'f20202281@hyderabad.bits-pilani.ac.in'
     }
   ]
 

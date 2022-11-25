@@ -1,0 +1,138 @@
+.TeamName{
+    outline: none;
+  background-color: black;
+  border: none;
+  height: 3em;
+  margin-top: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.1em;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 1vh;
+  margin-right: 1vh;
+  margin-bottom: 5vh;
+}
+.TeamName:focus{
+    border-color: white;
+}
+.TeamName1{
+    font-size: 2.5vh;
+    text-align: center;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(23, 23, 23);
+    margin: 2vh;
+    padding-top: 5vh;
+}
+
+.purchasing{
+    margin-top: 5vh;
+}
+.header{
+    font-size: 3vh;
+    text-align: center;
+    width: fit-content;
+    border-bottom: 1px solid white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4vh;
+}
+.subheader{
+    font-size: 2.3vh;
+    margin-bottom: 5vh;
+    text-align: center;
+}
+
+.Matrix{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2vh 0 2vh 0
+}
+.name{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.name1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2vh;
+}
+.add{
+    width: 5vh;
+    height: 5vh;
+    border-radius: 5px;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.add1{
+    width: 5vh;
+    height: 5vh;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1vh;
+    margin-right: 1vh;
+}
+
+.total{
+    margin: 3vh 0 3vh 0;
+    text-align: center;
+}
+.mainHead{
+    font-size: 2.7vh;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    border-bottom: 1px solid white;
+}
+.getscore{
+    width: auto;
+    height: auto;
+    padding: 1vh 2vh 1vh 2vh;
+    background: rgb(8, 126, 223);
+    border-radius: 5px;
+    margin-bottom: 3vh;
+}
+.submit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:15vh;
+    margin-bottom: 5vh;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius: 5px;
+    height: auto;
+    font-size: 2.5vh;
+    padding: 2vh 4vh 2vh 4vh;
+    background: rgb(8, 126, 223);
+    margin-top: 5vh;
+    transition: 0.2 ease;
+}
+.submit:hover{
+    cursor: pointer;
+    background: rgb(6, 64, 112);
+}
